@@ -61,6 +61,129 @@
   opacity: 0.15;
 }
 
+.header-container {
+    width: 100vw;
+    background-color: rgb(111, 3, 3);
+    display: flex;
+    justify-content: center;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    justify-content: space-between;
+}
+@media (max-width: 1024px) {
+    .header-box {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem
+}
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    font-size: large;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100vh;
+  background-color: rgb(111, 3, 3);
+  padding: 1rem;
+  z-index: 10;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.sidebar-logo {
+  margin-right: 0.5rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sidebar-link-block {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+  padding: 0.25rem;
+  border-radius: 0.5rem;  
+}
+
+.sidebar-link-block:hover {
+  background-color: rgba(245, 164, 164, 0.2);
+  border-radius: 0.5rem;
+}
+
+.desktop-link-box:hover {
+  background-color: rgba(245, 164, 164, 0.2);
+  border-radius: 1rem;
+}
+/* .sidebar-links {
+  margin-bottom: 1rem;
+} */
+
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  /* margin-bottom: 0.5rem; */
+  position: relative;
+}
+
+.sidebar-link-box {
+  padding-right: 0.5rem;
+}
+
+.sidebar-link-icon {
+  fill: white;
+}
+
+.sidebar-close {
+  display: flex;
+  font-size: 1.25rem;
+  justify-content: center;
+}
+
+.btn.btn-primary {
+  margin-top: 1rem;
+}
+
+
 @media screen and (max-width: 640px) {
   .main {
     padding: 0;
@@ -72,3 +195,4 @@
 .app {
   @apply relative z-10 flex justify-center items-center flex-col w-full ;
 }
+
