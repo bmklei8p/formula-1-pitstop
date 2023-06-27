@@ -218,6 +218,7 @@
 .standings-block {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .standings-table {
   width: 50%;
@@ -228,6 +229,7 @@
   width: 50%;
   justify-content: center;
   position: relative;
+  height: 300px;
 }
 .podium_first {
   position: absolute;
