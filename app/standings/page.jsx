@@ -1,7 +1,8 @@
 'use client'
 import { useState, useEffect } from "react"
+import ConstructorPodium from "./components/ConstructorPodium"
+import DriverPodium from "./components/DriverPodium"
 import DriverStandingsTable from "./components/DriverStandingsTable"
-import Podium from "./components/Podium"
 import ConstructorStandingsTable from "./components/ConstructorStandingsTable"
 
 const StandingsPage = () => {
@@ -9,17 +10,25 @@ const StandingsPage = () => {
 
   const [ driversStandings, setDriversStandings ] = useState([])
   const [ constructorsStandings, setConstructorsStandings ] = useState([])
-  const [ standings, setStandings ] = useState([])
-  
-  const [ firstPlace, setFirstPlace ] = useState()
-  const [ secondPlace, setSecondPlace ] = useState()
-  const [ thirdPlace, setThirdPlace ] = useState()
+
+  // drivers
+  const [ firstPlaceD, setFirstPlaceD ] = useState()
+  const [ secondPlaceD, setSecondPlaceD ] = useState()
+  const [ thirdPlaceD, setThirdPlaceD ] = useState()
+
+// constructors
+  const [ firstPlaceC, setFirstPlaceC ] = useState()
+  const [ secondPlaceC, setSecondPlaceC ] = useState()
+  const [ thirdPlaceC, setThirdPlaceC ] = useState()
 
   useEffect(() => {
     const getDriverStandings = async () => {
         const res = await fetch('http://localhost:3000/api/standings/drivers')
         const data = await res.json()
         setDriversStandings(data)
+        setFirstPlaceD(data[0].Constructors[0]?.constructorId)
+        setSecondPlaceD(data[1].Constructors[0]?.constructorId)
+        setThirdPlaceD(data[2].Constructors[0]?.constructorId)
         }
     getDriverStandings();
     }, []);
@@ -29,23 +38,12 @@ const StandingsPage = () => {
         const res = await fetch('http://localhost:3000/api/standings/constructors')
         const data = await res.json()
         setConstructorsStandings(data)
+        setFirstPlaceC(data[0].Constructor?.constructorId)
+        setSecondPlaceC(data[1].Constructor?.constructorId)
+        setThirdPlaceC(data[2].Constructor?.constructorId)
         }
     getConstructorsStandings();
     }, []);
-  
-    useEffect(() => {   
-        if (showDriversStandings) {
-            setStandings(driversStandings)
-            setFirstPlace(standings[0]?.Constructors[0].constructorId)
-            setSecondPlace(standings[1]?.Constructors[0].constructorId)
-            setThirdPlace(standings[2]?.Constructors[0].constructorId)
-        } else {
-            setStandings(constructorsStandings)
-            setFirstPlace(standings[0]?.Constructor?.name)
-            setSecondPlace(standings[1]?.Constructor?.name)
-            setThirdPlace(standings[2]?.Constructor?.name)
-        }
-    }, [showDriversStandings, driversStandings, constructorsStandings])
 
 
   return (
@@ -56,26 +54,15 @@ const StandingsPage = () => {
             <button className="constructors-title" onClick={() => setShowDriversStandings(false)}>Constructors</button>
         </div>
         <div className="standings-block">
-            {showDriversStandings ? 
-            <DriverStandingsTable standings={standings} />
-            :
-            <ConstructorStandingsTable standings={standings} />}   
-            <Podium firstPlace={firstPlace} secondPlace={secondPlace} thirdPlace={thirdPlace} />
+            {/* // show appropriate table based on showDriversStandings */}
+            {showDriversStandings ? <DriverStandingsTable standings={driversStandings} /> : <ConstructorStandingsTable standings={constructorsStandings} />}
+
+            {/* // show appropriate podium based on showDriversStandings */}
+            { firstPlaceC && firstPlaceD && showDriversStandings ? <DriverPodium firstPlace={firstPlaceD} secondPlace={secondPlaceD} thirdPlace={thirdPlaceD} />
+            : <ConstructorPodium firstPlace={firstPlaceC} secondPlace={secondPlaceC} thirdPlace={thirdPlaceC} />}
         </div>
     </div>
   )
 }
 
-    // this was needed to remove some error but I am no longer getting that error when I remove it. (table html diff client vs server). keeping incase
-//   const [isMounted, setIsMounted] = useState(false);
-//   useEffect(() => {
-//     setIsMounted(true);
-//     return () => {
-//       setIsMounted(false);
-//     };
-//   }, []);
-
-//   if (!isMounted) {
-//     return null;
-//   }
 export default StandingsPage

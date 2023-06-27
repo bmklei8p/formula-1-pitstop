@@ -63,11 +63,14 @@
 
 .header-container {
     width: 100vw;
-    background-color: rgb(111, 3, 3);
+    background-color: rgb(149, 47, 47);
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
-
+/* .main {
+    background-color: rgb(253, 223, 223);
+} */
 .header-box {
     display: flex;
     align-items: center;
@@ -103,13 +106,16 @@
 }
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 4.25rem;  /* this bring the sidebar down so we can still just use the header title */
+  /* works for almost every device- but very small width 280px will merge header/sidebar - may
+  need to use some sort of calculation function for this if i need to be that precise */
   left: 0;
   width: 200px;
   height: 100vh;
-  background-color: rgb(111, 3, 3);
+  background-color: rgb(149, 47, 47);
   padding: 1rem;
   z-index: 10;
+  border-top: 5px white dotted;
 }
 
 .sidebar-header {
@@ -131,13 +137,13 @@
 }
 
 .sidebar-link-block {
-  display: flex; 
+  display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
   padding: 0.25rem;
-  border-radius: 0.5rem;  
+  border-radius: 0.5rem;
 }
 
 .sidebar-link-block:hover {
@@ -211,7 +217,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   gap: 5rem;
 }
@@ -240,21 +246,21 @@
 }
 .podium-first-container {
   position: absolute;
-  top: 40px; /* Adjust this value to position the image as desired */
+  top: 45px; /* Adjust this value to position the image as desired */
   left: calc(50% - 40px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
 }
 .podium-second-container {
   position: absolute;
-  top: 100px; /* Adjust this value to position the image as desired */
+  top: 65px; /* Adjust this value to position the image as desired */
   left: calc(50% - 135px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
 }
 .podium-third-container {
   position: absolute;
-  top: 80px; /* Adjust this value to position the image as desired */
+  top: 88px; /* Adjust this value to position the image as desired */
   left: calc(50% + 60px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
