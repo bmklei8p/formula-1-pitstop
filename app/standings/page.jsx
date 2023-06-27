@@ -48,7 +48,7 @@ const StandingsPage = () => {
 
   return (
     <div className="standings-container">
-        <h1 className="standings-page-title">{showDriversStandings ? "Driver Standings": "Constructor Standings"}</h1>
+        <h1 className="standings-page-title">{showDriversStandings ? "Drivers Standings": "Constructors Standings"}</h1>
         <div className="titles-block">
             <button className="drivers-title" onClick={() => setShowDriversStandings(true)}>Drivers</button>
             <button className="constructors-title" onClick={() => setShowDriversStandings(false)}>Constructors</button>

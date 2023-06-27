@@ -13,6 +13,12 @@
   padding: 120px 24px 160px 24px;
   pointer-events: none;
 }
+@media (max-width: 1024px) {
+  .main {
+    min-height: 90vh;
+  }
+}
+
 
 .main:before {
   background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
@@ -116,15 +122,6 @@
   padding: 1rem;
   z-index: 10;
   border-top: 5px white dotted;
-}
-
-.sidebar-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  gap: 1rem;
 }
 
 .sidebar-logo {
