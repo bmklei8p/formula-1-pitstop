@@ -61,15 +61,15 @@ return (
                     <div className="sidebar">
                         <div className="sidebar-links">
                             {navLinks.map((link) => (
-                            <div key={link.href} className="sidebar-link-block">
-                                <div className="sidebar-link-box">
-                                    {link.icon && React.cloneElement(link.icon, { size: 25 })}
-                                    {link.img && <Image src={link.img} alt='f1-logo' width={25} height={25} />}
-                                </div>
                                 <Link href={link.href} onClick={() => setShowSideBar(false)}>
-                                    {link.title}
+                                    <div key={link.href} className="sidebar-link-block">
+                                        <div className="sidebar-link-box">
+                                            {link.icon && React.cloneElement(link.icon, { size: 25 })}
+                                            {link.img && <Image src={link.img} alt='f1-logo' width={25} height={25} />}
+                                        </div>
+                                        {link.title}
+                                    </div>
                                 </Link>
-                            </div>
                             ))}
                         </div>
                         <div className="sidebar-close">
