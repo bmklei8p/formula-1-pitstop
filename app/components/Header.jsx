@@ -70,7 +70,7 @@ return (
                                     {link.icon && React.cloneElement(link.icon, { size: 25 })}
                                     {link.img && <Image src={link.img} alt='f1-logo' width={25} height={25} />}
                                 </div>
-                                <Link href={link.href}>
+                                <Link href={link.href} onClick={() => setShowSideBar(false)}>
                                     {link.title}
                                 </Link>
                             </div>

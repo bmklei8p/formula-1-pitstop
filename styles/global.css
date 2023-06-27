@@ -105,7 +105,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: auto;
+  width: 200px;
   height: 100vh;
   background-color: rgb(111, 3, 3);
   padding: 1rem;
@@ -149,9 +149,6 @@
   background-color: rgba(245, 164, 164, 0.2);
   border-radius: 1rem;
 }
-/* .sidebar-links {
-  margin-bottom: 1rem;
-} */
 
 .sidebar-links a {
   display: flex;
@@ -161,7 +158,6 @@
   color: white;
   text-decoration: none;
   font-size: 1.25rem;
-  /* margin-bottom: 0.5rem; */
   position: relative;
 }
 
@@ -190,9 +186,108 @@
   }
 }
 
+/* standings page */
+.standings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .standings-container {
+    width: 100%;
+  }
+}
+.standings-page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.titles-block {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row; 
+  align-items: center;
+  gap: 5rem;
+}
+.standings-block {
+  display: flex;
+  justify-content: center;
+}
+.standings-table {
+  width: 50%;
+  text-align: center;
+}
+.podium-container {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  position: relative;
+}
+.podium_first {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  box-sizing: border-box;
+}
+.podium-first-container {
+  position: absolute;
+  top: 40px; /* Adjust this value to position the image as desired */
+  left: calc(50% - 40px); /* Adjust this value to position the image horizontally */
+  display: flex;
+  justify-content: center;
+}
+.podium-second-container {
+  position: absolute;
+  top: 100px; /* Adjust this value to position the image as desired */
+  left: calc(50% - 135px); /* Adjust this value to position the image horizontally */
+  display: flex;
+  justify-content: center;
+}
+.podium-third-container {
+  position: absolute;
+  top: 80px; /* Adjust this value to position the image as desired */
+  left: calc(50% + 60px); /* Adjust this value to position the image horizontally */
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  .standings-block {
+    flex-direction: column;
+  }
+  .standings-table {
+    width: 100%;
+  }
+  .podium-container {
+    width: 100%;
+  }
+}
+
+
+.titles-block {
+  display: flex;
+  flex-direction: row;
+}
+
+
 /* Tailwind Styles */
 
 .app {
   @apply relative z-10 flex justify-center items-center flex-col w-full ;
 }
 
+.podium_first {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3;
+}
+podium_second  {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3;
+}
+.podium_third {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3;
+}
