@@ -265,7 +265,7 @@
 }
 @media (max-width: 1024px) {
   .standings-block {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .standings-table {
     width: 100%;
