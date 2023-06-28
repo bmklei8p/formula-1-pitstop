@@ -14,7 +14,7 @@ const DriverStandingsTable = ({standings}) => {
             {standings.map((pos) => (
                 <tr key={pos.position} className="position">
                     <td >{pos.position}</td>
-                    <td style={{textAlign: "left"}}>{pos.Driver.givenName + " " + pos.Driver.familyName}</td>
+                    <td>{pos.Driver.givenName + " " + pos.Driver.familyName}</td>
                     <td>{pos.points}</td>
                 </tr>
             ))}

@@ -14,7 +14,7 @@ const ConstructorStandingsTable = ({standings}) => {
         {standings.map((pos) => (
             <tr key={pos.position} className="position">
                 <td >{pos.position}</td>
-                <td style={{textAlign: "left"}}>{pos.Constructor?.name}</td>
+                <td>{pos.Constructor?.name}</td>
                 <td>{pos.points}</td>
             </tr>
         ))}
