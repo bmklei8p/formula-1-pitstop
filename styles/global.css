@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(192, 192, 192);
+  /* background-color: rgb(192, 192, 192); */
+
 }
 
 .main {
@@ -125,7 +126,7 @@ body {
   background-color: rgb(149, 47, 47);
   padding: 1rem;
   z-index: 10;
-  border-top: 5px white dotted;
+  /* border-top: 5px white dotted; */
 }
 
 .sidebar-logo {
@@ -211,8 +212,9 @@ body {
 }
 .standings-page-title {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
+  color: #ff2800
 }
 
 .titles-block {
@@ -290,9 +292,20 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center;
+}
+.tracks-title-block {
+  height: 100%;
+}
+.page-title {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: #FF2800;
+  font-size: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .track-list-container {
@@ -300,7 +313,11 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
 }
-
+.mobile-track-list-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .track-list-box {
   border: black 1px solid;
   padding: 1rem

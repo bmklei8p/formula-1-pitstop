@@ -104,8 +104,17 @@ export default function TracksMap() {
 
 
     return (
-      <div>
+      <div className='mobile-track-list-container'> 
         <div>
+        <button
+            onClick={handlePrevArrowClick}
+            disabled={disablePrevArrow}
+            style={{ marginRight: '10px' }}
+          >
+            {'<'}
+          </button>
+        </div>
+        <div className='track-list-box'>
           {currentTracks.map((track, trackIndex) => (
             <p
               key={trackIndex}
@@ -117,14 +126,9 @@ export default function TracksMap() {
           ))}
         </div>
         <div>
-          <button
-            onClick={handlePrevArrowClick}
-            disabled={disablePrevArrow}
-            style={{ marginRight: '10px' }}
-          >
-            {'<'}
+          <button onClick={handleNextArrowClick} disabled={disableNextArrow}>
+            {'>'}
           </button>
-          <button onClick={handleNextArrowClick} disabled={disableNextArrow}>{'>'}</button>
         </div>
       </div>
     );
@@ -134,7 +138,7 @@ export default function TracksMap() {
 // data for the map
   const mapContainerStyle = {
     width: '100%',
-    height: '70vh'
+    height: '65vh'
   };
 
   const centerDesktop = {
@@ -148,9 +152,11 @@ export default function TracksMap() {
 
   return (
     <div className='tracks-container'>
-      <h1>
-        2023 Formula 1 Tracks
-      </h1>
+      <div className='tracks-title-block'>
+        <h1 className='page-title'> 
+          2023 Formula 1 Tracks
+        </h1>
+      </div>
       <LoadScript googleMapsApiKey={API_KEY}>
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
@@ -170,8 +176,8 @@ export default function TracksMap() {
               onCloseClick={handleCloseInfoWindow}
             >
               <div>
-                <h3>{selectedMarker.officialName}</h3>
-                <p>{selectedMarker.des}</p>
+                <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.officialName}</h3>
+                <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
               </div>
             </InfoWindow>
           )}
