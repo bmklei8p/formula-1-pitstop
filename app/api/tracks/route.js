@@ -1,5 +1,5 @@
-import { connectToDB } from "@utils/database"
-import Track from "@models/Track"
+import { connectToDB } from "../../../utils/database"
+import Track from "../../../models/track"
 
 export const GET = async () => {
     try {

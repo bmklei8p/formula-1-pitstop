@@ -8,6 +8,18 @@ export default function TracksMap() {
   const [mobileScreen, setMobileScreen] = useState(false);
   const [mobileTrackIndex, setMobileTrackIndex] = useState(0);
 
+  // get track list from api
+  const [ trackList, setTrackList ] = useState([]);
+  useEffect(() => {
+    const fetchTracks = async () => {
+      const res = await fetch('/api/tracks');
+      const data = await res.json();
+      setTrackList(data);
+    };
+    fetchTracks();
+  }, []);
+
+
   useEffect(() => {
     const handleResize = () => {
       const isMobile = window.innerWidth <= 768;
@@ -36,7 +48,7 @@ export default function TracksMap() {
 
   const renderTrackList = () => {
     const sortedTrackList = trackList.sort((a, b) =>
-      a.trackName.localeCompare(b.trackName)
+      a.officialName.localeCompare(b.officialName)
     );
 
     const trackBoxes = [];
@@ -59,7 +71,7 @@ export default function TracksMap() {
             style={{ cursor: 'pointer' }}
             onClick={() => handleTrackClick(track)}
           >
-            {track.trackName}
+            {track.officialName}
           </p>
         ))}
       </div>
@@ -68,7 +80,7 @@ export default function TracksMap() {
 
   const renderMobileTrackList = () => {
     const sortedTrackList = trackList.sort((a, b) =>
-      a.trackName.localeCompare(b.trackName)
+      a.officialName.localeCompare(b.officialName)
     );
 
     const startIndex = mobileTrackIndex * 5;
@@ -100,7 +112,7 @@ export default function TracksMap() {
               style={{ cursor: 'pointer' }}
               onClick={() => handleTrackClick(track)}
             >
-              {track.trackName}
+              {track.officialName}
             </p>
           ))}
         </div>
@@ -118,35 +130,8 @@ export default function TracksMap() {
     );
   };
 
-  // Below is data for the map
-  const trackList = [
-    { trackName: 'Bahrain International Circuit', des: 'Sakhir, Bahrain', lat: 26.0325, lon: 50.5106 },
-    { trackName: 'Albert Park Circuit', des: 'Melbourne, Australia', lat: -37.8497, lon: 144.968 },
-    { trackName: 'Circuit de Barcelona-Catalunya', des: 'Barcelona, Spain', lat: 41.5664, lon: 2.2617 },
-    { trackName: 'Circuit de Monaco', des: 'Monte Carlo, Monaco', lat: 43.7347, lon: 7.4206 },
-    { trackName: 'Baku City Circuit', des: 'Baku, Azerbaijan', lat: 40.3725, lon: 49.8532 },
-    { trackName: 'Circuit Paul Ricard', des: 'Le Castellet, France', lat: 43.2506, lon: 5.7917 },
-    { trackName: 'Red Bull Ring', des: 'Spielberg, Austria', lat: 47.2197, lon: 14.7647 },
-    { trackName: 'Silverstone Circuit', des: 'Silverstone, United Kingdom', lat: 52.0786, lon: -1.0169 },
-    { trackName: 'Hungaroring', des: 'Budapest, Hungary', lat: 47.5833, lon: 19.2483 },
-    { trackName: 'Circuit de Spa-Francorchamps', des: 'Spa, Belgium', lat: 50.4372, lon: 5.9714 },
-    { trackName: 'Zandvoort Circuit', des: 'Zandvoort, Netherlands', lat: 52.3883, lon: 4.5444 },
-    { trackName: 'Autodromo Nazionale di Monza', des: 'Monza, Italy', lat: 45.6156, lon: 9.2811 },
-    { trackName: 'Sochi Autodrom', des: 'Sochi, Russia', lat: 43.4057, lon: 39.9578 },
-    { trackName: 'Marina Bay Street Circuit', des: 'Singapore', lat: 1.2914, lon: 103.8636 },
-    { trackName: 'Suzuka Circuit', des: 'Suzuka, Japan', lat: 34.8431, lon: 136.5381 },
-    { trackName: 'Circuit of the Americas', des: 'Austin, United States', lat: 30.1333, lon: -97.6411 },
-    { trackName: 'Autódromo Hermanos Rodríguez', des: 'Mexico City, Mexico', lat: 19.4042, lon: -99.0907 },
-    { trackName: 'Interlagos Circuit', des: 'São Paulo, Brazil', lat: -23.7036, lon: -46.6997 },
-    { trackName: 'Melbourne Grand Prix Circuit', des: 'Melbourne, Australia', lat: -37.8497, lon: 144.968 },
-    { trackName: 'Jeddah Street Circuit', des: 'Jeddah, Saudi Arabia', lat: 21.5012, lon: 39.1723 },
-    { trackName: 'Yas Marina Circuit', des: 'Abu Dhabi, United Arab Emirates', lat: 24.4717, lon: 54.6057 },
-    { trackName: 'Circuit of the Americas', des: 'Austin, United States', lat: 30.1333, lon: -97.6411 },
-    { trackName: 'Interlagos Circuit', des: 'São Paulo, Brazil', lat: -23.7036, lon: -46.6997 },
-    { trackName: 'Suzuka Circuit', des: 'Suzuka, Japan', lat: 34.8431, lon: 136.5381 },
-  ];
 
-
+// data for the map
   const mapContainerStyle = {
     width: '100%',
     height: '70vh'
@@ -175,17 +160,17 @@ export default function TracksMap() {
           {trackList.map((marker, index) => (
             <Marker
               key={index}
-              position={{ lat: marker.lat, lng: marker.lon }}
+              position={{ lat: marker.lat, lng: marker.long }}
               onClick={() => handleMarkerClick(marker)}
             />
           ))}
           {selectedMarker && (
             <InfoWindow
-              position={{ lat: selectedMarker.lat, lng: selectedMarker.lon }}
+              position={{ lat: selectedMarker.lat, lng: selectedMarker.long }}
               onCloseClick={handleCloseInfoWindow}
             >
               <div>
-                <h3>{selectedMarker.trackName}</h3>
+                <h3>{selectedMarker.officialName}</h3>
                 <p>{selectedMarker.des}</p>
               </div>
             </InfoWindow>

@@ -13,10 +13,27 @@ const TrackSchema = new Schema({
         type: String,
         required: [true, "Please provide the date the track was first used"],
     },
+    lat: {
+        type: Number,
+        required: [true, "Please provide the latitude of the track"],
+    },
+    long: {
+        type: Number,
+        required: [true, "Please provide the longitude of the track"],
+    },
+    locationCity: {
+        type: String,
+        required: [true, "Please provide the city the track is located in"],
+    },
+    locationCountry: {
+        type: String,
+        required: [true, "Please provide the country the track is located in"],
+    },
     numberOfLaps: {
         type: Number,
     },
-    lapDistance: {
+    // in km
+    raceDistance: {
         type: Number,
     },
     fastestLapTime: {
@@ -33,6 +50,10 @@ const TrackSchema = new Schema({
     },
     fastestLapTeam: {
         type: String,
+    },
+    years: {
+        type: Array,
+        required: [true, "Please provide the years the track was used"],
     },
     inCurrentSeason: {
         type: Boolean,

@@ -12,7 +12,6 @@ import { PiFlagCheckeredFill } from 'react-icons/pi'
 
 const Header = () => {
   const [showSideBar, setShowSideBar] = useState(false)
-
   const navLinks = [{
     title: "Schedule",
     href: '/schedule',
