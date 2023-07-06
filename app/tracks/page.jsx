@@ -2,13 +2,15 @@
 import { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+
 export default function TracksMap() {
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [mobileScreen, setMobileScreen] = useState(false);
   const [mobileTrackIndex, setMobileTrackIndex] = useState(0);
 
-  // get track list from api
+  // get track list from api linked to db
   const [ trackList, setTrackList ] = useState([]);
   useEffect(() => {
     const fetchTracks = async () => {
@@ -104,14 +106,14 @@ export default function TracksMap() {
 
 
     return (
-      <div className='mobile-track-list-container'> 
+      <div className='mobile-track-list-container'>
         <div>
         <button
             onClick={handlePrevArrowClick}
             disabled={disablePrevArrow}
-            style={{ marginRight: '10px' }}
+            style={{ marginRight: '10px', fontSize: '2rem' }}
           >
-            {'<'}
+            <BiLeftArrowAlt />
           </button>
         </div>
         <div className='track-list-box'>
@@ -126,8 +128,8 @@ export default function TracksMap() {
           ))}
         </div>
         <div>
-          <button onClick={handleNextArrowClick} disabled={disableNextArrow}>
-            {'>'}
+          <button onClick={handleNextArrowClick} disabled={disableNextArrow} style={{ marginLeft: '10px', fontSize: '2rem'}}>
+            <BiRightArrowAlt />
           </button>
         </div>
       </div>
@@ -136,10 +138,7 @@ export default function TracksMap() {
 
 
 // data for the map
-  const mapContainerStyle = {
-    width: '100%',
-    height: '65vh'
-  };
+  const mapContainerStyle = mobileScreen ? { width: '100%', height: '65vh' } : { width: '75%', height: '65vh'}
 
   const centerDesktop = {
     lat: 10,
@@ -150,39 +149,45 @@ export default function TracksMap() {
     lng: 10
   };
 
+  const mapOptions = {
+    disableDefaultUI: true,
+  }
+
   return (
     <div className='tracks-container'>
       <div className='tracks-title-block'>
-        <h1 className='page-title'> 
+        <h1 className='page-title'>
           2023 Formula 1 Tracks
         </h1>
       </div>
-      <LoadScript googleMapsApiKey={API_KEY}>
-        <GoogleMap
-          mapContainerStyle={mapContainerStyle}
-          center={mobileScreen ? centerMobile : centerDesktop}
-          zoom={mobileScreen ? 4.5 : 3}
-        >
-          {trackList.map((marker, index) => (
-            <Marker
-              key={index}
-              position={{ lat: marker.lat, lng: marker.long }}
-              onClick={() => handleMarkerClick(marker)}
-            />
-          ))}
-          {selectedMarker && (
-            <InfoWindow
-              position={{ lat: selectedMarker.lat, lng: selectedMarker.long }}
-              onCloseClick={handleCloseInfoWindow}
-            >
-              <div>
-                <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.officialName}</h3>
-                <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
-              </div>
-            </InfoWindow>
-          )}
-        </GoogleMap>
-      </LoadScript>
+      <div className='map-container'>
+        <LoadScript googleMapsApiKey={API_KEY}>
+          <GoogleMap
+            mapContainerStyle={mapContainerStyle}
+            center={mobileScreen ? centerMobile : centerDesktop}
+            zoom={mobileScreen ? 4.5 : 3}
+            disableDefaultUI={mapOptions}>
+            {trackList.map((marker, index) => (
+              <Marker
+                key={index}
+                position={{ lat: marker.lat, lng: marker.long }}
+                onClick={() => handleMarkerClick(marker)}
+              />
+            ))}
+            {selectedMarker && (
+              <InfoWindow
+                position={{ lat: selectedMarker.lat, lng: selectedMarker.long }}
+                onCloseClick={handleCloseInfoWindow}
+              >
+                <div>
+                  <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.officialName}</h3>
+                  <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
+                </div>
+              </InfoWindow>
+            )}
+          </GoogleMap>
+        </LoadScript>
+      </div>
         {/* Container with track list */}
       <div className='track-list-container'>
         {mobileScreen ? renderMobileTrackList() : renderTrackList()}

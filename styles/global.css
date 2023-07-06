@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 body {
-  /* background-color: rgb(192, 192, 192); */
-
+  background-color: rgb(192, 192, 192);
 }
 
 .main {
@@ -307,11 +306,16 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.map-container {
+  display: flex;
+  justify-content: center;
+}
 
 .track-list-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-top: 0.75rem;
 }
 .mobile-track-list-container {
   display: flex;
@@ -320,7 +324,7 @@ body {
 }
 .track-list-box {
   border: black 1px solid;
-  padding: 1rem
+  padding: 0.5rem
 }
 /* Tailwind Styles */
 
@@ -337,3 +341,5 @@ podium_second  {
 .podium_third {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3;
 }
+
+/* legg */
