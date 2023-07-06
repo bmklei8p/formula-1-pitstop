@@ -5,7 +5,7 @@ const TrackSchema = new Schema({
         type: String,
         required: [true, "Please provide the official name"],
     },
-    friendlyName: {
+    circuitName: {
         type: String,
         required: [true, "Please provide a user friendly name"],
     },

@@ -15,6 +15,6 @@ export const connectToDB = async () => {
             useUnifiedTopology: true,
         })
     } catch (error) {
-        console.log(error);
+        console.log("ConnectionToDB error: ", error);
     }
 }
