@@ -209,26 +209,7 @@ body {
     width: 100%;
   }
 }
-.standings-page-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #ff2800
-}
 
-.titles-block {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: row;
-  align-items: center;
-  gap: 5rem;
-}
-
-.standings-table {
-  width: 50%;
-  text-align: center;
-}
 .podium-container {
   display: flex;
   flex-wrap: wrap;
@@ -267,9 +248,6 @@ body {
 }
 
 @media (max-width: 728px) {
-  .standings-table {
-    width: 100%;
-  }
   .podium-container {
     width: 100%;
   }

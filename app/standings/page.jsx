@@ -48,16 +48,26 @@ const StandingsPage = () => {
 
   return (
     <div className="standings-container">
-        <h1 className="standings-page-title">{showDriversStandings ? "Drivers Standings": "Constructors Standings"}</h1>
-        <div className="titles-block">
-          <div>
-            <button className="text-lg border border-red-500 rounded px-4 py-1 mx-2 my-1 hover:bg-red-500 hover:text-white" onClick={() => setShowDriversStandings(true)}>Drivers</button>
+        <h1 className="hidden text-4xl font-bold mb-4 text-red-600 md:block">{showDriversStandings ? "Drivers Standings": "Constructors Standings"}</h1>
+        {/* mobile buttons */}
+        <div className="flex justify-center md:hidden">
+          <div className="basis-1/2" onClick={() => setShowDriversStandings(true)}>
+            <button className={`${showDriversStandings ? `text-2xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`}>Drivers</button>
           </div>
-          <div>
-            <button className="text-lg border border-red-500 rounded px-4 py-1 mx-2 my-1"onClick={() => setShowDriversStandings(false)}>Constructors</button>
+          <div className="basis-1/2" onClick={() => setShowDriversStandings(false)}>
+            <button className={`${!showDriversStandings ? `text-2xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`}>Constructors</button>
           </div>
         </div>
-        <div className="flex flex-col-reverse justify-center md:flex-row md:align-center">
+        {/* desktop buttons */}
+        <div className="hidden justify-center md:flex">
+          <div className="basis-1/2" onClick={() => setShowDriversStandings(true)}>
+            <button className={`${showDriversStandings ? `text-2xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`} onClick={() => setShowDriversStandings(true)}>Drivers</button>
+          </div>
+          <div className="basis-1/2" onClick={() => setShowDriversStandings(false)}>
+            <button className={`${!showDriversStandings ? `text-2xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`} onClick={() => setShowDriversStandings(false)}>Constructors</button>
+          </div>
+        </div>
+        <div className={`flex flex-col-reverse justify-center ${showDriversStandings ? `md:flex-row md:align-center` : `md:flex-row-reverse md:align-center`}`}>
             {/* show appropriate table based on showDriversStandings */}
             {showDriversStandings ? <DriverStandingsTable standings={driversStandings} /> : <ConstructorStandingsTable standings={constructorsStandings} />}
 
