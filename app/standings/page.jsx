@@ -50,14 +50,18 @@ const StandingsPage = () => {
     <div className="standings-container">
         <h1 className="standings-page-title">{showDriversStandings ? "Drivers Standings": "Constructors Standings"}</h1>
         <div className="titles-block">
-            <button className="drivers-title" onClick={() => setShowDriversStandings(true)}>Drivers</button>
-            <button className="constructors-title" onClick={() => setShowDriversStandings(false)}>Constructors</button>
+          <div>
+            <button className="text-lg border border-red-500 rounded px-4 py-1 mx-2 my-1 hover:bg-red-500 hover:text-white" onClick={() => setShowDriversStandings(true)}>Drivers</button>
+          </div>
+          <div>
+            <button className="text-lg border border-red-500 rounded px-4 py-1 mx-2 my-1"onClick={() => setShowDriversStandings(false)}>Constructors</button>
+          </div>
         </div>
-        <div className="standings-block">
-            {/* // show appropriate table based on showDriversStandings */}
+        <div className="flex flex-col-reverse justify-center md:flex-row md:align-center">
+            {/* show appropriate table based on showDriversStandings */}
             {showDriversStandings ? <DriverStandingsTable standings={driversStandings} /> : <ConstructorStandingsTable standings={constructorsStandings} />}
 
-            {/* // show appropriate podium based on showDriversStandings */}
+            {/* show appropriate podium based on showDriversStandings */}
             { firstPlaceC && firstPlaceD && showDriversStandings ? <DriverPodium firstPlace={firstPlaceD} secondPlace={secondPlaceD} thirdPlace={thirdPlaceD} />
             : <ConstructorPodium firstPlace={firstPlaceC} secondPlace={secondPlaceC} thirdPlace={thirdPlaceC} />}
         </div>

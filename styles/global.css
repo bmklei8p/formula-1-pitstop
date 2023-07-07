@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(192, 192, 192);
+  background-color: #e2e8f0;
 }
 
 .main {
@@ -224,21 +224,18 @@ body {
   align-items: center;
   gap: 5rem;
 }
-.standings-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .standings-table {
   width: 50%;
   text-align: center;
 }
 .podium-container {
   display: flex;
+  flex-wrap: wrap;
   width: 50%;
   justify-content: center;
   position: relative;
-  height: 300px;
+  align-content: center;
 }
 .podium_first {
   position: absolute;
@@ -249,34 +246,41 @@ body {
 }
 .podium-first-container {
   position: absolute;
-  top: 45px; /* Adjust this value to position the image as desired */
+  top: 220px; /* Adjust this value to position the image as desired */
   left: calc(50% - 40px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
 }
 .podium-second-container {
   position: absolute;
-  top: 65px; /* Adjust this value to position the image as desired */
+  top: 250px; /* Adjust this value to position the image as desired */
   left: calc(50% - 135px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
 }
 .podium-third-container {
   position: absolute;
-  top: 88px; /* Adjust this value to position the image as desired */
+  top: 275px; /* Adjust this value to position the image as desired */
   left: calc(50% + 60px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
 }
-@media (max-width: 1024px) {
-  .standings-block {
-    flex-direction: column-reverse;
-  }
+
+@media (max-width: 728px) {
   .standings-table {
     width: 100%;
   }
   .podium-container {
     width: 100%;
+  }
+  .podium-first-container {
+    top: 45px;
+  }
+  .podium-second-container {
+    top: 65px;
+  }
+  .podium-third-container {
+    top: 88px;
   }
 }
 

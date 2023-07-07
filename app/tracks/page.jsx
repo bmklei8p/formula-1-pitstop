@@ -167,24 +167,24 @@ export default function TracksMap() {
             center={mobileScreen ? centerMobile : centerDesktop}
             zoom={mobileScreen ? 4.5 : 3}
             disableDefaultUI={mapOptions}>
-            {trackList.map((marker, index) => (
-              <Marker
-                key={index}
-                position={{ lat: marker.lat, lng: marker.long }}
-                onClick={() => handleMarkerClick(marker)}
-              />
-            ))}
-            {selectedMarker && (
-              <InfoWindow
-                position={{ lat: selectedMarker.lat, lng: selectedMarker.long }}
-                onCloseClick={handleCloseInfoWindow}
-              >
-                <div>
-                  <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.officialName}</h3>
-                  <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
-                </div>
-              </InfoWindow>
-            )}
+              {trackList.map((marker, index) => (
+                <Marker
+                  key={index}
+                  position={{ lat: marker.lat, lng: marker.long }}
+                  onClick={() => handleMarkerClick(marker)}
+                />
+              ))}
+              {selectedMarker && (
+                <InfoWindow
+                  position={{ lat: selectedMarker.lat, lng: selectedMarker.long }}
+                  onCloseClick={handleCloseInfoWindow}
+                >
+                  <div>
+                    <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.officialName}</h3>
+                    <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
+                  </div>
+                </InfoWindow>
+              )}
           </GoogleMap>
         </LoadScript>
       </div>
