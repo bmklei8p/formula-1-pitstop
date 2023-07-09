@@ -25,3 +25,10 @@
 6/28 - My tacks component is very complicated and a lot of different things going on at once. Consider breaking down into smaller components. Additionally, map resource on load takes a good amount of time. I need a loading spinner/icon to hold the position until it comes in instead of just Loading... for better UX.
 #
 6/28 - BUG: When I click on a marker, then use the arrow on the track list, it resets the map position to the default. I find this jarring and need to look into a fix.
+
+
+#
+7/9 - Need to update at least on mobile when I go to a marker, the map should be centered on the marker. - Completed with new state centerMobile and updated onClick's to setMobile to the marker's lat/lng.
+
+7/9 - Update font to the font used on f1 page: font is titillium-web on google fonts. Updated it following next.js doc to work with one font-weight/variable. Know that i need to use array for importing but how to denote the variable that will be pulled into tailwind config. Use the font-weight class before the font-family in the tailwind className to specific which font-weight to use. - Complete
+

@@ -1,11 +1,23 @@
 import '../styles/global.css'
 import Header from './components/Header'
 import mongoose from 'mongoose';
+import { Titillium_Web } from 'next/font/google'
 
 export const metadata = {
   title: 'Formula 1 Pitstop',
   description: 'Your one stop for all things Formula 1',
 }
+
+const titilliumWeb = Titillium_Web({
+  // weight: '300',
+  // weight: ['300'],
+  weight: ['300', '400', '600', '700', '900'],
+  style: 'normal',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: 
+    '--font-titillium-web',
+})
 
 export default function RootLayout({ children }) {
   const initialConnectToDB = async () => {
@@ -43,7 +55,7 @@ export default function RootLayout({ children }) {
   initialConnectToDB();
   
   return (
-    <html lang="en">
+    <html lang="en" className={`${titilliumWeb.variable}`}>
       <body>
         <div className='main'>
           <div className='gradient'/>

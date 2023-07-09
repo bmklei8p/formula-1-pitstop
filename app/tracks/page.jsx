@@ -9,6 +9,10 @@ export default function TracksMap() {
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [mobileScreen, setMobileScreen] = useState(false);
   const [mobileTrackIndex, setMobileTrackIndex] = useState(0);
+  const [ centerMobile, setCenterMobile ] = useState({
+    lat: 50,
+    lng: 10
+  });
 
   // get track list from api linked to db
   const [ trackList, setTrackList ] = useState([]);
@@ -38,6 +42,7 @@ export default function TracksMap() {
 
   const handleMarkerClick = (marker) => {
     setSelectedMarker(marker);
+    setCenterMobile({lat: marker.lat, lng: marker.long});
   };
 
   const handleCloseInfoWindow = () => {
@@ -46,6 +51,7 @@ export default function TracksMap() {
 
   const handleTrackClick = (track) => {
     setSelectedMarker(track);
+    setCenterMobile({lat: track.lat, lng: track.long});
   };
 
   const renderTrackList = () => {
@@ -144,10 +150,6 @@ export default function TracksMap() {
     lat: 10,
     lng: 0
   };
-  const centerMobile = {
-    lat: 50,
-    lng: 10
-  };
 
   const mapOptions = {
     disableDefaultUI: true,
@@ -156,7 +158,8 @@ export default function TracksMap() {
   return (
     <div className='tracks-container'>
       <div className='tracks-title-block'>
-        <h1 className='page-title'>
+        <h1 className='font-bold font-sans '>  {/* font-bold is the font-weight, 
+        font-sans is the family I custom imported, need to do sizing/coloring if i want to */}
           2023 Formula 1 Tracks
         </h1>
       </div>
