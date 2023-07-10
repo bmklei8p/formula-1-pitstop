@@ -11,7 +11,6 @@ export const GET = async (request, { params }) => {
         console.log(error);
         return new Response(JSON.stringify({ error: error.message }), { status: 500 });
     }
-
 }
 
 
