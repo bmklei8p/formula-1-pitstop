@@ -157,12 +157,6 @@ export default function TracksMap() {
 
   return (
     <div className='tracks-container'>
-      <div className='tracks-title-block'>
-        <h1 className='font-bold font-sans '>  {/* font-bold is the font-weight, 
-        font-sans is the family I custom imported, need to do sizing/coloring if i want to */}
-          2023 Formula 1 Tracks
-        </h1>
-      </div>
       <div className='map-container'>
         <LoadScript googleMapsApiKey={API_KEY}>
           <GoogleMap
@@ -191,7 +185,14 @@ export default function TracksMap() {
           </GoogleMap>
         </LoadScript>
       </div>
+
         {/* Container with track list */}
+      <div className='tracks-title-block mt-2'>
+        <h1 className='font-bold font-sans text-3xl text-red-800'>  {/* font-bold is the font-weight,
+        font-sans is the family I custom imported, need to do sizing/coloring if i want to */}
+          2023 Formula 1 Tracks
+        </h1>
+      </div>
       <div className='track-list-container'>
         {mobileScreen ? renderMobileTrackList() : renderTrackList()}
       </div>

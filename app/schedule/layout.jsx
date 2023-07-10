@@ -1,11 +1,11 @@
-'use client' 
+'use client'
 
 import ScheduleProvider from "./components/ScheduleProvider"
 
 const StandingsLayout = ({children}) => {
 
   return (
-    <div>
+    <div className="w-full flex justify-center">
         <ScheduleProvider>
             {children}
         </ScheduleProvider>

@@ -1,8 +1,14 @@
-import React from 'react'
 
-const PastRaces = () => {
+const PastRaces = ({races}) => {
   return (
-    <div>PastRaces</div>
+    <div>
+      {races && races.map((race, index) => {
+        return (
+          <div key={index}>
+            {race.raceName}
+          </div>
+        )})}
+    </div>
   )
 }
 
