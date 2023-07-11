@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const UpcomingRace = ({ nextRace }) => {
   const currentDate = new Date();
   const raceDate = new Date(nextRace.date);
@@ -11,22 +13,28 @@ const UpcomingRace = ({ nextRace }) => {
   );
 
   return (
-    <div className="w-full flex flex-col justify-center border-4 bg-black text-white ">
-      <div>
+    <Link href={`schedule/current/${nextRace.round}`} className="w-full grid border-4 bg-gray-500 text-white pt-2">  {/* this was a flex flex-col */}
+      <div className="text-xl md:text-2xl">
         {nextRace.raceName}
       </div>
-      <div className="flex justify-center mb-2 mt-1">
-          <div>
-            {daysUntilRace} Days :{' '}
+      <div className="justify-self-center w-full md:w-8/12"> 
+      <div className="grid grid-cols-3 mb-2 mt-1 divide-x-2 md:divide-x-4  justify-center">
+         {/* <div className="justify-self-center">  */}
+          <div className="flex flex-col">
+            <div>{daysUntilRace}</div>
+            <div>Days</div>
           </div>
-          <div>
-            {hoursUntilRace} Hours :{' '}
+          <div className="flex flex-col">
+            <div>{hoursUntilRace}</div>
+            <div>Hours</div>
           </div>
-          <div>
-            {minutesUntilRace} Minutes
+          <div className="flex flex-col">
+            <div>{minutesUntilRace}</div>
+            <div>Minutes</div>
+          </div>
           </div>
         </div>
-    </div>
+    </Link>
   )
 }
 

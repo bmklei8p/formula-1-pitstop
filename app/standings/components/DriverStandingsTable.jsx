@@ -1,5 +1,3 @@
-import React from 'react'
-
 const DriverStandingsTable = ({standings}) => {
     return (
         <div className='sm:w-1/2 sm:pt-6'>

@@ -32,3 +32,8 @@
 
 7/9 - Update font to the font used on f1 page: font is titillium-web on google fonts. Updated it following next.js doc to work with one font-weight/variable. Know that i need to use array for importing but how to denote the variable that will be pulled into tailwind config. Use the font-weight class before the font-family in the tailwind className to specific which font-weight to use. - Complete
 
+7/10 - Sprint races are causing errors as they do not have the same keys as the other races for the results: may need to loop over the shcedule, flag the sprint vs regular, and then have each sent to its own result component.
+
+
+7/11 need a back button on the result/schedule detail pages
+signapore track needs layout or link fixed 
