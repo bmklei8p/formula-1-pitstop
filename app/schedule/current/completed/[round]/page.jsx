@@ -9,8 +9,8 @@ const RaceResultsPage = async ({ params }) => {
   return (
     <div className="flex flex-col justify-center text-left w-full md:w-3/4">
         <RacePodiumResults raceResults={raceResults} raceCircuitId={race.Circuit.circuitId}/>
-        <div className="text-xl mt-4 text-red-500 md:text-2xl">Race Weekend Results</div>
-        <div>{race.raceName}</div>
+        <div className="text-2xl mt-4 ml-4 font-bold text-red-500 md:text-4xl">Race Weekend Results</div>
+        <div className="text-2xl ml-4 mb-1">{race.raceName}</div>
         <ResultsList raceResults={raceResults}/>
     </div>
   )
