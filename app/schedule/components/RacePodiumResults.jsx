@@ -13,10 +13,10 @@ const RacePodiumResults = ({raceResults, raceCircuitId}) => {
             </Link>
         </div> */}
         {/* need to put this image in a box for larger screens  width={1353} height={447} */}
-        <div className="relative border-black border-4 h-72 md:h-96  w-full">
+        <div className="relative border-black border-4 h-72 md:h-96 w-full">
             <Image className="" priority={true} fill={true} sizes="100vw" src={`/assets/images/podium/${raceCircuitId}_podium.jpeg`} alt="podium"/>
         </div>
-        <div className="w-full p-x-4 mt-4 hidden md:block">
+        <div className="w-full p-x-4 mt-4 hidden lg:block">
             <div className="flex flex-row w-full text-xl md:text-2xl mb-3">
                 <div className="basis-1/5 flex justify-center">
                     <Image src="/assets/images/first.png" alt="first place trophy" width={50} height={50} />

@@ -53,7 +53,7 @@ const ConstructorSingleRaceStandingsTable = ({ standings }) => {
     // sort constructors by points
   const sortedConstructors = Object.values(constructorResults).sort((a, b) => b.points - a.points);
   return (
-    <div className='sm:w-1/2 sm:pt-6'>
+    <div className='lg:w-1/2 sm:pt-6'>
     {/* table header */}
     <div className="bg-slate-300 px-6 py-4 w-1/10 max-w-lg mx-auto shadow-lg flex items-start border-solid border-red-500 border-b-[3px]">
         <div className="basis-1/5 shrink-0">

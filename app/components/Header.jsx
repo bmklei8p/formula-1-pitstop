@@ -44,17 +44,15 @@ return (
                 <Image className="logo-img" src='/assets/images/logo.png' alt='f1-logo' width={50} height={50} />
                 <h2 className="title">Formula 1 Pitstop</h2>
             </div>
-            <div className="md:flex hidden" style={{padding: "1rem"}}>
-                <div className='links'>
+            <div className="hidden lg:p-2 lg:block">
+                <div className='grid grid-cols-5 divide-x-2 justify-center '>
                 {navLinks.map((link) => (
-                        <div key={link.href} className='desktop-link-box'>
-                            <Link href={link.href}>{link.title}</Link>
-                        </div>
+                        <Link key={link.href} className='text-xl desktop-link-box hover:bg-slate-300  hover:text-black flex px-4 items-center justify-center' href={link.href}>{link.title}</Link>
                     ))}
                 </div>
             </div>
             {/* mobile header - sidebar */}
-            <div className="md:hidden flex justify-end">
+            <div className="lg:hidden flex justify-end">
                 <RiMenuFill size={30} onClick={() => setShowSideBar((prev) => !prev)} />
                 {showSideBar && (
                     <div className="sidebar">
