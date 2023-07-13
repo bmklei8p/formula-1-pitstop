@@ -7,10 +7,16 @@ const RaceResultsPage = async ({ params }) => {
   const raceResults = race.Results;
 
   return (
-    <div className="flex flex-col justify-center text-left w-full md:w-3/4">
+    <div className="flex flex-col justify-center text-center w-full md:w-3/4">
         <RacePodiumResults raceResults={raceResults} raceCircuitId={race.Circuit.circuitId}/>
-        <div className="text-2xl mt-4 ml-4 font-bold text-red-500 md:text-4xl">Race Weekend Results</div>
-        <div className="text-2xl ml-4 mb-1">{race.raceName}</div>
+        <div className="mt-4 ml-4">
+          <h1 className="text-2xl font-bold text-red-500 md:text-4xl">
+            Race Weekend Results
+          </h1>
+          <h3 className="text-xl ml-4 mb-1">
+            {race.raceName}
+          </h3>
+        </div>
         <ResultsList raceResults={raceResults}/>
     </div>
   )

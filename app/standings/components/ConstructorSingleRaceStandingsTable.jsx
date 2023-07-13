@@ -42,17 +42,16 @@ const ConstructorSingleRaceStandingsTable = ({ standings }) => {
     },
   }
     // loop through standings and add up points for each constructor
-//   const addPointsToConstructor = (standings) => {
-//     for (let i = 0; i < standings.length; i++) {
-//         const constructor = standings[i].Constructor.constructorId;
-//         const points = parseInt(standings[i].points);
-//         constructorResults[constructor].points += points;
-//         }
-//     }
-//   addPointsToConstructor(standings);
-//     // sort constructors by points
-//     const sortedConstructors = Object.values(constructorResults).sort((a, b) => b.points - a.points);
-//   console.log(sortedConstructors)
+  const addPointsToConstructor = (standings) => {
+    for (let i = 0; i < standings.length; i++) {
+        const constructor = standings[i].Constructor.constructorId;
+        const points = parseInt(standings[i].points);
+        constructorResults[constructor].points += points;
+        }
+    }
+  addPointsToConstructor(standings);
+    // sort constructors by points
+  const sortedConstructors = Object.values(constructorResults).sort((a, b) => b.points - a.points);
   return (
     <div className='sm:w-1/2 sm:pt-6'>
     {/* table header */}
@@ -66,17 +65,17 @@ const ConstructorSingleRaceStandingsTable = ({ standings }) => {
         <p className='font-medium text-lg basis-1/5'>Points</p>
     </div>
     {/* map through standings and display each position */}
-    {/* {Object.keys(sortedConstructors).map((constructor) => (
-        <div key={constructor.name} className="px-6 py-4 max-w-lg mx-auto shadow-lg flex items-start even:bg-slate-200 odd:bg-slate-300">
+    {sortedConstructors.map((constructor, index) => (
+        <div key={index} className="px-6 py-4 max-w-lg mx-auto shadow-lg flex items-start even:bg-slate-200 odd:bg-slate-300">
             <div className="shrink-0 basis-1/5">
-                <h1 className='text-center'>{constructor.points}</h1>
+                <h1 className='text-center'>{index + 1}</h1>
             </div>
             <div className="w-full md:flex-row basis-3/5">
                 <div className="text-xl text-black">{constructor.name}</div>
             </div>
             <p className='text-center basis-1/5'>{constructor.points}</p>
         </div>
-    ))} */}
+    ))}
 </div>
   )
 }
