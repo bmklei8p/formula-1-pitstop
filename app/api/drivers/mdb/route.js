@@ -1,12 +1,11 @@
 import { connectToDB } from "@/utils/database"
+import Driver from "@/models/driver";
 
-export default GET = async (req, res) => {
+export const GET = async (req, res) => {
     try {
         connectToDB();
-        const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-        const json = await res.json();
-        console.log(json);
-        return new Response(JSON.stringify(json), {status: 200});
+        const drivers = await Driver.find({});
+        return new Response(JSON.stringify(drivers), { status: 200 })
     } catch (err) {
         console.log(err);
         return new Response(err, {status: 500});

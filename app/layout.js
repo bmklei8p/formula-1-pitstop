@@ -9,8 +9,6 @@ export const metadata = {
 }
 
 const titilliumWeb = Titillium_Web({
-  // weight: '300',
-  // weight: ['300'],
   weight: ['300', '400', '600', '700', '900'],
   style: 'normal',
   subsets: ['latin'],
@@ -29,20 +27,21 @@ export default function RootLayout({ children }) {
   //           useUnifiedTopology: true,
   //       })
 
-  //       // upload all tracks to database
-  //       // check if tracks collection is empty
-  //       const data = await mongoose.connection.collection('tracks').find({}).toArray();
-  //       if (data.length > 0) {
+  //       // check if collections are empty
+  //       const dataTrack = await mongoose.connection.collection('tracks').find({}).toArray();
+  //       const dataDriver = await mongoose.connection.collection('drivers').find({}).toArray();
+  //       if (dataTrack.length > 0 && dataDriver.length > 0) {
   //           console.log("Tracks already uploaded to database");
   //           return;
   //       }
+  //       // upload all tracks to database
   //       const tracks = require('../utils/tracks.json');
   //       await mongoose.connection.collection('tracks').insertMany(tracks);
   //       console.log("Tracks uploaded to database");
   //       // upload all drivers to database
-  //       // const drivers = require('./drivers.json');
-  //       // await mongoose.connection.collection('drivers').insertMany(drivers);
-  //       // console.log("Drivers uploaded to database");
+  //       const drivers = require('../utils/drivers.json');
+  //       await mongoose.connection.collection('drivers').insertMany(drivers);
+  //       console.log("Drivers uploaded to database");
   //       // // upload all teams to database
   //       // const teams = require('./teams.json');
   //       // await mongoose.connection.collection('teams').insertMany(teams);

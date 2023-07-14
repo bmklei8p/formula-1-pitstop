@@ -1,6 +1,6 @@
-{ "albon": {
+[{
     "driverId": "albon",
-    "color": "e20b20",
+    "color": "#34bedd",
     "permanentNumber": "23",
     "code": "ALB",
     "url": "http://en.wikipedia.org/wiki/Alexander_Albon",
@@ -19,9 +19,9 @@
     "wins": "0",
     "careerPoints": "212"
     },
-    "alonso": {
+    {
         "driverId": "alonso",
-        "color": "e20b20",
+        "color": "#368b74",
         "permanentNumber": "14",
         "code": "ALO",
         "url": "http://en.wikipedia.org/wiki/Fernando_Alonso",
@@ -40,9 +40,9 @@
         "wins": "32",
         "careerPoints": "2198"
     },
-    "bottas": {
+    {
         "driverId": "bottas",
-        "color": "e20b20",
+        "color": "#c92d4c",
         "permanentNumber": "77",
         "code": "BOT",
         "url": "http://en.wikipedia.org/wiki/Valtteri_Bottas",
@@ -61,9 +61,9 @@
         "wins": "10",
         "careerPoints": "1792"
     },
-    "de_vries": {
+    {
         "driverId": "de_vries",
-        "color": "e20b20",
+        "color": "#5e8fab",
         "permanentNumber": "21",
         "code": "DEV",
         "url": "http://en.wikipedia.org/wiki/Nyck_de_Vries",
@@ -82,9 +82,9 @@
         "wins": "0",
         "careerPoints": "2"
     },
-    "gasly": {
+    {
         "driverId": "gasly",
-        "color": "e20b20",
+        "color": "#2293d1",
         "permanentNumber": "10",
         "code": "GAS",
         "url": "http://en.wikipedia.org/wiki/Pierre_Gasly",
@@ -103,7 +103,7 @@
         "wins": "1",
         "careerPoints": "348"
     },
-    "hamilton": {
+    {
         "driverId": "hamilton",
         "color": "#6cd3c0",
         "permanentNumber": "44",
@@ -124,9 +124,9 @@
         "wins": "103",
         "careerPoints": "4526.5"
     },
-    "hulkenberg": {
+    {
         "driverId": "hulkenberg",
-        "color": "e20b20",
+        "color": "#b5babd",
         "permanentNumber": "27",
         "code": "HUL",
         "url": "http://en.wikipedia.org/wiki/Nico_Hülkenberg",
@@ -145,9 +145,9 @@
         "wins": "0",
         "careerPoints": "530"
     },
-    "leclerc": {
+    {
         "driverId": "leclerc",
-        "color": "e20b20",
+        "color": "#f91437",
         "permanentNumber": "16",
         "code": "LEC",
         "url": "http://en.wikipedia.org/wiki/Charles_Leclerc",
@@ -166,9 +166,9 @@
         "wins": "5",
         "careerPoints": "942"
     },
-    "kevin_magnussen": {
+    {
         "driverId": "kevin_magnussen",
-        "color": "e20b20",
+        "color": "#b5babd",
         "permanentNumber": "20",
         "code": "MAG",
         "url": "http://en.wikipedia.org/wiki/Kevin_Magnussen",
@@ -187,9 +187,9 @@
         "wins": "0",
         "careerPoints": "185"
     },
-    "norris": {
+    {
         "driverId": "norris",
-        "color": "e20b20",
+        "color": "#f5801f",
         "permanentNumber": "4",
         "code": "NOR",
         "url": "http://en.wikipedia.org/wiki/Lando_Norris",
@@ -208,9 +208,9 @@
         "wins": "0",
         "careerPoints": "470"
     },
-    "ocon": {
+    {
         "driverId": "ocon",
-        "color": "e20b20",
+        "color": "#2293d1",
         "permanentNumber": "31",
         "code": "OCO",
         "url": "http://en.wikipedia.org/wiki/Esteban_Ocon",
@@ -229,9 +229,9 @@
         "wins": "1",
         "careerPoints": "395"
     },
-    "perez": {
+    {
         "driverId": "perez",
-        "color": "e20b20",
+        "color": "#e20b20",
         "permanentNumber": "11",
         "code": "PER",
         "url": "http://en.wikipedia.org/wiki/Sergio_Pérez",
@@ -250,9 +250,9 @@
         "wins": "6",
         "careerPoints": "1357"
     },
-    "piastri": {
+    {
         "driverId": "piastri",
-        "color": "e20b20",
+        "color": "#f5801f",
         "permanentNumber": "81",
         "code": "PIA",
         "url": "http://en.wikipedia.org/wiki/Oscar_Piastri",
@@ -271,7 +271,7 @@
         "wins": "0",
         "careerPoints": "17"
     },
-    "russell": {
+    {
         "driverId": "russell",
         "color": "#6cd3c0",
         "permanentNumber": "63",
@@ -292,9 +292,9 @@
         "wins": "1",
         "careerPoints": "376"
     },
-    "sainz": {
+    {
         "driverId": "sainz",
-        "color": "e20b20",
+        "color": "#f91437",
         "permanentNumber": "55",
         "code": "SAI",
         "url": "http://en.wikipedia.org/wiki/Carlos_Sainz_Jr.",
@@ -313,9 +313,9 @@
         "wins": "1",
         "careerPoints": "865.5"
     },
-    "sargeant": {
+    {
         "driverId": "sargeant",
-        "color": "e20b20",
+        "color": "#34bedd",
         "permanentNumber": "2",
         "code": "SAR",
         "url": "http://en.wikipedia.org/wiki/Logan_Sargeant",
@@ -334,9 +334,9 @@
         "wins": "0",
         "careerPoints": "0"
     },
-    "stroll": {
+    {
         "driverId": "stroll",
-        "color": "e20b20",
+        "color": "#368b74",
         "permanentNumber": "18",
         "code": "STR",
         "url": "http://en.wikipedia.org/wiki/Lance_Stroll",
@@ -355,9 +355,9 @@
         "wins": "0",
         "careerPoints": "238"
     },
-    "tsunoda": {
+    {
         "driverId": "tsunoda",
-        "color": "e20b20",
+        "color": "#5e8fab",
         "permanentNumber": "22",
         "code": "TSU",
         "url": "http://en.wikipedia.org/wiki/Yuki_Tsunoda",
@@ -376,9 +376,9 @@
         "wins": "0",
         "careerPoints": "46"
     },
-    "max_verstappen": {
+    {
         "driverId": "max_verstappen",
-        "color": "e20b20",
+        "color": "#e20b20",
         "permanentNumber": "33",
         "code": "VER",
         "url": "http://en.wikipedia.org/wiki/Max_Verstappen",
@@ -397,9 +397,9 @@
         "wins": "43",
         "careerPoints": "2266.5"
     },
-    "zhou": {
+    {
         "driverId": "zhou",
-        "color": "e20b20",
+        "color": "#c92d4c",
         "permanentNumber": "24",
         "code": "ZHO",
         "url": "http://en.wikipedia.org/wiki/Guanyu_Zhou",
@@ -418,4 +418,4 @@
         "wins": "0",
         "careerPoints": "10"
     }
-}
+]
