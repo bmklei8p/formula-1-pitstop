@@ -136,7 +136,7 @@ const DriversPage = () => {
         "dateOfBirth": "1987-08-19",
         "nationality": "German",
         "driverHeadshotImage": "hulkenberg_front.png",
-        "flagImage": "Germany_flag.svg",
+        "flagImage": "German_flag.svg",
         "team": "Haas",
         "carNumber": "27",
         "podiums": "0",
@@ -412,16 +412,16 @@ const DriversPage = () => {
   return (
     <div className='w-9/12 mt-4 md:w-3/4'>
       {/* card container */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-10 md:space-y-0 md:space-x-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
       {/* card   */}
       {drivers.map((driver, index) => (
-        <Link href='drivers/'>
-          <div key={index} className={`flex p-2 w-full flex-col border-t-4 border-r-4 hover:border-${driver.color} border-black rounded-md `}>
+        <Link key={index} href='drivers/'>
+          <div className={`flex p-2 w-full flex-col border-t-4 border-r-4 hover:border-${driver.color} border-black rounded-md `}>
             <div className='flex flex-row justify-between'>
               <div className='flex justify-center items-center text-xl md:text-2xl'><h1>{index+1}</h1></div>
               <div className='flex flex-col'>
               {/* this needs to be updated to this seasons points */}
-                <div className='text-center text-l md:text-xl'>{driver.points}</div>  
+                <div className='text-center text-l md:text-xl'>{driver.points}</div>
                 <div className='bg-black text-white font-bold px-2 rounded-lg mb-1' >POINTS</div>
               </div>
             </div>
