@@ -1,26 +1,27 @@
-[
-    {
-        "driverId": "albon",
-        "permanentNumber": "23",
-        "code": "ALB",
-        "url": "http://en.wikipedia.org/wiki/Alexander_Albon",
-        "givenName": "Alexander",
-        "familyName": "Albon",
-        "dateOfBirth": "1996-03-23",
-        "nationality": "Thai",
-        "driverHeadshotImage": "albon_front.png",
-        "flagImage": "thailand_flag.avif",
-        "team": "Williams",
-        "carNumber": "23",
-        "podiums": "2",
-        "placeOfBirth": "London, England",
-        "highestGridPosition": "4",
-        "highestRaceFinish": "3x2",
-        "wins": "0",
-        "points": "212"
+{ "albon": {
+    "driverId": "albon",
+    "color": "e20b20",
+    "permanentNumber": "23",
+    "code": "ALB",
+    "url": "http://en.wikipedia.org/wiki/Alexander_Albon",
+    "givenName": "Alexander",
+    "familyName": "Albon",
+    "dateOfBirth": "1996-03-23",
+    "nationality": "Thai",
+    "driverHeadshotImage": "albon_front.png",
+    "flagImage": "thailand_flag.avif",
+    "team": "Williams",
+    "carNumber": "23",
+    "podiums": "2",
+    "placeOfBirth": "London, England",
+    "highestGridPosition": "4",
+    "highestRaceFinish": "3x2",
+    "wins": "0",
+    "careerPoints": "212"
     },
-    {
+    "alonso": {
         "driverId": "alonso",
+        "color": "e20b20",
         "permanentNumber": "14",
         "code": "ALO",
         "url": "http://en.wikipedia.org/wiki/Fernando_Alonso",
@@ -37,10 +38,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x32",
         "wins": "32",
-        "points": "2198"
+        "careerPoints": "2198"
     },
-    {
+    "bottas": {
         "driverId": "bottas",
+        "color": "e20b20",
         "permanentNumber": "77",
         "code": "BOT",
         "url": "http://en.wikipedia.org/wiki/Valtteri_Bottas",
@@ -57,10 +59,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x10",
         "wins": "10",
-        "points": "1792"
+        "careerPoints": "1792"
     },
-    {
+    "de_vries": {
         "driverId": "de_vries",
+        "color": "e20b20",
         "permanentNumber": "21",
         "code": "DEV",
         "url": "http://en.wikipedia.org/wiki/Nyck_de_Vries",
@@ -77,10 +80,11 @@
         "highestGridPosition": "8",
         "highestRaceFinish": "9x1",
         "wins": "0",
-        "points": "2"
+        "careerPoints": "2"
     },
-    {
+    "gasly": {
         "driverId": "gasly",
+        "color": "e20b20",
         "permanentNumber": "10",
         "code": "GAS",
         "url": "http://en.wikipedia.org/wiki/Pierre_Gasly",
@@ -97,10 +101,11 @@
         "highestGridPosition": "2",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "points": "348"
+        "careerPoints": "348"
     },
-    {
+    "hamilton": {
         "driverId": "hamilton",
+        "color": "#6cd3c0",
         "permanentNumber": "44",
         "code": "HAM",
         "url": "http://en.wikipedia.org/wiki/Lewis_Hamilton",
@@ -117,10 +122,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x103",
         "wins": "103",
-        "points": "4526.5"
+        "careerPoints": "4526.5"
     },
-    {
+    "hulkenberg": {
         "driverId": "hulkenberg",
+        "color": "e20b20",
         "permanentNumber": "27",
         "code": "HUL",
         "url": "http://en.wikipedia.org/wiki/Nico_Hülkenberg",
@@ -137,10 +143,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "4",
         "wins": "0",
-        "points": "530"
+        "careerPoints": "530"
     },
-    {
+    "leclerc": {
         "driverId": "leclerc",
+        "color": "e20b20",
         "permanentNumber": "16",
         "code": "LEC",
         "url": "http://en.wikipedia.org/wiki/Charles_Leclerc",
@@ -157,10 +164,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x5",
         "wins": "5",
-        "points": "942"
+        "careerPoints": "942"
     },
-    {
+    "kevin_magnussen": {
         "driverId": "kevin_magnussen",
+        "color": "e20b20",
         "permanentNumber": "20",
         "code": "MAG",
         "url": "http://en.wikipedia.org/wiki/Kevin_Magnussen",
@@ -177,10 +185,11 @@
         "highestGridPosition": "4",
         "highestRaceFinish": "2x1",
         "wins": "0",
-        "points": "185"
+        "careerPoints": "185"
     },
-    {
+    "norris": {
         "driverId": "norris",
+        "color": "e20b20",
         "permanentNumber": "4",
         "code": "NOR",
         "url": "http://en.wikipedia.org/wiki/Lando_Norris",
@@ -197,10 +206,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "2x2",
         "wins": "0",
-        "points": "470"
+        "careerPoints": "470"
     },
-    {
+    "ocon": {
         "driverId": "ocon",
+        "color": "e20b20",
         "permanentNumber": "31",
         "code": "OCO",
         "url": "http://en.wikipedia.org/wiki/Esteban_Ocon",
@@ -217,10 +227,11 @@
         "highestGridPosition": "3",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "points": "395"
+        "careerPoints": "395"
     },
-    {
+    "perez": {
         "driverId": "perez",
+        "color": "e20b20",
         "permanentNumber": "11",
         "code": "PER",
         "url": "http://en.wikipedia.org/wiki/Sergio_Pérez",
@@ -237,10 +248,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x6",
         "wins": "6",
-        "points": "1357"
+        "careerPoints": "1357"
     },
-    {
+    "piastri": {
         "driverId": "piastri",
+        "color": "e20b20",
         "permanentNumber": "81",
         "code": "PIA",
         "url": "http://en.wikipedia.org/wiki/Oscar_Piastri",
@@ -257,10 +269,11 @@
         "highestGridPosition": "3",
         "highestRaceFinish": "4x1",
         "wins": "0",
-        "points": "17"
+        "careerPoints": "17"
     },
-    {
+    "russell": {
         "driverId": "russell",
+        "color": "#6cd3c0",
         "permanentNumber": "63",
         "code": "RUS",
         "url": "http://en.wikipedia.org/wiki/George_Russell_%28racing_driver%29",
@@ -277,10 +290,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "points": "376"
+        "careerPoints": "376"
     },
-    {
+    "sainz": {
         "driverId": "sainz",
+        "color": "e20b20",
         "permanentNumber": "55",
         "code": "SAI",
         "url": "http://en.wikipedia.org/wiki/Carlos_Sainz_Jr.",
@@ -297,10 +311,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "points": "865.5"
+        "careerPoints": "865.5"
     },
-    {
+    "sargeant": {
         "driverId": "sargeant",
+        "color": "e20b20",
         "permanentNumber": "2",
         "code": "SAR",
         "url": "http://en.wikipedia.org/wiki/Logan_Sargeant",
@@ -317,10 +332,11 @@
         "highestGridPosition": "14",
         "highestRaceFinish": "11x1",
         "wins": "0",
-        "points": "0"
+        "careerPoints": "0"
     },
-    {
+    "stroll": {
         "driverId": "stroll",
+        "color": "e20b20",
         "permanentNumber": "18",
         "code": "STR",
         "url": "http://en.wikipedia.org/wiki/Lance_Stroll",
@@ -337,10 +353,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "3x3",
         "wins": "0",
-        "points": "238"
+        "careerPoints": "238"
     },
-    {
+    "tsunoda": {
         "driverId": "tsunoda",
+        "color": "e20b20",
         "permanentNumber": "22",
         "code": "TSU",
         "url": "http://en.wikipedia.org/wiki/Yuki_Tsunoda",
@@ -357,10 +374,11 @@
         "highestGridPosition": "7",
         "highestRaceFinish": "4x1",
         "wins": "0",
-        "points": "46"
+        "careerPoints": "46"
     },
-    {
+    "max_verstappen": {
         "driverId": "max_verstappen",
+        "color": "e20b20",
         "permanentNumber": "33",
         "code": "VER",
         "url": "http://en.wikipedia.org/wiki/Max_Verstappen",
@@ -377,10 +395,11 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x43",
         "wins": "43",
-        "points": "2266.5"
+        "careerPoints": "2266.5"
     },
-    {
+    "zhou": {
         "driverId": "zhou",
+        "color": "e20b20",
         "permanentNumber": "24",
         "code": "ZHO",
         "url": "http://en.wikipedia.org/wiki/Guanyu_Zhou",
@@ -397,6 +416,6 @@
         "highestGridPosition": "9",
         "highestRaceFinish": "8x1",
         "wins": "0",
-        "points": "10"
+        "careerPoints": "10"
     }
-]
+}

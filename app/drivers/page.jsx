@@ -1,33 +1,36 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState, useEffect } from "react"
 
 const DriversPage = () => {
-  const getDrivers = async () => {
-    const driverInformation = await fetch('')
-  }
-  const drivers = [
-    {
-        "driverId": "albon",
-        "permanentNumber": "23",
-        "code": "ALB",
-        "url": "http://en.wikipedia.org/wiki/Alexander_Albon",
-        "givenName": "Alexander",
-        "familyName": "Albon",
-        "dateOfBirth": "1996-03-23",
-        "nationality": "Thai",
-        "driverHeadshotImage": "albon_front.png",
-        "flagImage": "thailand_flag.avif",
-        "team": "Williams",
-        "carNumber": "23",
-        "podiums": "2",
-        "placeOfBirth": "London, England",
-        "highestGridPosition": "4",
-        "highestRaceFinish": "3x2",
-        "wins": "0",
-        "points": "212"
+  const [ driversStandings, setDriversStandings ] = useState([])
+  // const [ driverInformation, setDriverInformation ] = useState()
+  const [ driverInformation, setDriverInformation ] = useState({ "albon": {
+    "driverId": "albon",
+    "color": "#34bedd",
+    "permanentNumber": "23",
+    "code": "ALB",
+    "url": "http://en.wikipedia.org/wiki/Alexander_Albon",
+    "givenName": "Alexander",
+    "familyName": "Albon",
+    "dateOfBirth": "1996-03-23",
+    "nationality": "Thai",
+    "driverHeadshotImage": "albon_front.png",
+    "flagImage": "thailand_flag.avif",
+    "team": "Williams",
+    "carNumber": "23",
+    "podiums": "2",
+    "placeOfBirth": "London, England",
+    "highestGridPosition": "4",
+    "highestRaceFinish": "3x2",
+    "wins": "0",
+    "careerPoints": "212"
     },
-    {
+    "alonso": {
         "driverId": "alonso",
+        "color": "#368b74",
         "permanentNumber": "14",
         "code": "ALO",
         "url": "http://en.wikipedia.org/wiki/Fernando_Alonso",
@@ -44,10 +47,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "1x32",
         "wins": "32",
-        "points": "2198"
+        "careerPoints": "2198"
     },
-    {
+    "bottas": {
         "driverId": "bottas",
+        "color": "#c92d4c",
         "permanentNumber": "77",
         "code": "BOT",
         "url": "http://en.wikipedia.org/wiki/Valtteri_Bottas",
@@ -64,10 +68,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "1x10",
         "wins": "10",
-        "points": "1792"
+        "careerPoints": "1792"
     },
-    {
+    "de_vries": {
         "driverId": "de_vries",
+        "color": "#5e8fab",
         "permanentNumber": "21",
         "code": "DEV",
         "url": "http://en.wikipedia.org/wiki/Nyck_de_Vries",
@@ -84,10 +89,11 @@ const DriversPage = () => {
         "highestGridPosition": "8",
         "highestRaceFinish": "9x1",
         "wins": "0",
-        "points": "2"
+        "careerPoints": "2"
     },
-    {
+    "gasly": {
         "driverId": "gasly",
+        "color": "#2293d1",
         "permanentNumber": "10",
         "code": "GAS",
         "url": "http://en.wikipedia.org/wiki/Pierre_Gasly",
@@ -104,10 +110,11 @@ const DriversPage = () => {
         "highestGridPosition": "2",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "points": "348"
+        "careerPoints": "348"
     },
-    {
+    "hamilton": {
         "driverId": "hamilton",
+        "color": "#6cd3c0",
         "permanentNumber": "44",
         "code": "HAM",
         "url": "http://en.wikipedia.org/wiki/Lewis_Hamilton",
@@ -124,10 +131,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "1x103",
         "wins": "103",
-        "points": "4526.5"
+        "careerPoints": "4526.5"
     },
-    {
+    "hulkenberg": {
         "driverId": "hulkenberg",
+        "color": "#b5babd",
         "permanentNumber": "27",
         "code": "HUL",
         "url": "http://en.wikipedia.org/wiki/Nico_Hülkenberg",
@@ -144,10 +152,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "4",
         "wins": "0",
-        "points": "530"
+        "careerPoints": "530"
     },
-    {
+    "leclerc": {
         "driverId": "leclerc",
+        "color": "#f91437",
         "permanentNumber": "16",
         "code": "LEC",
         "url": "http://en.wikipedia.org/wiki/Charles_Leclerc",
@@ -164,10 +173,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "1x5",
         "wins": "5",
-        "points": "942"
+        "careerPoints": "942"
     },
-    {
+    "kevin_magnussen": {
         "driverId": "kevin_magnussen",
+        "color": "#b5babd",
         "permanentNumber": "20",
         "code": "MAG",
         "url": "http://en.wikipedia.org/wiki/Kevin_Magnussen",
@@ -184,10 +194,11 @@ const DriversPage = () => {
         "highestGridPosition": "4",
         "highestRaceFinish": "2x1",
         "wins": "0",
-        "points": "185"
+        "careerPoints": "185"
     },
-    {
+    "norris": {
         "driverId": "norris",
+        "color": "#f5801f",
         "permanentNumber": "4",
         "code": "NOR",
         "url": "http://en.wikipedia.org/wiki/Lando_Norris",
@@ -204,10 +215,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "2x2",
         "wins": "0",
-        "points": "470"
+        "careerPoints": "470"
     },
-    {
+    "ocon": {
         "driverId": "ocon",
+        "color": "#2293d1",
         "permanentNumber": "31",
         "code": "OCO",
         "url": "http://en.wikipedia.org/wiki/Esteban_Ocon",
@@ -224,10 +236,11 @@ const DriversPage = () => {
         "highestGridPosition": "3",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "points": "395"
+        "careerPoints": "395"
     },
-    {
+    "perez": {
         "driverId": "perez",
+        "color": "#e20b20",
         "permanentNumber": "11",
         "code": "PER",
         "url": "http://en.wikipedia.org/wiki/Sergio_Pérez",
@@ -244,10 +257,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "1x6",
         "wins": "6",
-        "points": "1357"
+        "careerPoints": "1357"
     },
-    {
+    "piastri": {
         "driverId": "piastri",
+        "color": "#f5801f",
         "permanentNumber": "81",
         "code": "PIA",
         "url": "http://en.wikipedia.org/wiki/Oscar_Piastri",
@@ -264,10 +278,11 @@ const DriversPage = () => {
         "highestGridPosition": "3",
         "highestRaceFinish": "4x1",
         "wins": "0",
-        "points": "17"
+        "careerPoints": "17"
     },
-    {
+    "russell": {
         "driverId": "russell",
+        "color": "#6cd3c0",
         "permanentNumber": "63",
         "code": "RUS",
         "url": "http://en.wikipedia.org/wiki/George_Russell_%28racing_driver%29",
@@ -284,10 +299,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "points": "376"
+        "careerPoints": "376"
     },
-    {
+    "sainz": {
         "driverId": "sainz",
+        "color": "#f91437",
         "permanentNumber": "55",
         "code": "SAI",
         "url": "http://en.wikipedia.org/wiki/Carlos_Sainz_Jr.",
@@ -304,10 +320,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "points": "865.5"
+        "careerPoints": "865.5"
     },
-    {
+    "sargeant": {
         "driverId": "sargeant",
+        "color": "#34bedd",
         "permanentNumber": "2",
         "code": "SAR",
         "url": "http://en.wikipedia.org/wiki/Logan_Sargeant",
@@ -324,10 +341,11 @@ const DriversPage = () => {
         "highestGridPosition": "14",
         "highestRaceFinish": "11x1",
         "wins": "0",
-        "points": "0"
+        "careerPoints": "0"
     },
-    {
+    "stroll": {
         "driverId": "stroll",
+        "color": "#368b74",
         "permanentNumber": "18",
         "code": "STR",
         "url": "http://en.wikipedia.org/wiki/Lance_Stroll",
@@ -344,10 +362,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "3x3",
         "wins": "0",
-        "points": "238"
+        "careerPoints": "238"
     },
-    {
+    "tsunoda": {
         "driverId": "tsunoda",
+        "color": "#5e8fab",
         "permanentNumber": "22",
         "code": "TSU",
         "url": "http://en.wikipedia.org/wiki/Yuki_Tsunoda",
@@ -364,10 +383,11 @@ const DriversPage = () => {
         "highestGridPosition": "7",
         "highestRaceFinish": "4x1",
         "wins": "0",
-        "points": "46"
+        "careerPoints": "46"
     },
-    {
+    "max_verstappen": {
         "driverId": "max_verstappen",
+        "color": "#e20b20",
         "permanentNumber": "33",
         "code": "VER",
         "url": "http://en.wikipedia.org/wiki/Max_Verstappen",
@@ -384,10 +404,11 @@ const DriversPage = () => {
         "highestGridPosition": "1",
         "highestRaceFinish": "1x43",
         "wins": "43",
-        "points": "2266.5"
+        "careerPoints": "2266.5"
     },
-    {
+    "zhou": {
         "driverId": "zhou",
+        "color": "#c92d4c",
         "permanentNumber": "24",
         "code": "ZHO",
         "url": "http://en.wikipedia.org/wiki/Guanyu_Zhou",
@@ -404,39 +425,74 @@ const DriversPage = () => {
         "highestGridPosition": "9",
         "highestRaceFinish": "8x1",
         "wins": "0",
-        "points": "10"
+        "careerPoints": "10"
     }
-]
+}
+)
 
+  // drivers standings api call from ergast  
+  useEffect(() => {
+    const getDriverStandings = async () => {
+        const res = await fetch('http://localhost:3000/api/standings/drivers')
+        const data = await res.json()
+        setDriversStandings(data)
+        }
+    getDriverStandings();
+    }, []);
+ 
+
+  // driver information api call from db
+  // useEffect((drivers) => {
+  //   const getDriverInformation = async () => {
+  //     // const res = await fetch('http://localhost:3000/api/drivers')
+  //     // const data = await res.json()
+  //     console.log({"driver information": drivers})
+  //     setDriverInformation(drivers)
+  //   }
+  //   getDriverInformation(drivers);
+  // }, [])
+  // driversStandings.map((driver, index) => {
+  //   driver.set('flagImage', driverInformation[driver.driverId].flagImage)
+  //   driver.set('color', driverInformation[driver.driverId].color)
+  // })
+  // console.log({"drivers standings": driversStandings})
 
   return (
     <div className='w-9/12 mt-4 md:w-3/4'>
       {/* card container */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
       {/* card   */}
-      {drivers.map((driver, index) => (
+      {driversStandings  && driverInformation && driversStandings.map((driver, index) => {
+          const driverColor = driverInformation[driver.Driver.driverId].color;
+          const driverFlag = driverInformation[driver.Driver.driverId].flagImage;
+      return (
         <Link key={index} href='drivers/'>
-          <div className={`flex p-2 w-full flex-col border-t-4 border-r-4 hover:border-${driver.color} border-black rounded-md `}>
+          {/* hidden div for tailwind border custom utility classes to be pre-loaded for driver color's next to name and on hover*/}
+          <div className='hidden border-[#e20b20] border-[#368b74] border-[#6cd3c0] border-[#f91437] border-[#f5801f] 
+          border-[#2293d1] border-[#34bedd] border-[#b5babd] border-[#c92d4c] border-[#5e8fab]
+           hover:border-[#e20b20] hover:border-[#368b74] hover:border-[#6cd3c0] hover:border-[#f91437] hover:border-[#f5801f] 
+          hover:border-[#2293d1] hover:border-[#34bedd] hover:border-[#b5babd] hover:border-[#c92d4c] hover:border-[#5e8fab]'>
+            There has to be a better way to do this!
+          </div>
+          <div className={`flex p-2 w-full flex-col border-t-4 border-r-4 hover:border-[${driverColor}] border-black rounded-tr-lg`}>
             <div className='flex flex-row justify-between'>
               <div className='flex justify-center items-center text-xl md:text-2xl'><h1>{index+1}</h1></div>
               <div className='flex flex-col'>
-              {/* this needs to be updated to this seasons points */}
                 <div className='text-center text-l md:text-xl'>{driver.points}</div>
-                <div className='bg-black text-white font-bold px-2 rounded-lg mb-1' >POINTS</div>
+                <div className='bg-black text-white font-bold px-2 rounded-lg mb-1'>POINTS</div>
               </div>
             </div>
             <div className='flex flex-row pt-2 pb-2 items-center justify-between border-t-2 border-b-2 border-black '  >
-              <div className={`border-l-4 border-solid border-${driver.color} border-red-500`}><h3 className='px-2'>{driver.givenName + " "}  <strong>{driver.familyName}</strong></h3></div>
-              <div className=' overflow-hidden relative border-solid border-gray-300 rounded-md border-2 w-14 h-8'><Image src={`/assets/images/flag/${driver.flagImage}`} alt={`${driver.nationality} flag`} className='object-cover' fill={true}/></div>
+              <div className={`border-l-4 border-solid border-[${driverColor}]`}><h3 className='px-2'>{driver.Driver.givenName + " "}<strong>{driver.Driver.familyName}</strong></h3></div>
+              <div className=' overflow-hidden relative border-solid border-gray-300 rounded-md border-2 w-14 h-8'><Image src={`/assets/images/flag/${driverFlag}`} alt={`${driver.Driver.nationality} flag`} className='object-cover' fill={true}/></div>
             </div>
             <div className='flex flex-row justify-between items-end'>
-              {/* <div>{driver.carNumber}</div> */}
-              <div className='overflow-hidden relative w-14 h-10'><Image className='object-cover' src={`/assets/images/drivers/car_numbers/${driver.driverId}_car_number.avif`} alt={`${driver.givenName}'s car number stylized`} fill={true} /></div>
-              <div><Image src={`/assets/images/drivers/${driver.driverId}_front.png`} alt={`${driver.givenName} image`} height={200} width={200} /></div>
+              <div className='overflow-hidden relative w-14 h-10'><Image className='object-cover' src={`/assets/images/drivers/car_numbers/${driver.Driver.driverId}_car_number.avif`} alt={`${driver.Driver.givenName}'s car number stylized`} fill={true} /></div>
+              <div><Image src={`/assets/images/drivers/${driver.Driver.driverId}_front.png`} alt={`${driver.Driver.givenName} image`} height={200} width={200} /></div>
             </div>
           </div>
         </Link>
-        ))}
+        )})}
     </div>
     </div>
   )
