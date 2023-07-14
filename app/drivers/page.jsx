@@ -6,7 +6,6 @@ import { useState, useEffect } from "react"
 
 const DriversPage = () => {
   const [ driversStandings, setDriversStandings ] = useState([])
-  // const [ driverInformation, setDriverInformation ] = useState()
   const [ driverInformation, setDriverInformation ] = useState(null)
 
 
@@ -26,6 +25,7 @@ const DriversPage = () => {
     const getDriverInformation = async () => {
       const res = await fetch('http://localhost:3000/api/drivers/mdb')
       const data = await res.json()
+      // convert to map for faster lookup
       const driversMap = new Map();
       data.forEach(driver => {
           driversMap.set(driver.driverId, driver)})
@@ -63,11 +63,11 @@ const DriversPage = () => {
             </div>
             <div className='flex flex-row pt-2 pb-2 items-center justify-between border-t-2 border-b-2 border-black '  >
               <div className={`border-l-4 border-solid border-[${driverColor}]`}><h3 className='px-2'>{driver.Driver.givenName + " "}<strong>{driver.Driver.familyName}</strong></h3></div>
-              <div className=' overflow-hidden relative border-solid border-gray-300 rounded-md border-2 w-14 h-8'><Image src={`/assets/images/flag/${driverFlag}`} alt={`${driver.Driver.nationality} flag`} className='object-cover' fill={true}/></div>
+              <div className=' overflow-hidden relative border-solid border-gray-300 rounded-md border-2 w-14 h-8'><Image src={`/assets/images/flag/${driverFlag}`} alt={`${driver.Driver.nationality} flag`} sizes="(max-width: 768px) 100vw" className='object-cover' fill={true}/></div>
             </div>
             <div className='flex flex-row justify-between items-end'>
-              <div className='overflow-hidden relative w-14 h-10'><Image className='object-cover' src={`/assets/images/drivers/car_numbers/${driver.Driver.driverId}_car_number.avif`} alt={`${driver.Driver.givenName}'s car number stylized`} fill={true} /></div>
-              <div><Image src={`/assets/images/drivers/${driver.Driver.driverId}_front.png`} alt={`${driver.Driver.givenName} image`} height={200} width={200} /></div>
+              <div className='overflow-hidden relative w-14 h-10'><Image className='object-cover' src={`/assets/images/drivers/car_numbers/${driver.Driver.driverId}_car_number.avif`} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt={`${driver.Driver.givenName}'s car number stylized`} fill={true} /></div>
+              <div><Image src={`/assets/images/drivers/${driver.Driver.driverId}_front.png`} priority={true} alt={`${driver.Driver.givenName} image`} height={200} width={200} /></div>
             </div>
           </div>
         </Link>

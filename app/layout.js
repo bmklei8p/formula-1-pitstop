@@ -30,8 +30,9 @@ export default function RootLayout({ children }) {
   //       // check if collections are empty
   //       const dataTrack = await mongoose.connection.collection('tracks').find({}).toArray();
   //       const dataDriver = await mongoose.connection.collection('drivers').find({}).toArray();
-  //       if (dataTrack.length > 0 && dataDriver.length > 0) {
-  //           console.log("Tracks already uploaded to database");
+  //       const dataConstructor = await mongoose.connection.collection('constructors').find({}).toArray();
+  //       if (dataTrack.length > 0 && dataDriver.length > 0 && dataConstructor.length > 0) {
+  //           console.log("All data already uploaded to database");
   //           return;
   //       }
   //       // upload all tracks to database
@@ -42,10 +43,10 @@ export default function RootLayout({ children }) {
   //       const drivers = require('../utils/drivers.json');
   //       await mongoose.connection.collection('drivers').insertMany(drivers);
   //       console.log("Drivers uploaded to database");
-  //       // // upload all teams to database
-  //       // const teams = require('./teams.json');
-  //       // await mongoose.connection.collection('teams').insertMany(teams);
-  //       // console.log("Teams uploaded to database");
+  //       // upload all teams to database
+  //       const constructors = require('../utils/constructors.json');
+  //       await mongoose.connection.collection('constructors').insertMany(constructors);
+  //       console.log("Constructors uploaded to database");
   //   } catch (error) {
   //       console.log(error);
   //   }
