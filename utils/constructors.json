@@ -10,7 +10,7 @@
     "powerUnit": "Honda RBPT",
     "firstEntry": "1997",
     "worldChampionships": "5",
-    "highestRaceFinish": "1x102",
+    "highestRaceFinish": "1 (x102)",
     "polePositions": "91",
     "driverOne": "Max Verstappen",
     "driverTwo": "Sergio Perez",
@@ -32,7 +32,7 @@
     "powerUnit": "Mercedes",
     "firstEntry": "1970",
     "worldChampionships": "8",
-    "highestRaceFinish": "1x116",
+    "highestRaceFinish": "1 (x116)",
     "polePositions": "128",
     "driverOne": "Lewis Hamilton",
     "driverTwo": "George Russell",
@@ -216,12 +216,12 @@
     "highestRaceFinish": "1x2",
     "polePositions": "1",
     "driverOne": "Yuki Tsunoda",
-    "driverTwo": "Nyck de Vries",
+    "driverTwo": "Daniel Ricciardo",
     "driverOneId": "tsunoda",
-    "driverTwoId": "de_vries",
+    "driverTwoId": "ricciardo",
     "carURL": "alpha_tauri_car.avif",
     "teamLogoURL": "alphatauri_team_logo.png",
-    "driverOnePictureURL": "Yuki_Tsunoda_front.png",
-    "driverTwoPictureURL": "Nyck_de_Vries_front.png"
+    "driverOnePictureURL": "tsunoda_front.png",
+    "driverTwoPictureURL": "riccardo_front.png"
     }
 ]

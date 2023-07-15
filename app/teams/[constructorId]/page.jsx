@@ -1,5 +1,7 @@
-import Image from "next/image";
 import DriverInfoBox from "../components/DriverInfoBox";
+import ConstructorInfoBox from "../components/ConstructorInfoBox";
+import ImageCarousel from "../components/ImageCarousel";
+import Image from "next/image";
 
 // export async function generateStaticParams() {
 //     const races = await fetch('http://localhost:3000/api/schedule/season').then((res) => res.json())
@@ -10,32 +12,62 @@ import DriverInfoBox from "../components/DriverInfoBox";
 //   }
 
 const ConstructorDetailPage = async ({ params }) => {
-
-  const constructor = await fetch(`http://localhost:3000/api/constructors/${params.constructorId}`
-  ).then((res) => res.json())
+  const constructor = await fetch(
+    `http://localhost:3000/api/constructors/${params.constructorId}`
+  ).then((res) => res.json());
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-full md:w-9/12 bg-white flex flex-col md:flex-row md:justify-between">
-        {/* constructor info container */}
-        <div className=""> 
-          <p>hi?</p>
-        </div>
-        {/* diver pictures container */}
-        <div className="">
-          <div className="flex flex-row">
-            <DriverInfoBox pictureURL={constructor.driverOnePictureURL} driverName={constructor.driverOne} />
-            <DriverInfoBox pictureURL={constructor.driverTwoPictureURL} driverName={constructor.driverTwo} />
-            {/* alphatauri additional box for d-ric pic box */}
-            {constructor.constructorId === "alphatauri" && <DriverInfoBox pictureURL={constructor.driverOnePictureURL} driverName={constructor.driverOne} />}
+    <div className="w-full h-screen flex flex-col items-center bg-gray-100">
+      <div className="w-full h-full flex flex-col items-center bg-gray-100">
+        <h1 className="text-2xl md:text-3xl font-bold flex pt-2 pb-2 md:pb-4 ">
+          {constructor.fullTeamName}
+        </h1>
+        <div className="w-full md:w-9/12 2xl:w-1/2 bg-white flex flex-col gap-4 lg:flex-row lg:justify-between   md:gap-0 ">
+          {/* constructor info container */}
+          <div className="">
+            <ConstructorInfoBox constructor={constructor} />
           </div>
+          {/* diver pictures container */}
+          <div className="">
+          {(constructor.constructorId === "alphatauri") ?  (
+            <div className="flex flex-col md:flex-row">
+              <DriverInfoBox
+                pictureURL={constructor.driverOnePictureURL}
+                driverId={constructor.driverOneId}
+                driverName={constructor.driverOne}
+              />
+              <DriverInfoBox
+                pictureURL={constructor.driverTwoPictureURL}
+                driverId={constructor.driverTwoId}
+                driverName={constructor.driverTwo}
+              />
+              {/* alphatauri additional box for d-ric pic box */}
+              <DriverInfoBox pictureURL={"de_Vries_front.png"} driverId={"de_vries"} driverName={"Nyck de Vries"} />
+            </div>
+          ) :  (
+            <div className="flex flex-row">
+                <DriverInfoBox
+                  pictureURL={constructor.driverOnePictureURL}
+                  driverId={constructor.driverOneId}
+                  driverName={constructor.driverOne}
+                />
+                <DriverInfoBox
+                  pictureURL={constructor.driverTwoPictureURL}
+                  driverId={constructor.driverTwoId}
+                  driverName={constructor.driverTwo}
+              />
+              </div>)}
+          </div>
+        </div>
+        <div className="w-full md:w-9/12 2xl:w-1/2 mx-0 h-auto bg-gray-100">
+          <ImageCarousel imageURLArray={["albert_park_001.webp","albert_park_002.jpeg","albert_park_003.jpeg"]} path={`/assets/images/historic/`} />
+            {/* <Image src={`/assets/images/historic/albert_park_001.webp`} alt="sdf" priority={true} width={1920} height={1080} /> */}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ConstructorDetailPage
-
+export default ConstructorDetailPage;
 
 // sianz, magnussen, alphatauri

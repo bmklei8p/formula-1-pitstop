@@ -42,12 +42,12 @@ return (
         <div className="header-box">
             <div className="logo">
                 <Image className="logo-img" src='/assets/images/logo.png' alt='f1-logo' width={50} height={50} />
-                <h2 className="title">Formula 1 Pitstop</h2>
+                <h2 className="text-2xl font-semibold">Formula 1 Pitstop</h2>
             </div>
             <div className="hidden lg:p-2 lg:block">
                 <div className='grid grid-cols-5 divide-x-2 justify-center '>
                 {navLinks.map((link) => (
-                        <Link key={link.href} className='text-xl desktop-link-box hover:bg-slate-300  hover:text-black flex px-4 items-center justify-center' href={link.href}>{link.title}</Link>
+                        <Link key={link.href} className='text-xl hover:bg-white text-light hover:text-black flex px-4 items-center justify-center' href={link.href}>{link.title}</Link>
                     ))}
                 </div>
             </div>

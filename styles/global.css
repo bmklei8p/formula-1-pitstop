@@ -6,7 +6,8 @@
 
 body {
   /* background-color: #e2e8f0; */
-  background-color: #feffff;
+  /* background-color: #feffff; */
+  background-color: rgb(243 244 246);
   }
 
 .main {
@@ -56,10 +57,7 @@ body {
     align-items: center;
     gap: 1rem
 }
-.title {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
+
 
 .sidebar {
   position: fixed;
