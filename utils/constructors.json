@@ -1,7 +1,7 @@
 [   {
     "fullTeamName": "Oracle Red Bull Racing",
     "teamName": "Red Bull",
-    "constructorId": "",
+    "constructorId": "red_bull",
     "nationality": "British",
     "base": "Milton Keynes, United Kingdom",
     "teamChief": "Christian Horner",
@@ -86,7 +86,7 @@
     {
     "fullTeamName": "McLaren F1 Team",
     "teamName": "McLaren",
-    "constructorId": "mclauren",
+    "constructorId": "mclaren",
     "nationality": "British",
     "base": "Woking, United Kingdom",
     "teamChief": "Andrea Stella",
@@ -100,8 +100,8 @@
     "driverTwo": "Oscar Piastri",
     "driverOneId": "norris",
     "driverTwoId": "piastri",
-    "carURL": "mclauren_car.avif",
-    "teamLogoURL": "mclauren_team_logo.png",
+    "carURL": "mclaren_car.avif",
+    "teamLogoURL": "mclaren_team_logo.png",
     "driverOnePictureURL": "norris_front.png",
     "driverTwoPictureURL": "piastri_front.png"
     },
@@ -174,7 +174,7 @@
     {
     "fullTeamName": "Alfa Romeo F1 Team Stake",
     "teamName": "Alfa Romeo",
-    "constructorId": "alfa_romeo",
+    "constructorId": "alfa",
     "nationality": "",
     "base": "Hinwil, Switzerland",
     "teamChief": "Alessandro Alunni Bravi",
@@ -196,7 +196,7 @@
     {
     "fullTeamName": "Scuderia AlphaTauri",
     "teamName": "AlphaTauri",
-    "constructorId": "alpha_tauri",
+    "constructorId": "alphatauri",
     "nationality": "Italian",
     "base": "Faenza, Italy",
     "teamChief": "Franz Tost",

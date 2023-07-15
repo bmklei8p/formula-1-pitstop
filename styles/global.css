@@ -5,8 +5,9 @@
 @tailwind utilities;
 
 body {
-  background-color: #e2e8f0;
-}
+  /* background-color: #e2e8f0; */
+  background-color: #f1f1f1;
+  }
 
 .main {
   width: 100vw;
@@ -25,7 +26,8 @@ body {
 
 .header-container {
     width: 100vw;
-    background-color: rgb(149, 47, 47);
+    /* background-color: rgb(149, 47, 47); */
+    background-color: #e10600;
     display: flex;
     justify-content: center;
     z-index: 1;
@@ -67,7 +69,8 @@ body {
   left: 0;
   width: 200px;
   height: 100vh;
-  background-color: rgb(149, 47, 47);
+  /* background-color: rgb(149, 47, 47); */
+  background-color: #e10600;
   padding: 1rem;
   z-index: 10;
   /* border-top: 5px white dotted; */
