@@ -6,7 +6,7 @@ const RaceResultsPage = async ({ params }) => {
     .then((res) => res.json())
   const raceResults = race.Results;
 
-  const qualifying =  await fetch(`http://localhost:3000/api/schedule/season/completed/qualifying/${params.round}`)
+  const qualifyingResults =  await fetch(`http://localhost:3000/api/schedule/season/completed/qualifying/${params.round}`)
     .then((res) => res.json())
 
 
@@ -21,7 +21,7 @@ const RaceResultsPage = async ({ params }) => {
             {race.raceName}
           </h3>
         </div>
-        <ResultsList raceResults={raceResults} qualifyingResults={qualifying}/>
+        <ResultsList raceResults={raceResults} qualifyingResults={qualifyingResults}/>
     </div>
   )
 }

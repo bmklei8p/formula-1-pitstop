@@ -1,4 +1,5 @@
 [   {
+    "color": "#3471c5",
     "fullTeamName": "Oracle Red Bull Racing",
     "teamName": "Red Bull",
     "constructorId": "red_bull",
@@ -20,6 +21,7 @@
     "driverOnePictureURL": "max_verstappen_front.png",
     "driverTwoPictureURL": "perez_front.png"
     },{
+    "color": "#6cd3be",
     "fullTeamName": "Mercedes-AMG PETRONAS F1 Team",
     "teamName": "Mercedes",
     "constructorId": "mercedes",
@@ -41,6 +43,7 @@
     "driverOnePictureURL": "hamilton_front.png",
     "driverTwoPictureURL": "russell_front.png"
     },{
+    "color": "#358c75",
     "fullTeamName": "Aston Martin Aramco Cognizant F1 Team",
     "teamName": "Aston Martin",
     "constructorId": "aston_martin",
@@ -62,6 +65,7 @@
     "driverOnePictureURL": "alonso_front.png",
     "driverTwoPictureURL": "stroll_front.png"
     },{
+    "color": "#f91435",
     "fullTeamName": "Scuderia Ferrari",
     "teamName": "Ferrari",
     "constructorId": "ferrari",
@@ -84,6 +88,7 @@
     "driverTwoPictureURL": "saiz_front.png"
     },
     {
+    "color": "#f5801f",
     "fullTeamName": "McLaren F1 Team",
     "teamName": "McLaren",
     "constructorId": "mclaren",
@@ -106,6 +111,7 @@
     "driverTwoPictureURL": "piastri_front.png"
     },
     {
+    "color": "#2293d2",
     "fullTeamName": "BWT Alpine F1 Team",
     "teamName": "Alpine",
     "constructorId": "alpine",
@@ -128,6 +134,7 @@
     "driverTwoPictureURL": "ocon_front.png"
     },
     {
+    "color": "#37bedd",
     "fullTeamName": "Williams Racing",
     "teamName": "Williams",
     "constructorId": "williams",
@@ -149,7 +156,7 @@
     "driverOnePictureURL": "albon_front.png",
     "driverTwoPictureURL": "sargeant_front.png"
     },
-    {
+    {"color": "#b6babd",
     "fullTeamName": "MoneyGram Haas F1 Team",
     "teamName": "Haas",
     "constructorId": "haas",
@@ -172,6 +179,7 @@
     "driverTwoPictureURL": "hulkenberg_front.png"
     },
     {
+    "color": "#c92d4b",
     "fullTeamName": "Alfa Romeo F1 Team Stake",
     "teamName": "Alfa Romeo",
     "constructorId": "alfa",
@@ -194,6 +202,7 @@
     "driverTwoPictureURL": "zhou_front.png"
     },
     {
+    "color": "#5e8faa",
     "fullTeamName": "Scuderia AlphaTauri",
     "teamName": "AlphaTauri",
     "constructorId": "alphatauri",
