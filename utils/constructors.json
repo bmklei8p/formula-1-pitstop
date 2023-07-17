@@ -85,7 +85,7 @@
     "carURL": "ferrari_car.avif",
     "teamLogoURL": "ferrari_team_logo.png",
     "driverOnePictureURL": "leclerc_front.png",
-    "driverTwoPictureURL": "saiz_front.png"
+    "driverTwoPictureURL": "sainz_front.png"
     },
     {
     "color": "#f5801f",
@@ -175,7 +175,7 @@
     "driverTwoId": "hulkenberg",
     "carURL": "haas_car.avif",
     "teamLogoURL": "haas_team_logo.png",
-    "driverOnePictureURL": "keven_magnussen_front.png",
+    "driverOnePictureURL": "kevin_magnussen_front.png",
     "driverTwoPictureURL": "hulkenberg_front.png"
     },
     {
@@ -222,6 +222,6 @@
     "carURL": "alpha_tauri_car.avif",
     "teamLogoURL": "alphatauri_team_logo.png",
     "driverOnePictureURL": "tsunoda_front.png",
-    "driverTwoPictureURL": "riccardo_front.png"
+    "driverTwoPictureURL": "ricciardo_front.png"
     }
 ]
