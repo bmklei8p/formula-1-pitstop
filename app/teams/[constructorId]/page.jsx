@@ -1,7 +1,6 @@
 import DriverInfoBox from "../components/DriverInfoBox";
 import ConstructorInfoBox from "../components/ConstructorInfoBox";
 import ImageCarousel from "../components/ImageCarousel";
-import Image from "next/image";
 
 // export async function generateStaticParams() {
 //     const races = await fetch('http://localhost:3000/api/schedule/season').then((res) => res.json())
@@ -60,7 +59,7 @@ const ConstructorDetailPage = async ({ params }) => {
           </div>
         </div>
         <div className="w-full md:w-9/12 2xl:w-2/3 m-0 h-auto bg-gray-100">
-          <ImageCarousel imageURLArray={["001.avif","002.avif","003.avif"]} path={`/assets/images/teams/${constructor.constructorId}/`} />
+          <ImageCarousel imageURLArray={["001.avif","002.avif","003.avif"]} path={`/assets/images/teams/${constructor.constructorId}/`} alt={`${constructor.teamName} images`} />
             {/* <Image src={`/assets/images/historic/albert_park_001.webp`} alt="sdf" priority={true} width={1920} height={1080} /> */}
         </div>
       </div>

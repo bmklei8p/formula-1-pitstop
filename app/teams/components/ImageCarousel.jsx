@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
-const ImageCarousel = ({ imageURLArray, path }) => {
+const ImageCarousel = ({ imageURLArray, path, alt }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -23,7 +23,7 @@ const ImageCarousel = ({ imageURLArray, path }) => {
 
   return (
     <div className="bg-white border-t-2 border-gray-100 max-w-full m-0 relative group">
-        <Image src={`${path}${imageURLArray[currentIndex]}`} className="object-contain z-0  md:rounded-2xl" fill={false} width={1440} height={608} priority={true} alt="" />
+        <Image src={`${path}${imageURLArray[currentIndex]}`} className="object-contain z-0  md:rounded-2xl" fill={false} width={1440} height={608} priority={true} alt={alt} />
         {/* left arrow */}
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactLeft onClick={handlePrev} size={30} />

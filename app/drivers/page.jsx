@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-const DriversPage = () => {
+const DriversPage = async () => {
   const [driversStandings, setDriversStandings] = useState([]);
   const [driverInformation, setDriverInformation] = useState(null);
 
@@ -45,7 +45,7 @@ const DriversPage = () => {
             const driverColor = driverInformation.get(driverId)["color"];
             const driverFlag = driverInformation.get(driverId)["flagImage"];
             return (
-              <Link key={index} href="drivers/">
+              <Link key={index} href={`drivers/${driverId}`}>
                 {/* hidden div for tailwind border custom utility classes to be pre-loaded for driver color's next to name and on hover*/}
                 <div
                   className="hidden border-[#e20b20] border-[#368b74] border-[#6cd3c0] border-[#f91437] border-[#f5801f]

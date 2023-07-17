@@ -5,7 +5,7 @@ const DriverInfoBox = ({ pictureURL, driverName, driverId }) => {
     <div className="md:border-l-2 border-white">
       <div className="bg-gray-900 object-center relative ">
         <Image priority={true} src={`/assets/images/drivers/${pictureURL}`} alt={`${driverName} headshot`} width={300} height={300} />
-        {driverId === "de_vries" ? <Image className="absolute top-8 left-1" src={"/assets/images/red_x.svg"} height={300} width={300} /> : <></>}
+        {driverId === "de_vries" ? <Image className="absolute top-8 left-1" src={"/assets/images/red_x.svg"} height={300} width={300} alt="red x going across driver image to denote termination" /> : <></>}
       </div>
     {/* driver info box */}
     <div className="h-36 md:border-l-2 border-slate-200">
