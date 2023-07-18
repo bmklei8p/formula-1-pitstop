@@ -195,7 +195,7 @@ export default function TracksMap() {
 
         {/* Container with track list */}
       <div className='tracks-title-block mt-2'>
-        <h1 className='font-bold font-sans text-3xl md:hidden'>  
+        <h1 className='font-bold font-sans text-3xl md:hidden'>
           2023 Formula 1 Tracks
         </h1>
       </div>

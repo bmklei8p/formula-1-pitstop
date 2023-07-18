@@ -1,17 +1,17 @@
 import Image from "next/image";
 import RaceTimes from "../../components/RaceTimes";
 
-// export async function generateStaticParams() {
-//     const races = await fetch('http://localhost:3000/api/schedule/season').then((res) => res.json())
+export async function generateStaticParams() {
+    const races = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`).then((res) => res.json())
 
-//     return races.map((race) => ({
-//       round: race.round,
-//     }))
-//   }
+    return races.map((race) => ({
+      round: race.round,
+    }))
+  }
 
 const UpcomingRaceSchedulePage = async ({ params }) => {
 
-  const race = await fetch(`http://localhost:3000/api/schedule/season/current/${params.round}`
+  const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/current/${params.round}`
   ).then((res) => res.json())
 
   return (

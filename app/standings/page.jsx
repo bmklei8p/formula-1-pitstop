@@ -23,7 +23,7 @@ const StandingsPage = () => {
 
   useEffect(() => {
     const getDriverStandings = async () => {
-        const res = await fetch('http://localhost:3000/api/standings/drivers')
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/standings/drivers`)
         const data = await res.json()
         setDriversStandings(data)
         setFirstPlaceD(data[0].Constructors[0]?.constructorId)
@@ -35,7 +35,7 @@ const StandingsPage = () => {
 
   useEffect(() => {
     const getConstructorsStandings = async () => {
-        const res = await fetch('http://localhost:3000/api/standings/constructors')
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/constructors`)
         const data = await res.json()
         setConstructorsStandings(data)
         setFirstPlaceC(data[0].Constructor?.constructorId)

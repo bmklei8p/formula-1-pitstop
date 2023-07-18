@@ -3,7 +3,7 @@ import { useState } from "react"
 import RacePodiumResults from "@/app/schedule/components/RacePodiumResults"
 import DriverStandingsTable from "@/app/standings/components/DriverStandingsTable";
 
-const RaceResultsPage = async ({ params }) => { 
+const RaceResultsPage = async ({ params }) => {
   const [showRaceResults, setShowRaceResults] = useState(true)
   // const resultsTypeArray = [{type: showRaceResults, title: "Show Full Race Results", setChangeFunction: setShowRaceResults},
   //                           {type: showQualifyingResults, title: "Show Qualifying Results", setChangeFunction: setShowQualifyingResults},
@@ -16,10 +16,10 @@ const RaceResultsPage = async ({ params }) => {
   //                           {type:  false, title: "Show Practice Two Results", setChangeFunction: setShowPracticeTwoResults},
   //                           {type:  false, title: "Show Practice Three Results", setChangeFunction: setShowPracticeThreeResults}]
 
-  const race = await fetch(`http://localhost:3000/api/schedule/season/completed/${params.round}`)
+  const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/completed/${params.round}`)
     .then((res) => res.json())
   const raceResults = race.Results;
-  
+
 
   return (
     <div className="flex flex-col justify-center text-left w-full md:w-3/4">

@@ -11,7 +11,7 @@ const DriversPage = async () => {
   // drivers standings api call from ergast
   useEffect(() => {
     const getDriverStandings = async () => {
-      const res = await fetch("http://localhost:3000/api/standings/drivers");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`);
       const data = await res.json();
       setDriversStandings(data);
     };
@@ -21,7 +21,7 @@ const DriversPage = async () => {
   // driver information api call from db
   useEffect(() => {
     const getDriverInformation = async () => {
-      const res = await fetch("http://localhost:3000/api/drivers/mdb");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/mdb`);
       const data = await res.json();
       // convert to map for faster lookup
       const driversMap = new Map();

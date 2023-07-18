@@ -13,13 +13,13 @@ const ScheduleProvider = ({ children }) => {
 
     useEffect(() => {
     const getRaceSchedule = async () => {
-        const res = await fetch('http://localhost:3000/api/schedule/season')
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`)
         const data = await res.json()
         setSchedule(data);
         }
         getRaceSchedule();
     }, []);
-    
+
   return (
     <ScheduleContext.Provider value={schedule}>
         {children}

@@ -3,7 +3,7 @@ import ConstructorInfoBox from "../components/ConstructorInfoBox";
 import ImageCarousel from "../components/ImageCarousel";
 
 // export async function generateStaticParams() {
-//     const races = await fetch('http://localhost:3000/api/schedule/season').then((res) => res.json())
+//     const races = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`).then((res) => res.json())
 
 //     return races.map((race) => ({
 //       round: race.round,
@@ -12,7 +12,7 @@ import ImageCarousel from "../components/ImageCarousel";
 
 const ConstructorDetailPage = async ({ params }) => {
   const constructor = await fetch(
-    `http://localhost:3000/api/constructors/${params.constructorId}`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/constructors/${params.constructorId}`
   ).then((res) => res.json());
 
   return (

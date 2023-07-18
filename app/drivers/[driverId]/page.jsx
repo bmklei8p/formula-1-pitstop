@@ -3,7 +3,7 @@ import DriverInfoBox from "@/app/drivers/components/DriverInfoBox"
 import Image from "next/image"
 
 const DriverDetailPage = async ({ params }) => {
-  const driver = await fetch(`http://localhost:3000/api/drivers/${params.driverId}`
+  const driver = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/${params.driverId}`
   ).then((res) => res.json())
 
 
