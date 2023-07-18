@@ -1,6 +1,6 @@
 const DriverStandingsTable = ({standings}) => {
     return (
-        <div className='lg:w-1/2 sm:pt-6 overflow-y-hidden'>
+        <div className='md:w-1/2 w-full sm:pt-6 overflow-y-hidden'>
             {/* table header */}
             <div className="bg-slate-300 px-6 py-4 w-1/10 max-w-lg mx-auto shadow-lg flex items-start border-solid border-red-500 border-b-[3px]">
                 <div className="basis-1/5 shrink-0">

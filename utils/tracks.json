@@ -1,6 +1,6 @@
 [
     {
-      "officialName": "Albert Park Grand Prix Circuit",
+      "officialRaceName": "Albert Park Grand Prix Circuit",
       "circuitId": "albert_park",
       "trackStartDate": "1996",
       "years": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2004, 2005, 2006, 2007, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2022, 2023],
@@ -22,7 +22,7 @@
       "thirdParagraph": "The history of the Australian Grand Prix in Melbourne dates back to 1996 when it moved from Adelaide to its current location. Since then, the race has become an integral part of the Formula 1 season, serving as the opening round for many years. Melbourne's passion for motorsport is evident in the city's enthusiastic support for the event, with fans flocking to Albert Park to witness the exhilarating races firsthand. The Australian Grand Prix has not only showcased the skills of the world's best drivers but also provided a platform for the latest technological advancements in Formula 1. With a rich history spanning several decades, the Australian Grand Prix at Melbourne has left an indelible mark on the sport."
     },
     {
-      "officialName": "Circuit of the Americas",
+      "officialRaceName": "Circuit of the Americas",
       "circuitId": "americas",
       "trackStartDate": "2012",
       "years": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023],
@@ -44,7 +44,7 @@
       "thirdParagraph": "The history of the Circuit of the Americas as a Formula 1 venue dates back to 2012. The track's creation was a significant milestone for motorsport in the United States, marking the first purpose-built Formula 1 circuit in the country since the iconic Indianapolis Motor Speedway. The introduction of the United States Grand Prix at COTA brought the excitement of Formula 1 to American soil, attracting a passionate and growing fan base. The track's modern infrastructure and state-of-the-art facilities, combined with its challenging layout, have earned it a place as a prominent venue on the Formula 1 calendar. As the years have passed, the Circuit of the Americas has continued to leave a lasting impact on the sport, combining thrilling racing action with the warm Texan hospitality, making it a must-visit destination for motorsport enthusiasts from around the world."
     },
     {
-      "officialName": "Gulf Air Bahrain Grand Prix",
+      "officialRaceName": "Gulf Air Bahrain Grand Prix",
       "circuitId": "bahrain",
       "trackStartDate": "2004",
       "years": [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
@@ -66,7 +66,7 @@
       "thirdParagraph": "The Bahrain Grand Prix made its Formula 1 debut in 2004, becoming the first race in the Middle East to be included in the championship. The event has played a crucial role in promoting motorsport and fostering the growth of Formula 1 in the region. Over the years, Bahrain International Circuit has established itself as a world-class venue, hosting not only the Grand Prix but also pre-season testing and other motorsport events. The circuit's combination of technical challenges and stunning desert backdrop has made it a favorite among drivers and fans. The Bahrain Grand Prix continues to be an exciting addition to the Formula 1 calendar, attracting international attention and adding to the rich history of the sport."
     },
     {
-      "officialName": "Baku City Circuit",
+      "officialRaceName": "Baku City Circuit",
       "circuitId": "baku",
       "trackStartDate": "2016",
       "years": [2016, 2017, 2018, 2019, 2021, 2022, 2023],
@@ -88,7 +88,7 @@
       "thirdParagraph": "The Baku City Circuit made its Formula 1 debut in 2016, becoming the newest street circuit on the calendar. The race quickly gained popularity for its unique blend of challenging corners, high-speed sections, and stunning cityscape. The Baku Grand Prix has played a significant role in promoting Azerbaijan as a destination for international motorsport events. The circuit showcases the country's rich history and culture while providing a thrilling racing experience. Since its inception, the Baku City Circuit has earned a reputation for producing exciting and unpredictable races, adding to the allure and history of Formula 1."
     },
     {
-      "officialName": "Circuit de Barcelona-Catalunya",
+      "officialRaceName": "Circuit de Barcelona-Catalunya",
       "circuitId": "catalunya",
       "trackStartDate": "1991",
       "years": [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1999, 2000, 2001, 2002, 2003, 2004, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023],
@@ -110,7 +110,7 @@
       "thirdParagraph": "The history of the Circuit de Barcelona-Catalunya dates back to 1991 when it hosted its first Formula 1 race. Since then, the circuit has become a regular feature on the Formula 1 calendar, known for its technical layout and demanding nature. Not only does the circuit host the Spanish Grand Prix, but it also serves as a crucial venue for pre-season testing, allowing teams to fine-tune their cars ahead of the championship. Circuit de Barcelona-Catalunya's central location in Europe makes it easily accessible for teams and fans, further enhancing its significance in the world of Formula 1. With a rich history of thrilling races and an important role in the development of Formula 1 machinery, the Circuit de Barcelona-Catalunya has become an integral part of the motorsport landscape."
     },
     {
-      "officialName": "Hungaroring",
+      "officialRaceName": "Hungaroring",
       "circuitId": "hungaroring",
       "trackStartDate": "1986",
       "years": [1986, 1987, 1988, 1989, 1990, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023],
@@ -132,7 +132,7 @@
       "thirdParagraph": "The Hungaroring made its Formula 1 debut in 1986, becoming the first venue to host a Grand Prix behind the Iron Curtain. The circuit quickly gained popularity for its challenging layout and enthusiastic local fan base. The Hungarian Grand Prix has since become a staple on the Formula 1 calendar, attracting a global audience to Budapest. The Hungaroring's history is filled with moments of triumph and heartbreak, and it has played host to iconic battles among Formula 1's greatest drivers and teams. As one of the few circuits to offer limited overtaking opportunities, the Hungaroring often tests the drivers' ability to navigate through traffic and maximize their performance in a demanding environment. With its rich heritage and thrilling races, the Hungaroring remains an integral part of the Formula 1 championship."
     },
     {
-      "officialName": "Autódromo José Carlos Pace",
+      "officialRaceName": "Autódromo José Carlos Pace",
       "circuitId": "interlagos",
       "trackStartDate": "1973",
       "years": [1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023],
@@ -154,8 +154,8 @@
       "thirdParagraph": "The Autódromo José Carlos Pace has a rich history in Formula 1. It made its debut on the Formula 1 calendar in 1973 and has been a favorite among drivers and fans ever since. Named in honor of Brazilian driver José Carlos Pace, who tragically lost his life in a plane crash in 1977, the circuit has become an iconic venue in the sport. Interlagos has witnessed legendary battles and championship-deciding moments, making it a special place in Formula 1 folklore. The circuit's passionate local fans, known for their enthusiasm and love for the sport, create a unique atmosphere that adds to the magic of the Brazilian Grand Prix. With its challenging layout and rich history, Interlagos remains an essential destination on the Formula 1 calendar, attracting global attention and providing unforgettable racing moments."
     },
     {
-      "officialName": "STC Saudi Arabian Grand Prix",
-      "circuitId": "Saudi Arabian Grand Prix",
+      "officialRaceName": "STC Saudi Arabian Grand Prix",
+      "circuitId": "jeddah",
       "trackStartDate": "2021",
       "years": [2021, 2022, 2023],
       "lat": 21.6319,
@@ -176,7 +176,7 @@
       "thirdParagraph": "The Jeddah Circuit made its debut in the world of Formula 1 in 2021, marking Saudi Arabia's entry into the prestigious motorsport championship. The introduction of the Saudi Arabian Grand Prix signifies the country's commitment to expanding its sporting portfolio and promoting tourism through high-profile events. The Jeddah Circuit's modern facilities and impressive design reflect Saudi Arabia's ambition to host world-class sporting events. With its strategic location and commitment to delivering an exceptional racing experience, the Jeddah Circuit has quickly become an exciting addition to the Formula 1 calendar, poised to make its mark on the history of the sport."
     },
     {
-      "officialName": "Losail International Circuit",
+      "officialRaceName": "Losail International Circuit",
       "circuitId": "losail",
       "trackStartDate": "2021",
       "years": [2021, 2022, 2023],
@@ -198,8 +198,8 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Marina Bay Street Circuit",
-      "circuitId": "",
+      "officialRaceName": "Marina Bay Street Circuit",
+      "circuitId": "marina_bay",
       "trackStartDate": "",
       "lat": 1.2914,
       "long": 103.864,
@@ -219,8 +219,8 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Miami International Autodrome",
-      "circuitId": "",
+      "officialRaceName": "Miami International Autodrome",
+      "circuitId": "miami",
       "trackStartDate": "",
       "lat": 25.9581,
       "long": -80.2389,
@@ -240,8 +240,8 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Circuit de Monaco",
-      "circuitId": "",
+      "officialRaceName": "Circuit de Monaco",
+      "circuitId": "monaco",
       "trackStartDate": "",
       "lat": 43.7347,
       "long": 7.42056,
@@ -261,8 +261,8 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Autodromo Nazionale di Monza",
-      "circuitId": "",
+      "officialRaceName": "Autodromo Nazionale di Monza",
+      "circuitId": "monza",
       "trackStartDate": "",
       "lat": 45.6156,
       "long": 9.28111,
@@ -282,8 +282,8 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Red Bull Ring",
-      "circuitId": "",
+      "officialRaceName": "Red Bull Ring",
+      "circuitId": "red_bull_ring",
       "trackStartDate": "",
       "lat": 47.2197,
       "long": 14.7647,
@@ -303,8 +303,8 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Autódromo Hermanos Rodríguez",
-      "circuitId": "",
+      "officialRaceName": "Autódromo Hermanos Rodríguez",
+      "circuitId": "rodriguez",
       "trackStartDate": "",
       "lat": 19.4042,
       "long": -99.0907,
@@ -324,8 +324,8 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Silverstone Circuit",
-      "circuitId": "",
+      "officialRaceName": "Silverstone Circuit",
+      "circuitId": "silverstone",
       "trackStartDate": "",
       "lat": 52.0786,
       "long": -1.01694,
@@ -345,8 +345,8 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Circuit de Spa-Francorchamps",
-      "circuitId": "",
+      "officialRaceName": "Circuit de Spa-Francorchamps",
+      "circuitId": "spa",
       "trackStartDate": "",
       "lat": 50.4372,
       "long": 5.97139,
@@ -366,13 +366,97 @@
       "thirdParagraph": ""
     },
     {
-      "officialName": "Suzuka Circuit",
-      "circuitId": "",
+      "officialRaceName": "Suzuka Circuit",
+      "circuitId": "suzuka",
       "trackStartDate": "",
       "lat": 34.8431,
       "long": 136.541,
       "locationCity": "Suzuka",
       "locationCountry": "Japan",
+      "numberOfLaps": null,
+      "raceDistance": null,
+      "fastestLapTime": "",
+      "fastestLapDriver": "",
+      "fastestLapYear": "",
+      "fastestLapTeam": "",
+      "inCurrentSeason": true,
+      "trackLayoutImage": "",
+      "historicalImages": [],
+      "firstParagraph": "",
+      "secondParagraph": "",
+      "thirdParagraph": ""
+    },
+    {
+      "officialRaceName": "Canada",
+      "circuitId": "villeneuve",
+      "trackStartDate": "",
+      "lat": 1.2914,
+      "long": 103.864,
+      "locationCity": "Marina Bay",
+      "locationCountry": "Singapore",
+      "numberOfLaps": null,
+      "raceDistance": null,
+      "fastestLapTime": "",
+      "fastestLapDriver": "",
+      "fastestLapYear": "",
+      "fastestLapTeam": "",
+      "inCurrentSeason": true,
+      "trackLayoutImage": "",
+      "historicalImages": [],
+      "firstParagraph": "",
+      "secondParagraph": "",
+      "thirdParagraph": ""
+    },
+    {
+      "officialRaceName": "Las Vegas",
+      "circuitId": "vegas",
+      "trackStartDate": "",
+      "lat": 1.2914,
+      "long": 103.864,
+      "locationCity": "Las Vegas",
+      "locationCountry": "United States",
+      "numberOfLaps": null,
+      "raceDistance": null,
+      "fastestLapTime": "",
+      "fastestLapDriver": "",
+      "fastestLapYear": "",
+      "fastestLapTeam": "",
+      "inCurrentSeason": true,
+      "trackLayoutImage": "",
+      "historicalImages": [],
+      "firstParagraph": "",
+      "secondParagraph": "",
+      "thirdParagraph": ""
+    },
+    {
+      "officialRaceName": "",
+      "circuitId": "yas_marina",
+      "trackStartDate": "",
+      "lat": 1.2914,
+      "long": 103.864,
+      "locationCity": "Yas Island",
+      "locationCountry": "Abu Dhabi",
+      "numberOfLaps": null,
+      "raceDistance": null,
+      "fastestLapTime": "",
+      "fastestLapDriver": "",
+      "fastestLapYear": "",
+      "fastestLapTeam": "",
+      "inCurrentSeason": true,
+      "trackLayoutImage": "",
+      "historicalImages": [],
+      "firstParagraph": "",
+      "secondParagraph": "",
+      "thirdParagraph": ""
+    },
+    {
+      "officialRaceName": "Zandvoort",
+      "circuitId": "zandvoort",
+      "trackStartDate": "",
+      "lat": 1.2914,
+      "long": 103.864,
+      "locationCity": "Zandvoort",
+      "locationCountry": "Netherlands",
       "numberOfLaps": null,
       "raceDistance": null,
       "fastestLapTime": "",

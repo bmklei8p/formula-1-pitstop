@@ -48,7 +48,7 @@ const StandingsPage = () => {
 
   return (
     <div className="standings-container">
-        <h1 className="hidden text-4xl font-bold mb-4 text-red-600 md:block">{showDriversStandings ? "Drivers Standings": "Constructors Standings"}</h1>
+        <h1 className="hidden text-4xl font-bold mb-4 md:block">{showDriversStandings ? "Drivers Standings": "Constructors Standings"}</h1>
         {/* mobile buttons */}
         <div className="flex justify-center md:hidden">
           <div className="basis-1/2" onClick={() => setShowDriversStandings(true)}>

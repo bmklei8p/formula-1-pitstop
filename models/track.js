@@ -3,7 +3,6 @@ import {Schema, model, models} from "mongoose";
 const TrackSchema = new Schema({
     officialName: {
         type: String,
-        required: [true, "Please provide the official name"],
     },
     circuitId: {
         type: String,
@@ -11,7 +10,6 @@ const TrackSchema = new Schema({
     },
     trackStartDate: {
         type: String,
-        required: [true, "Please provide the date the track was first used"],
     },
     years: {
         type: Array,
@@ -26,18 +24,16 @@ const TrackSchema = new Schema({
     },
     locationCity: {
         type: String,
-        required: [true, "Please provide the city the track is located in"],
     },
     locationCountry: {
         type: String,
-        required: [true, "Please provide the country the track is located in"],
     },
     numberOfLaps: {
         type: Number,
     },
     // in km
     raceDistance: {
-        type: Number,
+        type: String,
     },
     fastestLapTime: {
         type: String,
@@ -56,7 +52,6 @@ const TrackSchema = new Schema({
     },
     years: {
         type: Array,
-        required: [true, "Please provide the years the track was used"],
     },
     inCurrentSeason: {
         type: Boolean,
@@ -70,15 +65,12 @@ const TrackSchema = new Schema({
     },
     firstParagraph: {
         type: String,
-        required: [true, "Please provide a short description of history of the track"],
     },
     secondParagraph: {
         type: String,
-        required: [true, "Please provide a long description of the track"],
     },
     thirdParagraph: {
         type: String,
-        required: [true, "Please provide a description of the track"],
     },
 });
 

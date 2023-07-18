@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
@@ -51,12 +52,13 @@ export default function TracksMap() {
 
   const handleTrackClick = (track) => {
     setSelectedMarker(track);
+    console.log(selectedMarker)
     setCenterMobile({lat: track.lat, lng: track.long});
   };
 
   const renderTrackList = () => {
     const sortedTrackList = trackList.sort((a, b) =>
-      a.officialName.localeCompare(b.officialName)
+      a.officialRaceName.localeCompare(b.officialRaceName)
     );
 
     const trackBoxes = [];
@@ -79,7 +81,7 @@ export default function TracksMap() {
             style={{ cursor: 'pointer' }}
             onClick={() => handleTrackClick(track)}
           >
-            {track.officialName}
+            {track.officialRaceName}
           </p>
         ))}
       </div>
@@ -88,7 +90,7 @@ export default function TracksMap() {
 
   const renderMobileTrackList = () => {
     const sortedTrackList = trackList.sort((a, b) =>
-      a.officialName.localeCompare(b.officialName)
+      a.officialRaceName.localeCompare(b.officialRaceName)
     );
 
     const startIndex = mobileTrackIndex * 5;
@@ -157,6 +159,9 @@ export default function TracksMap() {
 
   return (
     <div className='tracks-container'>
+      <div className='tracks-title-block'>
+        <h1 className='font-bold font-sans mt-2 mb-2 text-3xl hidden md:block'>2023 Formula 1 Tracks </h1>
+      </div>
       <div className='map-container'>
         <LoadScript googleMapsApiKey={API_KEY}>
           <GoogleMap
@@ -172,15 +177,17 @@ export default function TracksMap() {
                 />
               ))}
               {selectedMarker && (
-                <InfoWindow
-                  position={{ lat: selectedMarker.lat, lng: selectedMarker.long }}
-                  onCloseClick={handleCloseInfoWindow}
-                >
-                  <div>
-                    <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.officialName}</h3>
-                    <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
-                  </div>
-                </InfoWindow>
+                <Link href={`/tracks/${selectedMarker.circuitId}`}>
+                  <InfoWindow
+                    position={{ lat: selectedMarker.lat, lng: selectedMarker.long }}
+                    onCloseClick={handleCloseInfoWindow}
+                  >
+                    <div>
+                      <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.officialRaceName}</h3>
+                      <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
+                    </div>
+                  </InfoWindow>
+                </Link>
               )}
           </GoogleMap>
         </LoadScript>
@@ -188,8 +195,7 @@ export default function TracksMap() {
 
         {/* Container with track list */}
       <div className='tracks-title-block mt-2'>
-        <h1 className='font-bold font-sans text-3xl text-red-800'>  {/* font-bold is the font-weight,
-        font-sans is the family I custom imported, need to do sizing/coloring if i want to */}
+        <h1 className='font-bold font-sans text-3xl md:hidden'>  
           2023 Formula 1 Tracks
         </h1>
       </div>
