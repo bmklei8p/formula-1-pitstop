@@ -7,9 +7,9 @@ const DriverInfoBox = ({ driver }) => {
         <div className="">
             <h3 className="text-xl md:text-2xl font-bold">Driver Info</h3>
             <ul className="ml-4 text-lg md:text-xl">
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Place of birth: {driver.placeOfBirth}</li>
+                <li>Date of birth: {driver.dateOfBirth}</li>
+                <li>Team: {driver.team}</li>
                 <li></li>
             </ul>
         </div>
@@ -18,9 +18,10 @@ const DriverInfoBox = ({ driver }) => {
             <ul className="ml-4 text-lg md:text-xl">
               <li>World Championships: {driver.worldChampionships}</li>
               <li>Wins: {driver.wins}</li>
-              <li>Pole Positions: {driver.polePositions}</li>
-              <li>Highest Race Finish: {driver.highestRaceFinish}</li>
-              <li>Career Points: {driver.careerPoints}</li>
+              <li>Podiums: {driver.podiums}</li>
+              <li>Highest race finish: {driver.highestRaceFinish}</li>
+              <li>Career points: {driver.careerPoints}</li>
+              <li>Grand Prix Entered: {driver.grandPrixEntered}</li>
             </ul>
         </div>
     </div>

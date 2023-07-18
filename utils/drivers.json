@@ -17,7 +17,10 @@
     "highestGridPosition": "4",
     "highestRaceFinish": "3x2",
     "wins": "0",
-    "careerPoints": "212"
+    "careerPoints": "212",
+    "worldChampionships": "",
+    "grandPrixEntered": "",
+    "polePositions": "0"
     },
     {
         "driverId": "alonso",
@@ -38,7 +41,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x32",
         "wins": "32",
-        "careerPoints": "2198"
+        "careerPoints": "2198",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "bottas",
@@ -59,7 +65,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x10",
         "wins": "10",
-        "careerPoints": "1792"
+        "careerPoints": "1792",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "de_vries",
@@ -80,7 +89,10 @@
         "highestGridPosition": "8",
         "highestRaceFinish": "9x1",
         "wins": "0",
-        "careerPoints": "2"
+        "careerPoints": "2",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "gasly",
@@ -101,7 +113,10 @@
         "highestGridPosition": "2",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "careerPoints": "348"
+        "careerPoints": "348",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "hamilton",
@@ -122,7 +137,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x103",
         "wins": "103",
-        "careerPoints": "4526.5"
+        "careerPoints": "4526.5",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "hulkenberg",
@@ -143,7 +161,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "4",
         "wins": "0",
-        "careerPoints": "530"
+        "careerPoints": "530",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "leclerc",
@@ -164,7 +185,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x5",
         "wins": "5",
-        "careerPoints": "942"
+        "careerPoints": "942",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "kevin_magnussen",
@@ -185,7 +209,10 @@
         "highestGridPosition": "4",
         "highestRaceFinish": "2x1",
         "wins": "0",
-        "careerPoints": "185"
+        "careerPoints": "185",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "norris",
@@ -206,7 +233,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "2x2",
         "wins": "0",
-        "careerPoints": "470"
+        "careerPoints": "470",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "ocon",
@@ -227,7 +257,10 @@
         "highestGridPosition": "3",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "careerPoints": "395"
+        "careerPoints": "395",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "perez",
@@ -248,7 +281,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x6",
         "wins": "6",
-        "careerPoints": "1357"
+        "careerPoints": "1357",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "piastri",
@@ -269,7 +305,10 @@
         "highestGridPosition": "3",
         "highestRaceFinish": "4x1",
         "wins": "0",
-        "careerPoints": "17"
+        "careerPoints": "17",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "russell",
@@ -290,7 +329,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "careerPoints": "376"
+        "careerPoints": "376",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "sainz",
@@ -311,7 +353,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x1",
         "wins": "1",
-        "careerPoints": "865.5"
+        "careerPoints": "865.5",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "sargeant",
@@ -332,7 +377,10 @@
         "highestGridPosition": "14",
         "highestRaceFinish": "11x1",
         "wins": "0",
-        "careerPoints": "0"
+        "careerPoints": "0",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "stroll",
@@ -353,7 +401,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "3x3",
         "wins": "0",
-        "careerPoints": "238"
+        "careerPoints": "238",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "tsunoda",
@@ -374,7 +425,10 @@
         "highestGridPosition": "7",
         "highestRaceFinish": "4x1",
         "wins": "0",
-        "careerPoints": "46"
+        "careerPoints": "46",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "max_verstappen",
@@ -395,7 +449,10 @@
         "highestGridPosition": "1",
         "highestRaceFinish": "1x43",
         "wins": "43",
-        "careerPoints": "2266.5"
+        "careerPoints": "2266.5",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
     },
     {
         "driverId": "zhou",
@@ -416,6 +473,33 @@
         "highestGridPosition": "9",
         "highestRaceFinish": "8x1",
         "wins": "0",
-        "careerPoints": "10"
-    }
+        "careerPoints": "10",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
+      },
+      {
+        "driverId": "ricciardo",
+        "color": "#c92d4c",
+        "permanentNumber": "999999",
+        "code": "RIC",
+        "url": "http://en.wikipedia.org/wiki/Daniel_Ricciardo",
+        "givenName": "Daniel",
+        "familyName": "Ricciardo",
+        "dateOfBirth": "1989-01-07",
+        "nationality": "Australian",
+        "driverHeadshotImage": "ricciardo_front.png",
+        "flagImage": "Australia_flag.svg",
+        "team": "AlphaTauri",
+        "carNumber": "3",
+        "podiums": "0",
+        "placeOfBirth": "Perth, Australia",
+        "highestGridPosition": "9",
+        "highestRaceFinish": "8x1",
+        "wins": "0",
+        "careerPoints": "10",
+        "worldChampionships": "",
+        "grandPrixEntered": "",
+        "polePositions": "0"
+      }
 ]

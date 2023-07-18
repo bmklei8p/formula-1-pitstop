@@ -65,6 +65,15 @@ const DriverSchema = new Schema({
     careerPoints: {
         type: String,
     },
+    grandPrixEntered: {
+        type: String,
+    },
+    worldChampionships: {
+        type: String, 
+    },
+    polePositions: {
+        type: String,
+    },  
 });
 
 
