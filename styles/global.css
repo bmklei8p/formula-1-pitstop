@@ -61,7 +61,7 @@ body {
 
 .sidebar {
   position: fixed;
-  top: 4.25rem;  /* this bring the sidebar down so we can still just use the header title */
+  top: 4rem;  /* this bring the sidebar down so we can still just use the header title */
   /* works for almost every device- but very small width 280px will merge header/sidebar - may
   need to use some sort of calculation function for this if i need to be that precise */
   left: 0;

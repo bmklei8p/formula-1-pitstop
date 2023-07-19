@@ -16,7 +16,7 @@ const StandingsPage = () => {
   const [ secondPlaceD, setSecondPlaceD ] = useState()
   const [ thirdPlaceD, setThirdPlaceD ] = useState()
 
-// constructors
+  // constructors
   const [ firstPlaceC, setFirstPlaceC ] = useState()
   const [ secondPlaceC, setSecondPlaceC ] = useState()
   const [ thirdPlaceC, setThirdPlaceC ] = useState()

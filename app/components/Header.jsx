@@ -39,10 +39,12 @@ return (
     //  desktop header
     <div className='header-container'>
         <div className="header-box">
+          <Link href="/">
             <div className="logo">
                 <Image className="logo-img" src='/assets/images/logo.png' alt='f1-logo' width={50} height={50} />
                 <h2 className="text-2xl font-semibold">Formula 1 Pitstop</h2>
             </div>
+          </Link>
             <div className="hidden lg:p-2 lg:block">
                 <div className='grid grid-cols-5 divide-x-2 justify-center '>
                 {navLinks.map((link) => (

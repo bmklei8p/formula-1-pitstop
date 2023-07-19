@@ -1,6 +1,6 @@
 import DriverInfoBox from "../components/DriverInfoBox";
 import ConstructorInfoBox from "../components/ConstructorInfoBox";
-import ImageCarousel from "../components/ImageCarousel";
+import ImageCarousel from "../../components/ImageCarousel";
 
 // export async function generateStaticParams() {
 //     const races = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`).then((res) => res.json())

@@ -33,6 +33,4 @@ const UpcomingRaces = ({races}) => {
 
 export default UpcomingRaces
 
-// onClick of the whole div should lead to a detail page about the timings of qualy/event/practice
-// `${race.Circuit.Location.locality},
 

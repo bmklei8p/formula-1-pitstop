@@ -92,11 +92,9 @@ export default function TracksMap() {
     const sortedTrackList = trackList.sort((a, b) =>
       a.officialRaceName.localeCompare(b.officialRaceName)
     );
-
     const startIndex = mobileTrackIndex * 5;
     const endIndex = startIndex + 5;
     const currentTracks = sortedTrackList.slice(startIndex, endIndex);
-
     const disablePrevArrow = mobileTrackIndex === 0;
     const disableNextArrow = endIndex >= sortedTrackList.length;
 
@@ -125,13 +123,13 @@ export default function TracksMap() {
           </button>
         </div>
         <div className='track-list-box'>
-          {currentTracks.map((track, trackIndex) => (
+          {currentTracks && currentTracks.map((track, trackIndex) => (
             <p
               key={trackIndex}
               style={{ cursor: 'pointer' }}
               onClick={() => handleTrackClick(track)}
             >
-              {track.officialName}
+              {track.officialRaceName}
             </p>
           ))}
         </div>

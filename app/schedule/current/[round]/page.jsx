@@ -19,7 +19,7 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
 
   return (
     <div className="w-full flex flex-col items-center ml-2 mr-2 mt-4">
-      <Image src={`/assets/images/track/${race.Circuit.circuitId}.png`} alt={`Image of ${race.raceName} track layout`} width={300} height={300} />
+      <Image src={`/assets/images/track/${race.Circuit.circuitId}.png`} alt={`Image of ${race.raceName} track layout`} width={600} height={600} priority={true} />
       <div className="flex flex-col justify-center text-center w-full mt-8 md:w-3/4">
         <div className="basis-1/6 flex flex-row gap-x-4 align-middle box-border h-95">
           <Image src={`/assets/images/flag/${race.Circuit.Location.country.replace(/ /g, '_')}_flag.svg`} alt={`${race.Circuit.Location.country} flag`} width={100} height={85} className="h-full object-contain" />

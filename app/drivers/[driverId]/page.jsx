@@ -1,4 +1,4 @@
-import ImageCarousel from "@/app/teams/components/ImageCarousel"
+import ImageCarousel from "@/app/components/ImageCarousel"
 import DriverInfoBox from "@/app/drivers/components/DriverInfoBox"
 import Image from "next/image"
 

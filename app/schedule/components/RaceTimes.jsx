@@ -5,7 +5,6 @@ const RaceTimes = ({ race }) => {
     const minute = timeArray[1]
     return `${hour}:${minute}`
     }
-    // need to check if it is a sprint race, and then determine the ui
 
     const practiceOneTime = handleTime(race.FirstPractice.time);
     const practiceTwoTime = handleTime(race.SecondPractice.time);
