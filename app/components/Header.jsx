@@ -48,7 +48,9 @@ return (
             <div className="hidden lg:p-2 lg:block">
                 <div className='grid grid-cols-5 divide-x-2 justify-center '>
                 {navLinks.map((link) => (
-                        <Link key={link.href} className='text-xl hover:bg-white text-light hover:text-black flex px-4 items-center justify-center' href={link.href}>{link.title}</Link>
+                      <div className='px-2'>
+                        <Link key={link.href} className='text-xl hover:bg-white text-light rounded-lg hover:text-black flex px-4 items-center justify-center' href={link.href}>{link.title}</Link>
+                      </div>
                     ))}
                 </div>
             </div>

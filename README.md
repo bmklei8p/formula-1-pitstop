@@ -51,10 +51,12 @@ signapore track needs layout or link fixed
 
 - image carousel div's for buttons off placement - fixed transform
 
-- track detail page: needs map component, needs styling for paragraphs
+- track detail page: needs map component, needs styling for paragraphs -fixed
 
 - schedule list page: flags in containers to fix size to a max for uniformity
 
 - images for schedule result page needs to be fixed to prevent strecthing, need title row for qualifying results
 
 - image carousel needs to have an indicator to show that it is a carousel and to show the image that is displayed currently
+
+- generate static params on all non-client dynamic pages
