@@ -9,7 +9,7 @@ const UpcomingRaces = ({races}) => {
         return (
           <Link key={index} className="bg-gray-300 hover:bg-gray-400 w-9/10 border-8 border-solid rounded-md border-gray-300" href={`schedule/current/${race.round}`}>
             <div className="flex flex-row px-2">
-              <div className="basis-1/6 flex align-middle box-border h-95">  {/* getting height vs width auto console error */}
+              <div className="basis-1/6 flex align-middle box-border h-95">  
                   {/* replacing all spaces in the country name with _ for the image path */}
                  <Image src={`/assets/images/flag/${race.Circuit.Location.country.replace(/ /g, '_')}_flag.svg`} alt={`${race.Circuit.Location.country} flag`} width={100} height={85} className="h-full object-contain"  />
               </div>

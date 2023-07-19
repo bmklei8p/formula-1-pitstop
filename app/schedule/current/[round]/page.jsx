@@ -1,5 +1,6 @@
 import Image from "next/image";
 import RaceTimes from "../../components/RaceTimes";
+import SprintRaceTimes from "../../components/SprintRaceTimes";
 
 export async function generateStaticParams() {
     const races = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`).then((res) => res.json())
@@ -14,6 +15,8 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
   const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/current/${params.round}`
   ).then((res) => res.json())
 
+
+
   return (
     <div className="w-full flex flex-col items-center ml-2 mr-2 mt-4">
       <Image src={`/assets/images/track/${race.Circuit.circuitId}.png`} alt={`Image of ${race.raceName} track layout`} width={300} height={300} />
@@ -26,7 +29,7 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
           </div>
         </div>
       </div>
-      <RaceTimes race={race} />
+      {race.hasOwnProperty('Sprint') ? <SprintRaceTimes race={race} /> : <RaceTimes race={race} />}
     </div>
   )
 }

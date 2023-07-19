@@ -23,7 +23,7 @@ const StandingsPage = () => {
 
   useEffect(() => {
     const getDriverStandings = async () => {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/standings/drivers`)
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`)
         const data = await res.json()
         setDriversStandings(data)
         setFirstPlaceD(data[0].Constructors[0]?.constructorId)

@@ -37,3 +37,13 @@
 
 7/11 need a back button on the result/schedule detail pages
 signapore track needs layout or link fixed 
+
+
+
+7/19 - sprint races
+
+- navbar gap
+
+- home page
+
+- i broke the trackslist for mobile 
