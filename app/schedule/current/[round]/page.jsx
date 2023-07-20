@@ -65,9 +65,9 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
       <div className="w-full lg:w-9/12  2xl:w-2/3 flex flex-col-reverse gap-y-16 justify-evenly pt-2 bg-white md:flex-row">
         {/* track layout image */}
         {/* <div className="pt-8 pl-8"> */}
-        <div className="flex items-center justify-left pl-4 md:pl-0">
+        <div className="flex items-center pl-4 md:pl-8">
           <div className="flex flex-row items-center gap-x-2">
-            <div className="overflow-hidden relative border-solid border-gray-300 rounded-md border-2 w-16 md:w-24 h-10">
+            <div className="overflow-hidden relative border-solid border-2 border-white w-16 md:w-24 h-10">
               <Image
                 src={`/assets/images/flag/${race.Circuit.Location.country.replace(/ /g, '_')}_flag.svg`}
                 alt={`${race.Circuit.Location.country} flag`}

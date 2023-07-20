@@ -3,32 +3,39 @@ const QualifyingResults = ({ qualifyingResults }) => {
     return (
             <div className="flex flex-col w-full">
                 {/* table header */}
-                {/* <div className="bg-slate-200 py-4 w-full border-solid border-red-500 border-b-[3px]">
-                    <div className="basis-1/5 shrink-0">
-                        <h1 className='font-medium text-lg'>Position</h1>
+                <div className="flex justify-center flex-col bg-white" >
+                <div className="flex flex-row md:hidden">
+                  <div className={`px-4 py-2 w-full flex items-center`}>
+                        <div className="basis-1/5">
+                            <h1 className='text-center text-2xl text-green-700 font-bold '>Q1</h1>
+                        </div>
+                        <div className="basis-3/5">
+                            <div className="text-2xl text-blue-700 font-bold">Q2</div>
+                        </div>
+                        <div>
+                            <p className='basis-1/5 text-2xl text-red-700 font-bold'>Q3</p>
+                        </div>
                     </div>
-                    <div className="w-full basis-3/5 md:flex-row">
-                        <div className="text-xl font-medium text-black">Driver</div>
+                    <div className="hidden md:block md:w-3/4">
                     </div>
-                    <div>
-                        <p className='font-medium text-lg basis-1/5'>Time</p>
                     </div>
-                </div> */}
+                <div className="flex flex-row bg-slate-200 ">
+                <div className={`px-4 py-4 w-full flex items-center border-b-[3px] border-red-500`}>
+                      <div className="basis-1/5">
+                          <h1 className='text-center text-lg'>Position</h1>
+                      </div>
+                      <div className="basis-3/5">
+                          <div className="text-xl text-black">Driver</div>
+                      </div>
+                      <div>
+                          <p className='basis-1/5 text-lg'>Times</p>
+                      </div>
+                  </div>
+                  <div className="hidden md:block md:w-3/4">
+                  </div>
+                </div>
+                </div>
                 {qualifyingResults.map((pos) => (
-                    <>
-                    {pos.position === '1' ? 
-                    <div className="flex flex-row justify-center w-full">
-                        <div className="">
-                            <h1>Position</h1>
-                        </div>
-                        <div>
-                            <h1>Driver</h1>
-                        </div>
-                        <div>
-                            <h1>Time</h1>
-                        </div>
-                    </div>
-                    : null}
                     <div key={pos.position} className="flex justify-center flex-row even:bg-slate-300 odd:bg-slate-200" >
                         <div className={`px-4 py-4 w-full flex items-center border-r-8
                         ${parseInt(pos.position) <= 10 ? `border-green-700` : (parseInt(pos.position) <= 15 ? `border-blue-700` : `border-red-700`)}`}>
@@ -48,7 +55,6 @@ const QualifyingResults = ({ qualifyingResults }) => {
                             <h1 className={`${parseInt(pos.position) === 18 ? `block text-6xl text-red-700 text-left tracking-tight pl-8` : `hidden`}`}>Q3</h1>
                         </div>
                     </div>
-                    </>
                 ))}
             </div>
         )

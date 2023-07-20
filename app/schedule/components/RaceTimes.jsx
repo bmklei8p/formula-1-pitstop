@@ -15,7 +15,7 @@ const RaceTimes = ({ race }) => {
 
   return (
     <div className="flex flex-col border-r-4 border-t-4 border-black max-w-xl rounded-tr-lg w-full md:w-3/4">
-        <div className="text-xl md:text-2xl font-bold text-left">Weekend Schedule</div>
+        <div className="text-xl md:text-2xl font-bold text-left pt-2">Weekend Schedule</div>
         <div className="flex flex-col gap-2 px-4 py-2">
             <div className="flex flex-row text-lg hover:bg-gray-400">
                 <div className="basis-1/2 text-left">Practice 1</div>

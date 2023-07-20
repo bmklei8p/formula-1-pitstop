@@ -12,7 +12,7 @@ const DetailMap = ({ lat, long, officialRaceName, locationCity, locationCountry 
     lng: long
   })
 
-  const mapContainerStyle =  { width: '100%', height: '65vh' }
+  const mapContainerStyle =  { width: '100%', height: '45vh' }
 
   
   const handleMarkerClick = (marker) => {
@@ -31,6 +31,7 @@ const DetailMap = ({ lat, long, officialRaceName, locationCity, locationCountry 
         mapContainerStyle={mapContainerStyle}
         center={center}
         zoom={ 4.5 }
+        disableDefaultUI={true}
         >
             <Marker
               position={{ lat: lat, lng: long}}

@@ -13,9 +13,9 @@ const SprintRaceTimes = ({ race }) => {
 
 
   return (
-    <div className="flex flex-col justify-center text-center w-full mt-8 md:w-3/4">
-        <div className="text-xl md:text-2xl text-left text-red-500">Weekend Schedule</div>
-        <div className="bg-gray-300 flex flex-col gap-2 px-4 py-2">
+    <div className="flex flex-col border-r-4 border-t-4 border-black max-w-xl rounded-tr-lg w-full md:w-3/4">
+        <div className="text-xl md:text-2xl text-left font-bold pt-2">Weekend Schedule</div>
+        <div className="flex flex-col gap-2 px-4 py-2">
             <div className="flex flex-row text-lg hover:bg-gray-400">
                 <div className="basis-1/2 text-left">Practice 1</div>
                 <div className="w-full text-right">Fri</div>
@@ -27,8 +27,8 @@ const SprintRaceTimes = ({ race }) => {
                 <div className="basis-1/4 text-right">{qualifyingTime}</div>
             </div>
             <div className="flex flex-row text-lg hover:bg-gray-400">
-                <div className="basis-1/2 text-left">Sprint Shootout</div>
-                <div className="w-full text-right">Sat</div>
+                <div className="w-full text-left">Sprint Shootout</div>
+                <div className="basis-1/2 text-right">Sat</div>
                 <div className="basis-1/4 text-right">{sprintTime}</div>
             </div>
             <div className="flex flex-row text-lg hover:bg-gray-400">
