@@ -39,17 +39,18 @@ const SchedulePage = () => {
       setNextRace(null);
     }
   }, [schedule]);
+  <h1 className='font-bold text-2xl md:text-3xl mb-4'>Constructors</h1>
 
   return (
-      <div className="flex flex-col justify-center w-full md:w-9/12 text-center mt-8 mb-8">
+      <div className="flex flex-col justify-center w-full md:w-9/12 text-center mt-4 mb-4">
           <h1 className="hidden text-4xl font-bold mb-4 md:block">{showUpcomingRaces ? "Upcoming Races": "Completed Races"}</h1>
           {/* mobile buttons */}
-          <div className="flex justify-center mb-4 md:hidden">
+          <div className="flex justify-center md:hidden">
             <div className="basis-1/2" onClick={() => setShowUpcomingRaces(true)}>
-              <button className={`${showUpcomingRaces ? `text-2xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`}>Upcoming Races</button>
+              <button className={`${showUpcomingRaces ? `text-2xl font-bold md:text-3xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`}>Upcoming Races</button>
             </div>
             <div className="basis-1/2" onClick={() => setShowUpcomingRaces(false)}>
-              <button className={`${!showUpcomingRaces ? `text-2xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`}>Completed Races</button>
+              <button className={`${!showUpcomingRaces ? `text-2xl font-bold md:text-3xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`}>Completed Races</button>
             </div>
           </div>
           {/* desktop buttons */}

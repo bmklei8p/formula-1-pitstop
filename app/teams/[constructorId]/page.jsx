@@ -21,7 +21,7 @@ const ConstructorDetailPage = async ({ params }) => {
         <h1 className="text-2xl md:text-3xl font-bold flex pt-2 pb-2 md:pb-4 ">
           {constructor.fullTeamName}
         </h1>
-        <div className="w-full md:w-9/12 2xl:w-2/3 bg-white flex flex-col gap-4 lg:flex-row lg:justify-between md:gap-0 ">
+        <div className="w-full md:w-9/12 2xl:w-2/3 bg-white flex flex-col-reverse gap-4 lg:flex-row lg:justify-between md:gap-0 ">
           {/* constructor info container */}
           <div className="">
             <ConstructorInfoBox constructor={constructor} />

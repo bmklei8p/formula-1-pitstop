@@ -40,7 +40,8 @@ const TeamsPage = () => {
     <div className='w-full mx-4 mt-4 md:w-3/4'>
       {/* card container */}
       <div className='flex justify-center'>
-        <h1 className='font-bold text-2xl md:text-3xl mb-4'>2023 Formula 1 Teams</h1>
+      {/* <div className='flex justify-left mx-3'> */}
+        <h1 className='font-bold text-2xl md:text-3xl mb-4'>Constructors</h1>
       </div>
       <div className='grid grid-cols-1 mx-3 gap-8 lg:grid-cols-2 lg:gap-16'>
         {/* card   */}

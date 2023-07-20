@@ -4,7 +4,7 @@ import Image from "next/image"
 const PastRaces = ({races}) => {
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-3 mt-4 mx-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4 mt-4 mx-2">
       {races && races.map((race, index) => {
         return (
           <Link key={index} className="bg-gray-300 hover:bg-gray-400 w-9/10 border-8 border-solid rounded-md border-gray-300" href={`schedule/current/completed/${race.round}`}>

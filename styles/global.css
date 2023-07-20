@@ -250,7 +250,8 @@ body {
 .tracks-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 1rem;
+  justify-content: left;
   width: 100%;
   margin-bottom: 2rem;
   text-align: center;

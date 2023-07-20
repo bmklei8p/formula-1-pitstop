@@ -34,9 +34,13 @@ const DriversPage = async () => {
   }, []);
 
   return (
-    <div className="w-9/12 mt-4 md:w-3/4">
+    <div className="w-full mx-4 mt-4 md:w-3/4">
       {/* card container */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className='flex justify-center'>
+      {/* <div classname='flex justify-left mx-3'> */}
+        <h1 className='font-bold text-2xl md:text-3xl mb-4'>Drivers</h1>
+      </div>
+      <div className="grid grid-cols-1 mx-3 gap-8 xl:gap-16 md:grid-cols-2 lg:grid-cols-3">
         {/* card   */}
         {driversStandings &&
           driverInformation &&

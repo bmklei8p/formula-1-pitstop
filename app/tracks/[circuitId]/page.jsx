@@ -23,7 +23,10 @@ const TrackDetailPage = async ({ params }) => {
           <TrackInfoBox track={track} className="basis-full" />
         </div>
       </div>
-      <div className="w-full lg:w-9/12 2xl:w-2/3 flex flex-col-reverse pt-6 bg-white gap-4 md:gap-0 md:flex-row">
+      <div className="w-full lg:w-9/12 2xl:w-2/3 mx-0 h-auto pt-4 bg-white block md:hidden">
+        <ImageCarousel imageURLArray={["001.avif","002.avif","003.avif"]} path={`/assets/images/historic/${track.circuitId}/`} alt={`${track.locationCity} images`} />
+      </div>
+      <div className="w-full lg:w-9/12 2xl:w-2/3 flex flex-col pt-6 bg-white gap-4 md:gap-0 md:flex-row">
         <div className="w-full md:w-1/2 text-lg px-2 mb-4">
           <h3 className="text-2xl md:text-3xl font-bold mb-2">Track Story</h3>
           <div className="flex flex-col gap-6 px-4"> 
@@ -36,7 +39,7 @@ const TrackDetailPage = async ({ params }) => {
           <DetailMap lat={track.lat} long={track.long} officialRaceName={track.officialRaceName} locationCity={track.locationCity} locationCountry={track.locationCountry}/>
         </div>
       </div>
-      <div className="w-full lg:w-9/12 2xl:w-2/3 m-0 h-auto bg-gray-100">
+      <div className="w-full lg:w-9/12 2xl:w-2/3 m-0 h-auto bg-gray-100 hidden md:block">
         <ImageCarousel imageURLArray={["001.avif","002.avif","003.avif"]} path={`/assets/images/historic/${track.circuitId}/`} alt={`${track.locationCity} images`} />
       </div>
     </div>

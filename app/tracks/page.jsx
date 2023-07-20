@@ -29,7 +29,7 @@ export default function TracksMap() {
 
   useEffect(() => {
     const handleResize = () => {
-      const isMobile = window.innerWidth <= 768;
+      const isMobile = window.innerWidth <= 897;
       setMobileScreen(isMobile);
     };
 
@@ -158,7 +158,8 @@ export default function TracksMap() {
   return (
     <div className='tracks-container'>
       <div className='tracks-title-block'>
-        <h1 className='font-bold font-sans mt-2 mb-2 text-3xl hidden md:block'>2023 Formula 1 Tracks </h1>
+        <h1 className='font-bold font-sans mb-4 text-2xl md:text-3xl'>Circuits </h1>
+        {/* <h1 className='font-bold font-sans mb-2 text-3xl hidden md:block'>2023 Formula 1 Tracks </h1> */}
       </div>
       <div className='map-container'>
         <LoadScript googleMapsApiKey={API_KEY}>
@@ -192,11 +193,11 @@ export default function TracksMap() {
       </div>
 
         {/* Container with track list */}
-      <div className='tracks-title-block mt-2'>
+      {/* <div className='tracks-title-block mt-2'>
         <h1 className='font-bold font-sans text-3xl md:hidden'>
           2023 Formula 1 Tracks
         </h1>
-      </div>
+      </div> */}
       <div className='track-list-container'>
         {mobileScreen ? renderMobileTrackList() : renderTrackList()}
       </div>

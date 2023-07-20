@@ -8,7 +8,7 @@ const DriverInfoBox = ({ pictureURL, driverName, driverId }) => {
         {driverId === "de_vries" ? <Image className="absolute top-8 left-1" src={"/assets/images/red_x.svg"} height={300} width={300} alt="red x going across driver image to denote termination" /> : <></>}
       </div>
     {/* driver info box */}
-    <div className="h-36 md:border-l-2 border-slate-200">
+    <div className="h-24 md:h-36 md:border-l-2 border-slate-200">
       <div className="ml-4 font-light">
         <h3 className="pt-2 text-xl md:text-2xl">{driverName}</h3>
         <div className="overflow-hidden relative w-14 h-10 mt-3">
