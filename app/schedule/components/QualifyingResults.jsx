@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const QualifyingResults = ({ qualifyingResults }) => {
 
     return (
@@ -42,9 +44,9 @@ const QualifyingResults = ({ qualifyingResults }) => {
                             <div className="basis-1/5">
                                 <h1 className='text-center'>{pos.position === '1' ? 'Pole' : pos.position}</h1>
                             </div>
-                            <div className="basis-3/5">
+                            <Link href={`/drivers/${pos.Driver.driverId}`} className="basis-3/5">
                                 <div className="text-xl text-black">{pos.Driver.givenName + " " + pos.Driver.familyName}</div>
-                            </div>
+                            </Link>
                             <div>
                                 <p className='basis-1/5 text-lg'>{parseInt(pos.position) <= 10 ? pos.Q3 : (parseInt(pos.position) <= 15 ? pos.Q2 : pos.Q1)}</p>
                             </div>

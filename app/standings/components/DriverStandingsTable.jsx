@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const DriverStandingsTable = ({standings}) => {
     return (
         <div className='md:w-1/2 w-full sm:pt-6 overflow-y-hidden'>
@@ -17,9 +19,9 @@ const DriverStandingsTable = ({standings}) => {
                     <div className="shrink-0 basis-1/5">
                         <h1 className='text-center'>{pos.position}</h1>
                     </div>
-                    <div className="w-full md:flex-row basis-3/5">
+                    <Link href={`/drivers/${pos.Driver.driverId}`} className="w-full md:flex-row basis-3/5">
                         <div className="text-xl text-black">{pos.Driver.givenName + " " + pos.Driver.familyName}</div>
-                    </div>
+                    </Link>
                     <p className='text-center basis-1/5'>{pos.points}</p>
                 </div>
             ))}

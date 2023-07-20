@@ -62,7 +62,7 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
       <h1 className="text-2xl md:text-3xl font-bold pt-2 pb-2 md:pb-4">
         {race.raceName}
       </h1>
-      <div className="w-full lg:w-9/12  2xl:w-2/3 flex flex-col-reverse gap-y-16 justify-evenly pt-2 bg-white md:flex-row">
+      <div className="w-full lg:w-9/12 2xl:w-2/3 flex flex-col-reverse gap-y-16 justify-evenly pt-2 bg-white md:flex-row">
         {/* track layout image */}
         {/* <div className="pt-8 pl-8"> */}
         <div className="flex items-center pl-4 md:pl-8">
@@ -86,11 +86,11 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
           <Image src={`/assets/images/track/${track.circuitId}.png`} width={750} height={750} priority={true} alt={`${track.locationCity}'s track layout`} />
         </div>
       </div>
-      <div className="w-full md:w-9/12 2xl:w-2/3 px-4 md:px-8 pt-4 md:pt-8 h-auto bg-white flex flex-col md:flex-row">
+      <div className="w-full lg:w-9/12 2xl:w-2/3 px-4 md:px-8 pt-4 md:pt-8 h-auto bg-white flex flex-col md:flex-row">
         <div className="basis-1/2">
           {race.hasOwnProperty('Sprint') ? <SprintRaceTimes race={race} /> : <RaceTimes race={race} />}
         </div>
-        <div className="basis-1/2 mt-4 md:mt-0 pb-8">
+        <div className="basis-1/2 mt-4 md:mt-0 pb-8 max-w-xl">
           <TrackInfoBox track={track} className="basis-full" />
         </div>
       </div>

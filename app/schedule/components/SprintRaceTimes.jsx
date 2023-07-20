@@ -17,8 +17,8 @@ const SprintRaceTimes = ({ race }) => {
         <div className="text-xl md:text-2xl text-left font-bold pt-2">Weekend Schedule</div>
         <div className="flex flex-col gap-2 px-4 py-2">
             <div className="flex flex-row text-lg hover:bg-gray-400">
-                <div className="basis-1/2 text-left">Practice 1</div>
-                <div className="w-full text-right">Fri</div>
+                <div className="w-full text-left">Practice 1</div>
+                <div className="basis-1/2 text-right">Fri</div>
                 <div className="basis-1/4 text-right">{practiceOneTime}</div>
             </div>
             <div className="flex flex-row text-lg hover:bg-gray-400">

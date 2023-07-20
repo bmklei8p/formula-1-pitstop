@@ -16,8 +16,8 @@ const RacePodiumResults = ({raceResults, raceCircuitId}) => {
         {/* <div className="relative border-black border-4 h-72 md:h-96 w-full">
             <Image className="" priority={true} fill={true} sizes="100vw" src={`/assets/images/podium/${raceCircuitId}_podium.jpeg`} alt="podium"/>
         </div> */}
-        <div className="w-full">
-          <Image className="" priority={true} width={1024} height={600} src={`/assets/images/podium/${raceCircuitId}_podium.jpeg`} alt="podium"/>
+        <div className="w-full flex justify-center xl:w-2/3">
+          <Image className="" priority={true} width={750} height={600} src={`/assets/images/podium/${raceCircuitId}_podium.jpeg`} alt="podium"/>
         </div>
         <div className="w-2/3 p-x-4 mt-4 hidden lg:block">
             <div className="flex flex-row w-full text-xl md:text-2xl mb-3">

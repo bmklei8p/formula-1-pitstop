@@ -1,4 +1,4 @@
-
+import Link from "next/link"
 
 const ConstructorStandingsTable = ({standings}) => {
     return (
@@ -19,9 +19,9 @@ const ConstructorStandingsTable = ({standings}) => {
                     <div className="shrink-0 basis-1/5">
                         <h1 className='text-center'>{pos.position}</h1>
                     </div>
-                    <div className="w-full md:flex-row basis-3/5">
+                    <Link href={`/teams/${pos.Constructor.constructorId}`} className="w-full md:flex-row basis-3/5">
                         <div className="text-xl text-black">{pos.Constructor?.name}</div>
-                    </div>
+                    </Link>
                     <p className='text-center basis-1/5'>{pos.points}</p>
                 </div>
             ))}
