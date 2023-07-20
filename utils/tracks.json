@@ -191,7 +191,7 @@
       "fastestLapYear": "2021",
       "fastestLapTeam": "Red Bull Racing",
       "inCurrentSeason": true,
-      "trackLayoutImage": "loosail.png",
+      "trackLayoutImage": "losail.png",
       "historicalImages": [],
       "firstParagraph": "",
       "secondParagraph": "",
@@ -200,23 +200,23 @@
     {
       "officialRaceName": "Marina Bay Street Circuit",
       "circuitId": "marina_bay",
-      "trackStartDate": "",
+      "trackStartDate": "200",
       "lat": 1.2914,
       "long": 103.864,
       "locationCity": "Marina Bay",
       "locationCountry": "Singapore",
-      "numberOfLaps": null,
-      "raceDistance": null,
-      "fastestLapTime": "",
-      "fastestLapDriver": "",
-      "fastestLapYear": "",
-      "fastestLapTeam": "",
+      "numberOfLaps": 61,
+      "raceDistance": "308.706km",
+      "fastestLapTime": "1:41.905",
+      "fastestLapDriver": "Kevin Magnussen",
+      "fastestLapYear": "2018",
+      "fastestLapTeam": "Haas",
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Marina Bay Street Circuit in Singapore stands as a captivating venue for Formula 1 racing. Spanning 5.063 kilometers, the circuit is renowned for its unique setting amidst the city streets of Singapore. The track winds its way through the bustling urban landscape, providing an exhilarating experience for both drivers and spectators. The Marina Bay Street Circuit presents a formidable challenge with its combination of tight and technical sections, as well as high-speed straights. Its tight confines demand precision and concentration from drivers, adding an extra layer of excitement to the racing action.",
+      "secondParagraph": "Notable races at the Marina Bay Street Circuit have delivered thrilling moments etched into Formula 1 history. One unforgettable race took place in 2008 when Fernando Alonso, driving for Renault, capitalized on a late safety car period to secure an unexpected victory. The race showcased the unpredictable nature of street circuits and the strategic opportunities they can offer. Another remarkable moment occurred in 2017 when Ferrari's Sebastian Vettel and Red Bull Racing's Max Verstappen engaged in a wheel-to-wheel battle, thrilling spectators with their daring overtakes and fierce competition. These memorable races at the Marina Bay Street Circuit have cemented its reputation as a track that consistently delivers intense and memorable Formula 1 action.",
+      "thirdParagraph": "The Marina Bay Street Circuit has a rich history within Formula 1, having made its debut in 2008 as the sport's first-ever night race. The event quickly captured the imagination of fans worldwide, with the dazzling cityscape providing a stunning backdrop for the intense racing action. Over the years, the Marina Bay Street Circuit has become synonymous with drama and unpredictability, thanks to its tight and twisty layout. The circuit's demanding nature, combined with the challenge of racing under the lights, tests the skills of even the most accomplished drivers. As the years go by, the Marina Bay Street Circuit continues to be a highlight on the Formula 1 calendar, attracting spectators from around the globe and contributing to the vibrant history of the sport."
     },
     {
       "officialRaceName": "Miami International Autodrome",
@@ -256,9 +256,9 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Monaco Grand Prix is undoubtedly one of the most prestigious events on the Formula 1 calendar. The Circuit de Monaco, located in the glamorous city-state of Monaco, presents a unique and challenging track. Spanning just over 3.3 kilometers, the circuit weaves through the narrow streets of Monte Carlo, showcasing the perfect blend of speed and precision. The track features tight corners, elevation changes, and limited overtaking opportunities, making it a true test of skill for both drivers and teams. The glitz and glamour of the Monaco Grand Prix, coupled with the picturesque backdrop of the French Riviera, create an electric atmosphere that is unmatched in the world of motorsport.",
+      "secondParagraph": "The Monaco Grand Prix has a rich history filled with iconic moments. Legends of the sport, such as Ayrton Senna and Michael Schumacher, have left their mark on this challenging circuit. Senna's exceptional mastery of the track is particularly renowned, as he achieved a record six victories at Monaco. The unpredictable nature of the street circuit has often led to dramatic races, where strategy and precision are paramount. One standout race took place in 1996 when Olivier Panis secured a memorable victory, overcoming challenging weather conditions and a high attrition rate to claim an emotional and unexpected win. These historic moments have solidified the Monaco Grand Prix as a must-watch event and a true jewel in the crown of Formula 1.",
+      "thirdParagraph": "The Monaco Grand Prix has been an integral part of Formula 1 since its inception in 1950. The race is steeped in tradition and prestige, with the entire principality of Monaco transforming into a racing spectacle during the event. The circuit's tight confines and demanding nature pose a unique challenge for drivers, who must navigate through the narrow streets at high speeds while avoiding the barriers that line the track. The Monaco Grand Prix represents the epitome of glamour and excellence in motorsport, attracting not only racing enthusiasts but also celebrities and high-profile personalities. It is a race that captures the imagination of fans around the world and continues to be a highlight of the Formula 1 calendar, showcasing the sport's most iconic and thrilling moments."
     },
     {
       "officialRaceName": "Autodromo Nazionale di Monza",
@@ -277,9 +277,9 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Monza Grand Prix holds a significant place in the history of Formula 1 as one of the oldest and most iconic races on the calendar. Hosted at the Autodromo Nazionale Monza, located near Milan, Italy, the circuit is synonymous with high speeds and thrilling racing. Spanning 5.793 kilometers, the track features long straights, challenging chicanes, and sweeping curves that test the limits of driver skill and car performance. The passionate Italian fans, known as the 'tifosi', create an electric atmosphere as they cheer on their favorite drivers amidst the circuit's historic surroundings. The Monza Grand Prix is a celebration of speed, heritage, and the unwavering love for motorsport.",
+      "secondParagraph": "Throughout its storied history, the Monza Grand Prix has produced legendary moments and fierce battles. The circuit's high-speed nature allows for exhilarating wheel-to-wheel racing, often resulting in thrilling overtakes and dramatic finishes. Iconic drivers such as Michael Schumacher and Ayrton Senna have left their mark on the track with their exceptional performances. One unforgettable race occurred in 1971 when Peter Gethin won in a photo-finish, with the top five cars crossing the finish line within 0.61 seconds of each other, showcasing the intensity and competitiveness that Monza consistently delivers. These historic races have become part of Formula 1 folklore, solidifying Monza's status as a hallowed ground for motorsport enthusiasts.",
+      "thirdParagraph": "The Monza Grand Prix has been an integral part of Formula 1 since the inaugural championship in 1950. The circuit's history dates back even further, with racing at Monza tracing back to the 1920s. Its rich heritage and tradition make it a favorite among drivers and fans alike. Monza's famous circuit layout, highlighted by the iconic Parabolica and the legendary high-speed banking, is a true testament to the evolution of motorsport. The Monza Grand Prix embodies the essence of Italian racing passion and the pursuit of speed, capturing the imagination of millions of fans worldwide. It remains a centerpiece on the Formula 1 calendar, combining thrilling racing action with a deep sense of history and legacy."
     },
     {
       "officialRaceName": "Red Bull Ring",
@@ -298,9 +298,9 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Red Bull Ring, located in Spielberg, Austria, is a renowned circuit that plays host to the Formula 1 Austrian Grand Prix. Spanning 4.318 kilometers, the track is nestled amidst the picturesque Styrian mountains, providing a breathtaking backdrop for racing. The Red Bull Ring boasts a mix of fast straights, challenging corners, and elevation changes, offering an exciting and technical layout. The circuit's compact nature and excellent visibility allow for thrilling wheel-to-wheel battles and strategic overtaking opportunities. With its stunning natural scenery and passionate fans, the Red Bull Ring delivers an unforgettable experience for both drivers and spectators.",
+      "secondParagraph": "Notable races at the Red Bull Ring have left a lasting impact on Formula 1. One remarkable race took place in 2019 when Max Verstappen secured a memorable victory for Red Bull Racing. Verstappen's thrilling overtakes and tenacious driving showcased his exceptional skills on home turf, thrilling the Austrian crowd. Another standout moment occurred in 2020 when the Red Bull Ring hosted the season opener after a delay caused by the COVID-19 pandemic. The race marked a historic moment for Formula 1 as it returned to action, providing a sense of excitement and hope for fans worldwide. These memorable races at the Red Bull Ring have solidified its status as a fan-favorite circuit on the Formula 1 calendar.",
+      "thirdParagraph": "The Red Bull Ring has a rich history within Formula 1, dating back to its original construction in 1969. The circuit has undergone several transformations and name changes over the years but has consistently delivered thrilling racing action. Its association with the energy drink company Red Bull has further enhanced its reputation and provided a vibrant atmosphere for fans. The Red Bull Ring's location in the heart of Austria's beautiful countryside has made it a popular destination for motorsport enthusiasts. With its challenging layout, strategic overtaking opportunities, and passionate fans, the Red Bull Ring continues to captivate audiences and play a significant role in the history of Formula 1."
     },
     {
       "officialRaceName": "Autódromo Hermanos Rodríguez",
@@ -319,9 +319,9 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Autódromo Hermanos Rodríguez, located in Mexico City, is a revered circuit that hosts the Formula 1 Mexican Grand Prix. Spanning 4.304 kilometers, the track is named in honor of the Rodríguez brothers, Ricardo and Pedro, who were Mexican racing legends. The circuit is renowned for its high altitude, situated at around 2,200 meters above sea level, which poses unique challenges for both drivers and their cars. The Autódromo Hermanos Rodríguez features a blend of long straights, technical sections, and a challenging stadium section that provides a thrilling spectacle for fans. The circuit's enthusiastic Mexican crowd, known for their passion and vibrant support, create an electric atmosphere that adds to the allure of the Mexican Grand Prix.",
+      "secondParagraph": "Notable races at the Autódromo Hermanos Rodríguez have produced memorable moments in Formula 1 history. One iconic race occurred in 2016 when Lewis Hamilton claimed victory to secure his fourth World Championship title. The race showcased Hamilton's supreme driving skills as he navigated through challenging conditions and strategic battles, securing a well-deserved victory. Another remarkable race took place in 2019 when the Mexican Grand Prix saw a thrilling wheel-to-wheel duel between Hamilton and Sebastian Vettel. The battle, filled with daring overtakes and close-quarter racing, captivated spectators until the final lap. These historic races at the Autódromo Hermanos Rodríguez have solidified its status as a circuit that consistently delivers intense and memorable Formula 1 action.",
+      "thirdParagraph": "The Autódromo Hermanos Rodríguez has a rich history within Formula 1, dating back to its debut in 1962. The circuit has undergone several transformations and renovations over the years, but its essence as a challenging and exciting venue remains intact. The Mexican Grand Prix holds a special place in the hearts of Formula 1 fans and drivers, combining the thrill of racing with the warmth of Mexican hospitality. The Autódromo Hermanos Rodríguez's inclusion on the Formula 1 calendar has brought the sport to a passionate and dedicated fan base in Mexico, who eagerly support their favorite drivers amidst the vibrant and colorful atmosphere. With its historical significance and enduring legacy, the Autódromo Hermanos Rodríguez continues to shine as a cornerstone of Formula 1 racing."
     },
     {
       "officialRaceName": "Silverstone Circuit",
@@ -340,9 +340,9 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Silverstone Circuit, located in Northamptonshire, England, is a historic venue that hosts the Formula 1 British Grand Prix. Spanning 5.891 kilometers, the track holds a significant place in the history of motorsport as one of the oldest circuits on the Formula 1 calendar. The circuit's fast and flowing nature, with a combination of high-speed straights and challenging corners, makes it a favorite among drivers and fans alike. The Silverstone Circuit's long-standing association with Formula 1, coupled with its rich heritage, creates an electric atmosphere during race weekends, as spectators gather to witness the pinnacle of motorsport action.",
+      "secondParagraph": "Notable races at the Silverstone Circuit have provided fans with countless memorable moments. One standout race occurred in 2008 when Lewis Hamilton, driving for McLaren, claimed a thrilling victory in treacherous wet conditions. The race showcased Hamilton's exceptional driving skills as he battled through challenging circumstances to secure a famous win. Another remarkable moment took place in 2020 when the circuit hosted two back-to-back races due to the COVID-19 pandemic. These races, dubbed the 'Silverstone double-header,' provided fans with a unique and exciting experience, as the circuit witnessed intense battles and strategic drama over the course of two consecutive weekends.",
+      "thirdParagraph": "The Silverstone Circuit has a storied history in Formula 1, dating back to the inaugural World Championship season in 1950. The circuit's origins as a former World War II airfield add to its historical significance, creating a sense of nostalgia and heritage. Over the years, the Silverstone Circuit has undergone various layout changes and upgrades to meet modern safety standards while preserving its essence. The British Grand Prix at Silverstone has become a cornerstone of the Formula 1 calendar, attracting a passionate and knowledgeable crowd of motorsport enthusiasts. With its long straights, challenging corners, and rich legacy, the Silverstone Circuit continues to provide thrilling racing moments and hold a special place in the hearts of Formula 1 fans worldwide."
     },
     {
       "officialRaceName": "Circuit de Spa-Francorchamps",
@@ -361,9 +361,9 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Spa-Francorchamps Circuit, nestled in the scenic Ardennes region of Belgium, is a historic venue that plays host to the Formula 1 Belgian Grand Prix. Spanning 7.004 kilometers, the track is widely regarded as one of the most challenging and iconic circuits in motorsport. Its undulating layout winds through picturesque forests, providing a visually stunning backdrop. The Spa-Francorchamps Circuit is known for its mix of fast straights, sweeping curves, and demanding corners, including the infamous Eau Rouge and Raidillon combination. These challenging sections test the skill and bravery of drivers, making it a favorite among racing purists and fans alike.",
+      "secondParagraph": "Notable races at the Spa-Francorchamps Circuit have produced unforgettable moments. One standout race took place in 1998 when Michael Schumacher, driving for Ferrari, showcased his wet-weather mastery by triumphing over challenging conditions. Schumacher's incredible drive through the rain earned him a legendary victory. Another remarkable moment occurred in 2019 when Charles Leclerc, driving for Ferrari, secured his maiden Formula 1 win with a dominant performance. The race showcased Leclerc's emerging talent and marked a significant milestone in his career. These historic races at the Spa-Francorchamps Circuit have cemented its reputation as a track that consistently delivers thrilling and unpredictable Formula 1 action.",
+      "thirdParagraph": "The Spa-Francorchamps Circuit holds a special place in the history of Formula 1. Dating back to its origins in the 1920s, the circuit has evolved over time while preserving its unique character. The circuit's long straights and challenging corners make it a true test of driver skill and car performance. The Belgian Grand Prix at Spa-Francorchamps has become a highlight of the Formula 1 calendar, attracting a dedicated fan base that appreciates the circuit's rich heritage and breathtaking natural surroundings. With its demanding layout and prestigious history, the Spa-Francorchamps Circuit continues to captivate drivers, teams, and spectators, earning its status as an iconic venue in the world of Formula 1."
     },
     {
       "officialRaceName": "Suzuka Circuit",
@@ -382,9 +382,9 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Suzuka Circuit, situated in Mie Prefecture, Japan, is a legendary venue that hosts the Formula 1 Japanese Grand Prix. Spanning 5.807 kilometers, the track is revered for its technical and demanding layout. Designed as a figure-eight, the circuit features a mix of challenging corners, high-speed straights, and elevation changes, making it a true driver's circuit. The Suzuka Circuit's unique 'S' curves and the famous 130R corner test the limits of both car and driver, rewarding precision and bravery. The circuit's passionate Japanese fans create an incredible atmosphere, contributing to the electric energy that surrounds the Japanese Grand Prix.",
+      "secondParagraph": "Notable races at the Suzuka Circuit have provided fans with breathtaking moments. One unforgettable race occurred in 1988 when Ayrton Senna and Alain Prost engaged in an intense battle for victory. The race showcased their exceptional skill and determination, resulting in one of the most iconic moments in Formula 1 history. Another remarkable moment took place in 2005 when Kimi Räikkönen executed a remarkable comeback, starting from 17th on the grid to claim a memorable victory. These historic races at the Suzuka Circuit have solidified its status as a track that consistently delivers thrilling and unpredictable Formula 1 action.",
+      "thirdParagraph": "The Suzuka Circuit has been a significant part of Formula 1 since its debut in 1987. Its challenging layout and technical sections have earned it respect among drivers and teams. The circuit's location near the Honda-owned Suzuka factory adds to its significance, creating a special connection between Japanese manufacturers and the world of Formula 1. The Japanese Grand Prix at the Suzuka Circuit is a highlight of the Formula 1 calendar, drawing in fans from around the globe. With its demanding corners, rich history, and passionate atmosphere, the Suzuka Circuit continues to be a cherished and iconic venue in Formula 1."
     },
     {
       "officialRaceName": "Canada",
@@ -403,9 +403,9 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Villeneuve Circuit, located in Montreal, Canada, is a prominent venue that hosts the Formula 1 Canadian Grand Prix. Spanning 4.361 kilometers, the track is known for its combination of high-speed straights and challenging chicanes. The Villeneuve Circuit offers a thrilling racing experience, demanding precise car control and strategic maneuvering from drivers. The circuit's fast and flowing nature, set against the backdrop of Montreal's vibrant cityscape, creates an electrifying atmosphere for both competitors and spectators. The Villeneuve Circuit has become synonymous with excitement and unpredictability, providing fans with captivating Formula 1 action.",
+      "secondParagraph": "Notable races at the Villeneuve Circuit have produced iconic moments in Formula 1 history. One standout race took place in 2011 when Jenson Button emerged victorious after an intense duel with Sebastian Vettel. The race showcased Button's exceptional racecraft and strategic overtakes, ultimately leading to a thrilling victory. Another remarkable moment occurred in 2019 when the race was affected by challenging weather conditions, resulting in a chaotic and action-packed event. The ever-changing circumstances tested the drivers' skills and provided fans with a race filled with dramatic moments and unexpected outcomes. These historic races at the Villeneuve Circuit have solidified its status as a track that consistently delivers intense and unforgettable Formula 1 races.",
+      "thirdParagraph": "The Villeneuve Circuit made its debut on the Formula 1 calendar in 1978 and has been a staple venue ever since. Named in honor of Canadian racing legend Gilles Villeneuve, the circuit carries the legacy of his remarkable career. The Canadian Grand Prix at the Villeneuve Circuit is renowned for its passionate fan base, known for their enthusiastic support and vibrant displays. The circuit's challenging layout, coupled with the unpredictable weather conditions that often prevail during the race weekend, adds an element of excitement and unpredictability. With its rich history, thrilling racing action, and fervent atmosphere, the Villeneuve Circuit continues to be a cherished destination in Formula 1, capturing the hearts of fans worldwide."
     },
     {
       "officialRaceName": "Las Vegas",
@@ -429,7 +429,7 @@
       "thirdParagraph": ""
     },
     {
-      "officialRaceName": "",
+      "officialRaceName": "ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2023",
       "circuitId": "yas_marina",
       "trackStartDate": "",
       "lat": 1.2914,
@@ -466,8 +466,8 @@
       "inCurrentSeason": true,
       "trackLayoutImage": "",
       "historicalImages": [],
-      "firstParagraph": "",
-      "secondParagraph": "",
-      "thirdParagraph": ""
+      "firstParagraph": "The Zandvoort Circuit, situated in the coastal town of Zandvoort, Netherlands, is a notable venue for the Formula 1 Dutch Grand Prix. Spanning 4.259 kilometers, the track provides an exciting and challenging experience for both drivers and fans. Its layout incorporates a mix of fast straights, tight corners, and elevation changes, creating a demanding circuit that tests the skill and precision of Formula 1 drivers. The scenic location, with its dunes and picturesque surroundings, adds to the unique atmosphere of the Zandvoort Circuit, making it a favorite among racing enthusiasts.",
+      "secondParagraph": "Notable races at the Zandvoort Circuit have produced memorable moments in Formula 1 history. One standout race occurred in 1985 when Niki Lauda secured a remarkable victory under challenging wet conditions. Lauda's exceptional driving skills and strategic decisions propelled him to success in an enthralling race. Another remarkable moment took place in 2021 when the circuit made its return to the Formula 1 calendar after a long hiatus. The race showcased thrilling battles and intense competition among the drivers, as they navigated the demanding circuit in pursuit of victory. These historic races at the Zandvoort Circuit have left an indelible mark, adding to its legacy as an iconic venue in the world of Formula 1.",
+      "thirdParagraph": "The Zandvoort Circuit has been an integral part of Formula 1 since its debut in 1952. With its challenging track layout and passionate Dutch fans, the circuit has become a beloved destination on the Formula 1 calendar. The Dutch Grand Prix at Zandvoort offers a unique blend of exhilarating racing action and a vibrant atmosphere. The circuit's history and tradition, coupled with its scenic location, create an unforgettable experience for drivers and spectators alike. With its long straights, technical corners, and memorable races, the Zandvoort Circuit continues to captivate Formula 1 enthusiasts and plays a significant role in the rich tapestry of the sport."
     }
   ]

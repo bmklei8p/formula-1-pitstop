@@ -28,7 +28,7 @@ body {
 .header-container {
     width: 100vw;
     /* background-color: rgb(149, 47, 47); */
-    background-color: #e10600;
+    background-color: #b30600;
     display: flex;
     justify-content: center;
     z-index: 1;
@@ -68,7 +68,8 @@ body {
   width: 200px;
   height: 100vh;
   /* background-color: rgb(149, 47, 47); */
-  background-color: #e10600;
+  /* background-color: #e10600; */
+  background-color: #b30600;
   padding: 1rem;
   z-index: 10;
   /* border-top: 5px white dotted; */

@@ -36,11 +36,11 @@
 
 
 7/11 need a back button on the result/schedule detail pages
-signapore track needs layout or link fixed 
+signapore track needs layout or link fixed
 
 
 
-7/19 
+7/19
 - sprint races - Performed a check on the race to see if it was a sprint race, and conditionally rendered a new SprintRaceTime component. -fixed
 
 - navbar gap - complete
@@ -60,3 +60,5 @@ signapore track needs layout or link fixed
 - image carousel needs to have an indicator to show that it is a carousel and to show the image that is displayed currently
 
 - generate static params on all non-client dynamic pages
+
+- need to update parser to not work on the marina bay circuit due to the website not having any information about that race- updated manually
