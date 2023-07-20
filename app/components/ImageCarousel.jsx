@@ -27,7 +27,7 @@ const ImageCarousel = ({ imageURLArray, path, alt }) => {
         <div className="flex flex-row absolute top-4 gap-x-2">
           {/* dashes to denote carousel */}
           {imageURLArray.map((image, index) => (
-            <div key={index} className={` text-white rounded-full text-lg md:text-xl z-10 ${index === currentIndex ? "bg-gray-100" : ""}`}><BsCircle size={"1em"} /></div>
+            <div key={index} onClick={() => setCurrentIndex(index)} className={` text-white rounded-full text-lg md:text-xl z-10 ${index === currentIndex ? "bg-gray-100" : ""}`}><BsCircle size={"1em"} /></div>
             ))}
           {/* <div className="bg-black/20 text-white rounded-full z-10"><BsCircle /></div> */}
         </div>
