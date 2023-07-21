@@ -1,5 +1,5 @@
 'use client'
-import { format, parseISO, formatInTimeZone } from 'date-fns-tz';
+import { formatInTimeZone } from 'date-fns-tz';
 import { useState } from 'react'
 
 const RaceTimes = ({ race }) => {
@@ -17,23 +17,14 @@ const RaceTimes = ({ race }) => {
     const practiceThreeTime = handleTime(race.ThirdPractice.time);
     const qualifyingTime = handleTime(race.Qualifying.time);
     const raceTime = handleTime(race.time);
-    // these times are for the user's timezone
-      // Get user's timezone offset
-      const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      // const firstPraceTimeDateFormat = new Date(`${race.FirstPractice.date}T${race.FirstPractice.time}`)
-      // const current = new Date(race.FirstPractice.date)
-      // console.log(current)
-      // console.log(race.FirstPractice.time)
-      // console.log(userTimezone)
-      // const timeInParis = formatInTimeZone(current, 'Europe/Paris', 'HH:mm');
-      // console.log(timeInParis)
 
-      // Convert times to user's timezone
-      const practiceOneTimeUserTZ = formatInTimeZone(new Date(`${race.FirstPractice.date}T${race.FirstPractice.time}`), userTimezone, 'HH:mm');
-      const practiceTwoTimeUserTZ = formatInTimeZone(new Date(`${race.SecondPractice.date}T${race.SecondPractice.time}`), userTimezone, 'HH:mm');
-      const practiceThreeTimeUserTZ = formatInTimeZone(new Date(`${race.ThirdPractice.date}T${race.ThirdPractice.time}`), userTimezone, 'HH:mm');
-      const qualifyingTimeUserTZ = formatInTimeZone(new Date(`${race.Qualifying.date}T${race.Qualifying.time}`), userTimezone, 'HH:mm');
-      const raceTimeUserTZ = formatInTimeZone(new Date(`${race.date}T${race.time}`), userTimezone, 'HH:mm');
+    // Convert times to user's timezone
+    const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const practiceOneTimeUserTZ = formatInTimeZone(new Date(`${race.FirstPractice.date}T${race.FirstPractice.time}`), userTimezone, 'HH:mm');
+    const practiceTwoTimeUserTZ = formatInTimeZone(new Date(`${race.SecondPractice.date}T${race.SecondPractice.time}`), userTimezone, 'HH:mm');
+    const practiceThreeTimeUserTZ = formatInTimeZone(new Date(`${race.ThirdPractice.date}T${race.ThirdPractice.time}`), userTimezone, 'HH:mm');
+    const qualifyingTimeUserTZ = formatInTimeZone(new Date(`${race.Qualifying.date}T${race.Qualifying.time}`), userTimezone, 'HH:mm');
+    const raceTimeUserTZ = formatInTimeZone(new Date(`${race.date}T${race.time}`), userTimezone, 'HH:mm');
 
 
   return (
