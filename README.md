@@ -53,12 +53,14 @@ signapore track needs layout or link fixed
 
 - track detail page: needs map component, needs styling for paragraphs -fixed
 
-- schedule list page: flags in containers to fix size to a max for uniformity
+- schedule list page: flags in containers to fix size to a max for uniformity -fixed
 
-- images for schedule result page needs to be fixed to prevent strecthing, need title row for qualifying results
+- images for schedule result page needs to be fixed to prevent strecthing, need title row for qualifying results - qualifying results fixed
 
-- image carousel needs to have an indicator to show that it is a carousel and to show the image that is displayed currently
+- image carousel needs to have an indicator to show that it is a carousel and to show the image that is displayed currently -fixed
 
 - generate static params on all non-client dynamic pages
 
 - need to update parser to not work on the marina bay circuit due to the website not having any information about that race- updated manually
+
+- need to update driver image with de vries X not being responsive on mobile sizes: works on desktop
