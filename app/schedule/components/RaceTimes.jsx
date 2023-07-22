@@ -2,21 +2,18 @@
 import { formatInTimeZone } from 'date-fns-tz';
 import { useState } from 'react'
 
-const RaceTimes = ({ race }) => {
-  const [showUserTimes, setShowUserTimes] = useState(true)
+const RaceTimes = ({ race, trackTimezone }) => {
+    const [showUserTimes, setShowUserTimes] = useState(false);  
 
-  const handleTime = (time) => {
-    const timeArray = time.split(':')
-    const hour = timeArray[0]
-    const minute = timeArray[1]
-    return `${hour}:${minute}`
-    }
-    // all times here are in track timezone
-    const practiceOneTime = handleTime(race.FirstPractice.time);
-    const practiceTwoTime = handleTime(race.SecondPractice.time);
-    const practiceThreeTime = handleTime(race.ThirdPractice.time);
-    const qualifyingTime = handleTime(race.Qualifying.time);
-    const raceTime = handleTime(race.time);
+    // all times here are in UTC timezone
+    const practiceOneTime = formatInTimeZone(new Date(`${race.FirstPractice.date}T${race.FirstPractice.time}`), trackTimezone, 'HH:mm');
+    const practiceTwoTime = formatInTimeZone(new Date(`${race.SecondPractice.date}T${race.SecondPractice.time}`), trackTimezone, 'HH:mm');
+    const practiceThreeTime = formatInTimeZone(new Date(`${race.ThirdPractice.date}T${race.ThirdPractice.time}`), trackTimezone, 'HH:mm');
+    const qualifyingTime = formatInTimeZone(new Date(`${race.Qualifying.date}T${race.Qualifying.time}`), trackTimezone, 'HH:mm');
+    const raceTime = formatInTimeZone(new Date(`${race.date}T${race.time}`), trackTimezone, 'HH:mm');
+
+    // convert to the time of the track's timezone
+
 
     // Convert times to user's timezone
     const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;

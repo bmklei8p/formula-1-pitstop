@@ -3,13 +3,13 @@ import RaceTimes from "../../components/RaceTimes";
 import SprintRaceTimes from "../../components/SprintRaceTimes";
 import TrackInfoBox from "@/app/tracks/components/TrackInfoBox";
 
-export async function generateStaticParams() {
-    const races = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`).then((res) => res.json())
+// export async function generateStaticParams() {
+//     const races = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`).then((res) => res.json())
 
-    return races.map((race) => ({
-      round: race.round,
-    }))
-  }
+//     return races.map((race) => ({
+//       round: race.round,
+//     }))
+//   }
 
 const UpcomingRaceSchedulePage = async ({ params }) => {
 
@@ -19,7 +19,9 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/tracks/${race.Circuit.circuitId}`)
   const track = await res.json()
 
-
+  const timeZoneRes = await fetch(`https://maps.googleapis.com/maps/api/timezone/json?location=${race.Circuit.Location.lat},${race.Circuit.Location.long}&timestamp=0&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`)
+  const data = await timeZoneRes.json()
+  const timeZone = data.timeZoneId
 
   // return (
   //   <div className="w-full h-screen flex flex-col items-center">
@@ -88,7 +90,7 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
       </div>
       <div className="w-full lg:w-9/12 2xl:w-2/3 px-4 md:px-8 pt-4 md:pt-8 h-auto bg-white flex flex-col md:flex-row">
         <div className="basis-1/2">
-          {race.hasOwnProperty('Sprint') ? <SprintRaceTimes race={race} /> : <RaceTimes race={race} />}
+          {race.hasOwnProperty('Sprint') ? <SprintRaceTimes race={race} trackTimezone={timeZone} /> : <RaceTimes race={race} trackTimezone={timeZone} />}
         </div>
         <div className="basis-1/2 mt-4 md:mt-0 pb-8 max-w-xl">
           <TrackInfoBox track={track} className="basis-full" />

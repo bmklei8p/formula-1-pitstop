@@ -2,20 +2,14 @@
 import { formatInTimeZone } from 'date-fns-tz';
 import { useState } from 'react'
 
-const SprintRaceTimes = ({ race }) => {
+const SprintRaceTimes = ({ race, trackTimeZone }) => {
   const [showUserTimes, setShowUserTimes] = useState(true)
-  const handleTime = (time) => {
-    const timeArray = time.split(':')
-    const hour = timeArray[0]
-    const minute = timeArray[1]
-    return `${hour}:${minute}`
-    }
 
-    const practiceOneTime = handleTime(race.FirstPractice.time);
-    const qualifyingTime = handleTime(race.Qualifying.time);
-    const sprintShootoutTime = handleTime(race.SecondPractice.time);
-    const sprintTime = handleTime(race.Sprint.time)
-    const raceTime = handleTime(race.time);
+    const practiceOneTime = formatInTimeZone(new Date(`${race.FirstPractice.date}T${race.FirstPractice.time}`), trackTimeZone, 'HH:mm');
+    const qualifyingTime = formatInTimeZone(new Date(`${race.Qualifying.date}T${race.Qualifying.time}`), trackTimeZone, 'HH:mm');
+    const sprintShootoutTime = formatInTimeZone(new Date(`${race.SecondPractice.date}T${race.SecondPractice.time}`), trackTimeZone, 'HH:mm');
+    const sprintTime = formatInTimeZone(new Date(`${race.Sprint.date}T${race.Sprint.time}`), trackTimeZone, 'HH:mm');
+    const raceTime = formatInTimeZone(new Date(`${race.date}T${race.time}`), trackTimeZone, 'HH:mm');
 
     // Convert times to user's timezone
     const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -24,8 +18,6 @@ const SprintRaceTimes = ({ race }) => {
     const sprintShootoutTimeUserTZ = formatInTimeZone(new Date(`${race.SecondPractice.date}T${race.SecondPractice.time}`), userTimezone, 'HH:mm');
     const sprintTimeUserTz = formatInTimeZone(new Date(`${race.Sprint.date}T${race.Sprint.time}`), userTimezone, 'HH:mm');
     const raceTimeUserTZ = formatInTimeZone(new Date(`${race.date}T${race.time}`), userTimezone, 'HH:mm');
-
-
 
   return (
     <div className="flex flex-col border-r-4 border-t-4 border-black max-w-xl rounded-tr-lg w-full md:w-3/4">
