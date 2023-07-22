@@ -22,19 +22,11 @@ const HomePage = async () => {
   const nextRaceRound = nextRace.round;
 
 
-
-
-
-
-
-
-
-
   return (
-    <div className="w-full">
+    <div className="w-full flex flex-col items-center">
       {/* Banner */}
-      <section className="w-full">  
-        <div className="flex flex-col items-center justify-center bg-gray-800 relative">
+      <section className="w-full">
+        <div className="bg-gray-800 relative flex flex-row justify-center">
           <Image src='/assets/images/pit-stop.avif' alt="pit-stop" priority={true} width={4111} height={1111} className="cover opacity-20"  />
           <h1 className="text-3xl md:text-5xl text-white absolute font-bold top-[10%]">Formula 1 Pitstop</h1>
           <p className="text-2xl md:text-xl text-white absolute top-[20%]">Your <strong>one stop</strong> for all things F1</p>
@@ -42,18 +34,16 @@ const HomePage = async () => {
       </section>
       {/* End Banner */}
       {/* Content */}
-      <section className="w-full flex justify-center align-middle items-center">
-        <div className="flex flex-col w-full md:flex-row bg-gray-800 relative">
-          <div className="w-full bg-red-600">
+      <div className="w-full md:w-9/12 flex flex-col md:flex-row mt-4 p-2 md:p-0 gap-x-4 ">
+          <div className="w-full">
             {/* Recent Results */}
-            <RecentResults raceRound={nextRaceRound} />
+            <RecentResults raceRound={nextRaceRound} race={nextRace} />
           </div>
-          <div className="w-full bg-blue-600">
+          <div className="w-full">
             {/* Standings */}
             hello
           </div>
-        </div>
-      </section>
+      </div>
     </div>
   )
 }

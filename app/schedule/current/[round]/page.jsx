@@ -79,8 +79,8 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
               />
             </div>
             <div className="flex flex-col">
-              <div className="text-2xl md:text-3xl text-left text-bold">{race.Circuit.circuitName}</div>
-              <div className="text-xl md:text-2xl text-left">{race.Circuit.Location.locality}, {race.Circuit.Location.country}</div>
+              <div className="text-2xl md:text-3xl text-left text-black text-bold">{race.Circuit.circuitName}</div>
+              <div className="text-xl md:text-2xl text-left text-black">{race.Circuit.Location.locality}, {race.Circuit.Location.country}</div>
             </div>
           </div>
         </div>
