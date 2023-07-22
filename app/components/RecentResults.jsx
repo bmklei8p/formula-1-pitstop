@@ -3,8 +3,9 @@ import RecentQualyResults from "./RecentQualyResults"
 import RecentRaceResults from "./RecentRaceResults"
 
 const RecentResults = async ({ raceRound, race }) => {
-  // const RecentResults = async ( { race }) => {
-  // const raceRound = 10
+  // hard code to test if both race and qualy results show if both are complete
+  // const RecentResults = async ({ race }) => {
+  // const raceRound = 12
   const qualifyingResponse = await fetch(`https://ergast.com/api/f1/current/${raceRound}/qualifying.json`)
   const qualifyingData = await qualifyingResponse.json()
   const qualifyingResults = qualifyingData.MRData.RaceTable.Races
@@ -14,7 +15,7 @@ const RecentResults = async ({ raceRound, race }) => {
   const raceResults = raceResultsData.MRData.RaceTable.Races
 
   return (
-    <div className="border-r-4 border-t-4 border-black rounded-tr-lg">
+    <div className="border-r-4 border-t-4 border-black rounded-tr-lg px-2">
         <div className="flex flex-row items-center gap-x-2">
           <div className="overflow-hidden relative border-solid border-2 border-white w-16 md:w-20 h-10">
             <Image
@@ -33,16 +34,17 @@ const RecentResults = async ({ raceRound, race }) => {
       {/* Both Qualy and Race Results Complete */}
       { qualifyingResults.length > 0 && raceResults.length > 0 ?
         <>
-          <RecentRaceResults raceResults={raceResults[0].Results} />
-          <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} />
+          <RecentRaceResults raceResults={raceResults[0].Results} show={true} />
+          <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} show={false}  />
         </> : null}
 
       {/* Qualy Results Complete */}
       { qualifyingResults.length > 0 && !raceResults.length > 0 ?
-      <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} /> : null}
+      <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} show={true} /> : null}
 
       {/* Neither Complete */}
-      { !qualifyingResults.length > 0 && !raceResults.length > 0 ? <h1>Neither Complete</h1> : null}
+      { !qualifyingResults.length > 0 && !raceResults.length > 0 ?
+      <h1>Neither Complete</h1> : null}
     </div>
   )
 }

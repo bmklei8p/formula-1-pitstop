@@ -3,8 +3,8 @@ import Image from "next/image"
 import { useState } from "react"
 import { BsCaretLeftFill, BsFillCaretDownFill } from "react-icons/bs"
 
-const RecentQualyResults = ({ qualifyingResults }) => {
-    const [showRaceResults, setShowRaceResults] = useState(true)
+const RecentQualyResults = ({ qualifyingResults, show }) => {
+    const [showRaceResults, setShowRaceResults] = useState(show)
 
     return (
     <div className="mt-4">

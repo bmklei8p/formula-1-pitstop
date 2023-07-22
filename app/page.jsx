@@ -49,3 +49,6 @@ const HomePage = async () => {
 }
 
 export default HomePage
+
+// recent results should not use nextRace to aquire, have to figure out how to get -1 from nextRaceRound
+// i want these results to show until the next weekend starts but after the race is over, nextRace should switch to the next round number that will show as belgium...
