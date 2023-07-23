@@ -10,7 +10,8 @@ const HomePage = async () => {
   const upcomingRaces = []
   const pastRaces = []
   for (let i = 0; i < schedule.length; i++) {
-    const raceDate = new Date(schedule[i].date + 'T' + schedule[i].time);
+    // results of previous week will not switch over until first practice of the next race weekend
+    const raceDate = new Date(schedule[i].FirstPractice.date + 'T' + schedule[i].FirstPractice.time);
 
     if (raceDate > currentDateTime) {
       upcomingRaces.push(schedule[i]);
@@ -20,6 +21,8 @@ const HomePage = async () => {
   }
   const nextRace = upcomingRaces[0];
   const nextRaceRound = nextRace.round;
+  const resultsRace = pastRaces[0];
+  const resultsRaceRound = resultsRace.round;
 
 
   return (
@@ -37,7 +40,7 @@ const HomePage = async () => {
       <div className="w-full md:w-9/12 flex flex-col md:flex-row mt-4 p-2 md:p-0 gap-x-4 ">
           <div className="w-full">
             {/* Recent Results */}
-            <RecentResults raceRound={nextRaceRound} race={nextRace} />
+            <RecentResults raceRound={resultsRaceRound} race={resultsRace} />
           </div>
           <div className="w-full">
             {/* Standings */}
