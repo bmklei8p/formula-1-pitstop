@@ -36,8 +36,9 @@ const HomePage = async () => {
         </div>
       </section>
       {/* End Banner */}
+
       {/* Content */}
-      <div className="w-full md:w-9/12 flex flex-col md:flex-row mt-4 p-2 md:p-0 gap-x-4 ">
+      <div className="w-full md:w-9/12 flex flex-col lg:flex-row mt-4 p-2 md:p-0 gap-x-4 ">
           <div className="w-full">
             {/* Recent Results */}
             <RecentResults raceRound={resultsRaceRound} race={resultsRace} />

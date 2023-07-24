@@ -64,3 +64,5 @@ signapore track needs layout or link fixed
 - need to update parser to not work on the marina bay circuit due to the website not having any information about that race- updated manually
 
 - need to update driver image with de vries X not being responsive on mobile sizes: works on desktop
+
+- on full race results page, when the driver is a lap down showing as a DNF - 
