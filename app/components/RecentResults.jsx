@@ -40,7 +40,7 @@ const RecentResults = async ({ raceRound, race }) => {
               <div className="text-xl md:text-2xl text-left">{race.Circuit.Location.locality}, {race.Circuit.Location.country}</div>
             </div>
           </div>
-          <div className="hidden pr-4 md:block">
+          <div className="hidden md:block">
             {/* this only works for my data sets because there are no future races in this season that in two seperate months */}
             {/* could future proof it by having a check if race.date vs race.firstpractice.date are in different months */}
             <p className="text-lg md:text-2xl">
@@ -55,10 +55,10 @@ const RecentResults = async ({ raceRound, race }) => {
           </div>
       {/* Both Qualy and Race Results Complete */}
       { qualifyingResults.length > 0 && raceResults.length > 0 ?
-        <>
+        <div className="flex flex-col gap-y-4">
           <RecentRaceResults raceResults={raceResults[0].Results} raceRound={raceRound} show={true} />
           <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} raceRound={raceRound} show={false}  />
-        </> : null}
+        </div> : null}
 
       {/* Qualy Results Complete */}
       { qualifyingResults.length > 0 && !raceResults.length > 0 ?

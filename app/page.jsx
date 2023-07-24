@@ -1,6 +1,7 @@
 // import { useState, useEffect } from "react"
 import Image from "next/image"
 import RecentResults from "./components/RecentResults"
+import BriefStandings from "./components/BriefStandings"
 
 const HomePage = async () => {
   const res = await fetch('https://ergast.com/api/f1/current.json')
@@ -38,14 +39,14 @@ const HomePage = async () => {
       {/* End Banner */}
 
       {/* Content */}
-      <div className="w-full md:w-9/12 flex flex-col lg:flex-row mt-4 p-2 md:p-0 gap-x-4 ">
+      <div className="w-full md:w-9/12 flex flex-col gap-y-8 lg:flex-row mt-4 p-2 md:p-0 gap-x-8 ">
           <div className="w-full">
             {/* Recent Results */}
             <RecentResults raceRound={resultsRaceRound} race={resultsRace} />
           </div>
           <div className="w-full">
             {/* Standings */}
-            hello
+            <BriefStandings />
           </div>
       </div>
     </div>
