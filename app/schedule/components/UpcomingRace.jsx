@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const UpcomingRace = ({ nextRace }) => {
   const currentDate = new Date();
-  const raceDate = new Date(nextRace.date);
+  const raceDate = new Date(`${nextRace.date}T${nextRace.time}`);
   const timeUntilRace = raceDate - currentDate;
   const daysUntilRace = Math.floor(timeUntilRace / (1000 * 60 * 60 * 24));
   const hoursUntilRace = Math.floor(

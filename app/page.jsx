@@ -29,11 +29,18 @@ const HomePage = async () => {
   return (
     <div className="w-full flex flex-col items-center">
       {/* Banner */}
-      <section className="w-full">
-        <div className="bg-gray-800 relative flex flex-row justify-center">
-          <Image src='/assets/images/pit-stop.avif' alt="pit-stop" priority={true} width={4111} height={1111} className="cover opacity-20"  />
-          <h1 className="text-3xl md:text-5xl text-white absolute font-bold top-[10%]">Formula 1 Pitstop</h1>
-          <p className="text-2xl md:text-xl text-white absolute top-[20%]">Your <strong>one stop</strong> for all things F1</p>
+      <section className="hidden md:block">
+        <div className="bg-gray-800 overflow-hidden">
+          <Image src='/assets/images/pit-stop.avif' alt="pit-stop" priority={true} width={4111} height={1111} className="contain opacity-20"  />
+          {/* <h1 className="text-3xl md:text-5xl text-white absolute font-bold top-[10%]">Formula 1 Pitstop</h1>
+          <p className="text-2xl md:text-xl text-white absolute top-[20%]">Your <strong>one stop</strong> for all things F1</p> */}
+        </div>
+      </section>
+      <section className="block md:hidden">
+        <div className="bg-gray-800 overflow-hidden">
+          {/* <Image src='/assets/images/pit-stop.avif' alt="pit-stop" priority={true} width={} height={} className="contain opacity-20 md:hidden"  /> */}
+          {/* <h1 className="text-3xl md:text-5xl text-white absolute font-bold top-[10%]">Formula 1 Pitstop</h1>
+          <p className="text-2xl md:text-xl text-white absolute top-[20%]">Your <strong>one stop</strong> for all things F1</p> */}
         </div>
       </section>
       {/* End Banner */}

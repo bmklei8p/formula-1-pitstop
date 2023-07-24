@@ -15,7 +15,7 @@ const PastRaces = ({races}) => {
               </div>
               <div className="flex flex-col basis-2/3 md:basis-full w-full text-left">
                 <div className="flex-grow w-11/12  ml-auto">
-                  <div className="text-xl md:text-2xl">{race.Circuit.Location.country === 'USA' || race.Circuit.Location.country === 'United States' ?
+                  <div className="text-xl md:text-2xl font-bold">{race.Circuit.Location.country === 'USA' || race.Circuit.Location.country === 'United States' ?
                     `United States` : race.Circuit.Location.country} </div>
                   <div className="text-l md:text-xl">{race.raceName}</div>
                 </div>
