@@ -19,7 +19,7 @@ export const PATCH = async (req, { params }) => {
     connectToDB();
     const track = await Track.findOne({ circuitId: params.circuitId });
     // console.log(body);
-    
+
     if (!track) {
       return new Response("track not found", { status: 404 });
     }
@@ -36,8 +36,6 @@ export const PATCH = async (req, { params }) => {
     lapRecord.shift();
     track.fastestLapDriver = lapRecord.join(" ");
     console.log(track.fastestLapDriver);
-
-
     await track.save();
 
     return new Response("Successfully updated the track", { status: 200 });
