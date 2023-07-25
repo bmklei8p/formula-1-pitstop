@@ -24,18 +24,17 @@ export const PATCH = async (req, { params }) => {
       return new Response("track not found", { status: 404 });
     }
     track.officialRaceName = body.official_track_name;
+    console.log(officialRaceName)
     track.trackStartDate = body.first_grand_prix;
     track.numberOfLaps = body.number_of_laps;
     track.raceDistance = body.circuit_length;
     const lapRecord = body.lap_record.split(" ");
-    console.log(lapRecord);
     const lastIndex  = lapRecord.length - 1;
     track.fastestLapTime = lapRecord[0];
     track.fastestLapYear = lapRecord[lastIndex].replace("(", "").replace(")", "");
     lapRecord.pop();
     lapRecord.shift();
     track.fastestLapDriver = lapRecord.join(" ");
-    console.log(track.fastestLapDriver);
 
 
     await track.save();
