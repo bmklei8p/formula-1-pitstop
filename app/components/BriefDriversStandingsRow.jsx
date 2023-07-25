@@ -7,7 +7,7 @@ const BriefDriversStandingsRow = ({ driversStandings, index}) => {
       <div className="flex flex-row items-center gap-x-4">
         <p className="text-2xl md:text-3xl font-bold">{index+1}</p>
         <Link href={`drivers/${driversStandings[index].Driver.driverId}`}>
-          <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-gray-200">
+          <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-gray-900">
           <Image className="object-contain" src={`/assets/images/drivers/${driversStandings[index].Driver.driverId}_front.png`} alt={driversStandings[index].Driver.familyName} width={75} height={75} />
           </div>
         </Link>

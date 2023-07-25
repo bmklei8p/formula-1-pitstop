@@ -26,7 +26,7 @@ const DriverSingleRaceStandingsTable = ({standings}) => {
                       <div className="text-l md:text-xl text-black">{pos.Driver.givenName + " " + pos.Driver.familyName}</div>
                   </Link>
                   <div className="w-full basis-2/5 md:flex-row">
-                    <div className="text-l font-medium text-black">{pos.status === "Finished" ? pos.Time.time : "DNF" } </div>
+                    <div className="text-l font-medium text-black">{pos.status === "Finished"  ? pos.Time.time : (pos.status.includes('Lap') ? pos.status : "DNF") } </div>
                   </div>
                   <p className='text-center basis-1/5'>{pos.points}</p>
               </div>

@@ -7,7 +7,7 @@ const BriefConstructorsStandingsRow = ({ constructorsStandingsList, index}) => {
       <div className="flex flex-row items-center gap-x-4">
         <p className="text-2xl md:text-3xl font-bold">{index+1}</p>
         <Link href={`teams/${constructorsStandingsList[index].Constructor.constructorId}`}>
-          <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-gray-800">
+          <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-gray-900">
           <Image className="object-contain" src={`/assets/images/logos/${constructorsStandingsList[index].Constructor.constructorId}_team_logo.png`} alt={`${constructorsStandingsList[index].Constructor.name}'s logo`} width={75} height={75} />
           </div>
         </Link>

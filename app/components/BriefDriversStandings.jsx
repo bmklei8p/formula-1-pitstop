@@ -10,8 +10,8 @@ const BriefDriversStandings = ({driversStandingsList}) => {
 
   return (
     <div className="mt-4">
-      <div className="flex flex-row items-center gap-x-2">
-          <h1 className={`text-xl md:text-2xl ${showDriversStandings ? 'border-b-2 border-red-500' : ''}`}>Driver Standings</h1>
+      <div className="flex flex-row items-center gap-x-2 pb-4">
+          <h1 onClick={() => setShowDriversStandings(!showDriversStandings)} className={`text-xl md:text-2xl ${showDriversStandings ? 'border-b-2 border-red-500' : ''}`}>Driver Standings</h1>
           <button onClick={() => setShowDriversStandings(!showDriversStandings)} className="text-xl md:text-2xl">{showDriversStandings ? <PiCaretUp /> : <PiCaretDown /> }</button>
       </div>
       {showDriversStandings ?
@@ -20,7 +20,7 @@ const BriefDriversStandings = ({driversStandingsList}) => {
         <BriefDriversStandingsRow driversStandings={driversStandingsList} index={1} />
         <BriefDriversStandingsRow driversStandings={driversStandingsList} index={2} />
         <div className="flex justify-center">
-        <Link href={`standings/`}> 
+        <Link href={`standings/`}>
           <button className="text-lg md:text-xl border-b-2 border-black">Full Drivers Standings</button>
         </Link>
       </div>

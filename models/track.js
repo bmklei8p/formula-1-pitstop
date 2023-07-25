@@ -1,7 +1,7 @@
 import {Schema, model, models} from "mongoose";
 
 const TrackSchema = new Schema({
-    officialName: {
+    officialRaceName: {
         type: String,
     },
     circuitId: {
