@@ -10,8 +10,8 @@ const RecentQualyResults = ({ qualifyingResults, show, raceRound }) => {
 
     return (
     <div className="mt-4">
-    <div className="flex flex-row items-center gap-x-2">
-        <h1 className={`text-xl md:text-2xl ${showRaceResults ? 'border-b-2 border-red-500' : ''}`}>Qualification Results</h1>
+    <div className="flex flex-row items-center gap-x-2 pb-4">
+        <h1 onClick={() => setShowRaceResults(!showRaceResults)} className={`text-xl md:text-2xl ${showRaceResults ? 'border-b-2 border-red-500' : ''}`}>Qualification Results</h1>
         <button onClick={() => setShowRaceResults(!showRaceResults)} className="text-xl md:text-2xl">{showRaceResults ? <PiCaretUp /> : <PiCaretDown /> }</button>
     </div>
     {showRaceResults ?
@@ -20,7 +20,7 @@ const RecentQualyResults = ({ qualifyingResults, show, raceRound }) => {
         <RecentResultRow raceResults={qualifyingResults} index={1} qualy={true} />
         <RecentResultRow raceResults={qualifyingResults} index={2} qualy={true} />
         <div className="flex justify-center">
-          <Link href={`schedule/current/completed/${raceRound}`}> 
+          <Link href={`schedule/current/completed/${raceRound}`}>
             <button className="text-lg md:text-xl border-b-2 border-black">Full Results</button>
           </Link>
         </div>

@@ -288,6 +288,19 @@ body {
   border: black 1px solid;
   padding: 0.5rem
 }
+
+
+@keyframes moveRightAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw - 200px)); /* Assuming image width is 200px */
+  }
+}
+
+
+
 /* Tailwind Styles */
 
 .app {
@@ -312,5 +325,3 @@ body {
 .driver-podium_third {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-2/3;
 }
-
-/* legg */
