@@ -51,7 +51,6 @@ export default function TracksMap() {
 
   const handleTrackClick = (track) => {
     setSelectedMarker(track);
-    console.log(selectedMarker)
     setCenterMobile({lat: track.lat, lng: track.long});
   };
 
@@ -169,6 +168,7 @@ export default function TracksMap() {
             disableDefaultUI={mapOptions}>
               {trackList.map((marker, index) => (
                 <Marker
+                  icon={"/assets/images/red_flag.png"}
                   key={index}
                   position={{ lat: marker.lat, lng: marker.long }}
                   onClick={() => handleMarkerClick(marker)}
