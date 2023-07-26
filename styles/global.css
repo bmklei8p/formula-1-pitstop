@@ -204,24 +204,32 @@ body {
     top: 88px;
   }
 }
+.driver-podium-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 50%;
+}
 .driver-podium-first-container {
   position: absolute;
-  top: 530px; /* Adjust this value to position the image as desired */
-  left: calc(50% - 40px); /* Adjust this value to position the image horizontally */
+  top: 200px; /* Adjust this value to position the image as desired */
+  left: calc(50% - 50px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
 }
 .driver-podium-second-container {
   position: absolute;
-  top: 550px; /* Adjust this value to position the image as desired */
-  left: calc(50% - 135px); /* Adjust this value to position the image horizontally */
+  top: 220px; /* Adjust this value to position the image as desired */
+  left: calc(50% - 145px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
 }
 .driver-podium-third-container {
   position: absolute;
-  top: 580px; /* Adjust this value to position the image as desired */
-  left: calc(50% + 60px); /* Adjust this value to position the image horizontally */
+  top: 240px; /* Adjust this value to position the image as desired */
+  left: calc(50% + 48px); /* Adjust this value to position the image horizontally */
   display: flex;
   justify-content: center;
 }
@@ -231,13 +239,13 @@ body {
     width: 100%;
   }
   .driver-podium-first-container {
-    top: 45px;
+    top: 25px;
   }
   .driver-podium-second-container {
-    top: 65px;
+    top: 45px;
   }
   .driver-podium-third-container {
-    top: 88px;
+    top: 65px;
   }
 }
 

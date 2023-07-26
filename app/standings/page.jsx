@@ -26,9 +26,9 @@ const StandingsPage = () => {
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`)
         const data = await res.json()
         setDriversStandings(data)
-        setFirstPlaceD(data[0].Constructors[0]?.constructorId)
-        setSecondPlaceD(data[1].Constructors[0]?.constructorId)
-        setThirdPlaceD(data[2].Constructors[0]?.constructorId)
+        setFirstPlaceD(data[0].Driver)
+        setSecondPlaceD(data[1].Driver)
+        setThirdPlaceD(data[2].Driver)
         }
     getDriverStandings();
     }, []);

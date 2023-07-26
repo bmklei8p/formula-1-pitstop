@@ -17,7 +17,7 @@ const DriverDetailPage = async ({ params }) => {
       </h1>
       <div className="w-full md:w-9/12 2xl:w-2/3 justify-between flex flex-col  bg-white md:flex-row">
         <div className="basis-full bg-gray-900 flex justify-center ">
-          <Image src={`/assets/images/drivers/${driver.driverHeadshotImage}`} width={500} height={500} priority={true} alt={`${driver.familyName}'s headshot image`} />
+          <Image src={`/assets/images/drivers/${driver.driverId}_front.png`} width={500} height={500} priority={true} alt={`${driver.familyName}'s headshot image`} />
         </div>
         <DriverInfoBox driver={driver} className="basis-full" />
       </div>
