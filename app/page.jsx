@@ -52,7 +52,7 @@ const OverviewPage = async () => {
           sizes="(min-width: 777px) 100vw"
         />
       </div>
-      <div className="flex max-h-[90vh] md:hidden overflow-clip relative justify-center items-end bg-gray-900 -z-50 ">
+      <div className="flex max-h-[80vh] md:hidden overflow-clip relative justify-center items-end bg-gray-900 -z-50 ">
         <div className="h-26 w-full absolute z-40 flex flex-col justify-end py-2 items-center bg-gradient-to-t opacity-75 to-[#494949] from-[#2b2b2b]">
           <h1 className="text-white font-bold text-4xl">Formula 1 Pitstop</h1>
           <p className="text-white text-3xl">

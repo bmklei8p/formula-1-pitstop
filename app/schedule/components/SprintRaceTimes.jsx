@@ -24,10 +24,10 @@ const SprintRaceTimes = ({ race, trackTimeZone }) => {
         <div className="w-full pt-2 flex flex-row justify-between">
           <div className='text-xl md:text-2xl font-bold text-left'>Weekend Schedule</div>
             <div className='flex flex-row gap-x-2 pr-4'>
-              <button className={showUserTimes ? 'border-b-2 border-red-500' : ''} onClick={() => setShowUserTimes(true)} >
+              <button className={showUserTimes ? 'border-b-2 border-red-500 font-bold' : ''} onClick={() => setShowUserTimes(true)} >
                 My Times
               </button>
-              <button className={!showUserTimes ? 'border-b-2 border-red-500' : ''} onClick={() => setShowUserTimes(false)}>
+              <button className={!showUserTimes ? 'border-b-2 border-red-500 font-bold' : ''} onClick={() => setShowUserTimes(false)}>
                 Track Times
               </button>
             </div>

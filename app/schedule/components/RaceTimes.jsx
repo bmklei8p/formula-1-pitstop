@@ -29,14 +29,17 @@ const RaceTimes = ({ race, trackTimezone }) => {
         <div className="w-full pt-2 flex flex-row justify-between">
           <div className='text-xl md:text-2xl font-bold text-left'>Weekend Schedule</div>
           <div className='flex flex-row gap-x-2 pr-4'>
-            <button className={showUserTimes ? 'border-b-2 border-red-500' : ''} onClick={() => setShowUserTimes(true)} >
+            <button className={showUserTimes ? 'border-b-2 border-red-500 font-bold' : ''} onClick={() => setShowUserTimes(true)} >
               My Times
             </button>
-            <button className={!showUserTimes ? 'border-b-2 border-red-500' : ''} onClick={() => setShowUserTimes(false)}>
+            <button className={!showUserTimes ? 'border-b-2 border-red-500 font-bold' : ''} onClick={() => setShowUserTimes(false)}>
               Track Times
             </button>
           </div>
         </div>
+        {/* <div className='px-4 '>
+          <h2 className='text-lg'>July 31  - 02 </h2>
+        </div> */}
         <div className="flex flex-col gap-2 px-4 py-2">
             <div className="flex flex-row text-lg hover:bg-gray-400">
                 <div className="w-full text-left">Practice 1</div>
