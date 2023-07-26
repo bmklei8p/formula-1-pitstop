@@ -68,9 +68,10 @@ signapore track needs layout or link fixed
 - on full race results page, when the driver is a lap down showing as a DNF - fixed
 
 
-7/26 - 
-- Need track model to have both circuit name and official name for race - track pages will use circuit name for display. 
+7/26 -
+- Need track model to have both circuit name and official name for race - track pages will use circuit name for display.  - fixed
 
 
 
 
+- { next: {revalidate: 60}} vs { next: {revalidate: 60}} for fetches

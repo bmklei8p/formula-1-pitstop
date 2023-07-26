@@ -8,7 +8,7 @@ import BannerImageMobile from '../public/assets/images/home-banner-mobile.png'
 const OverviewPage = async () => {
 
   const getScheduleData = async () => {
-    const res = await fetch("https://ergast.com/api/f1/current.json", { cache: 'no-store'});
+    const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 60}});
     const data = await res.json();
     const schedule = data.MRData.RaceTable.Races;
     const currentDateTime = new Date();

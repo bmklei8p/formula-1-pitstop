@@ -2,11 +2,11 @@ import RacePodiumResults from "@/app/schedule/components/RacePodiumResults"
 import ResultsList from "@/app/schedule/components/ResultsList";
 
 const RaceResultsPage = async ({ params }) => {
-  const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/completed/${params.round}`, { cache: 'no-store'})
+  const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/completed/${params.round}`, { next: {revalidate: 60}})
     .then((res) => res.json())
   const raceResults = race.Results;
 
-  const qualifyingResults =  await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/completed/qualifying/${params.round}`, { cache: 'no-store'})
+  const qualifyingResults =  await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/completed/qualifying/${params.round}`, { next: {revalidate: 60}})
     .then((res) => res.json())
 
 
