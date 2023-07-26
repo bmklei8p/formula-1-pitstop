@@ -6,7 +6,7 @@ import DetailMap from "../components/DetailMap"
 const TrackDetailPage = async ({ params }) => {
   const { circuitId } = params
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/tracks/${circuitId}`, {next: {revalidate: 60}})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/tracks/${circuitId}`, { cache: 'no-store'})
   const track = await res.json()
 
   return (
