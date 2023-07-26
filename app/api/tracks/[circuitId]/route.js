@@ -23,19 +23,31 @@ export const PATCH = async (req, { params }) => {
     if (!track) {
       return new Response("track not found", { status: 404 });
     }
-    track.officialRaceName = body.official_track_name;
-    track.trackStartDate = body.first_grand_prix;
-    track.numberOfLaps = body.number_of_laps;
-    track.raceDistance = body.circuit_length;
-    const lapRecord = body.lap_record.split(" ");
-    console.log(lapRecord);
-    const lastIndex  = lapRecord.length - 1;
-    track.fastestLapTime = lapRecord[0];
-    track.fastestLapYear = lapRecord[lastIndex].replace("(", "").replace(")", "");
-    lapRecord.pop();
-    lapRecord.shift();
-    track.fastestLapDriver = lapRecord.join(" ");
-    console.log(track.fastestLapDriver);
+    // console.log(body.official_track_name)
+    // track.officialRaceName = body.official_track_name;
+    // console.log(officialRaceName)
+    if(body.official_track_name) {
+      track.officialRaceName = body.official_track_name;
+    }
+    if(body.first_grand_prix) {
+      track.trackStartDate = body.first_grand_prix;
+    }
+    if(body.number_of_laps) {
+      track.numberOfLaps = body.number_of_laps;
+    }
+    if(body.circuit_length) {
+      track.raceDistance = body.circuit_length;
+    }
+    if(body.lap_record) {
+      const lapRecord = body.lap_record.split(" ");
+      const lastIndex  = lapRecord.length - 1;
+      track.fastestLapTime = lapRecord[0];
+      track.fastestLapYear = lapRecord[lastIndex].replace("(", "").replace(")", "");
+      lapRecord.pop();
+      lapRecord.shift();
+      track.fastestLapDriver = lapRecord.join(" ");
+    }
+    // console.log(track.fastestLapDriver);
     await track.save();
 
     return new Response("Successfully updated the track", { status: 200 });
