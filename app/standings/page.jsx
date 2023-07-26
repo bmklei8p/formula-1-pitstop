@@ -24,7 +24,7 @@ const StandingsPage = () => {
   useEffect(() => {
     const getDriverStandings = async () => {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`, {next: {revalidate: 60}}
       );
       const data = await res.json();
       setDriversStandings(data);
@@ -38,7 +38,7 @@ const StandingsPage = () => {
   useEffect(() => {
     const getConstructorsStandings = async () => {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/constructors`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/constructors`, {next: {revalidate: 60}}
       );
       const data = await res.json();
       setConstructorsStandings(data);

@@ -6,7 +6,7 @@ import DetailMap from "../components/DetailMap"
 const TrackDetailPage = async ({ params }) => {
   const { circuitId } = params
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/tracks/${circuitId}`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/tracks/${circuitId}`, {next: {revalidate: 60}})
   const track = await res.json()
 
   return (
@@ -58,7 +58,7 @@ export default TrackDetailPage
 // <div className="w-full lg:w-9/12 2xl:w-2/3 flex flex-col pt-6 px-4 bg-white gap-x-8 md:px-2  md:flex-row">
 // <div className="w-full md:w-1/2 text-lg mb-4 border-r-4 border-t-4 rounded-tr-lg border-black">
 //   <h3 className="text-2xl md:text-3xl font-bold mb-2 pt-2">Track Story</h3>
-//   <div className="flex flex-col gap-6 px-2"> 
+//   <div className="flex flex-col gap-6 px-2">
 //     <p>{track.firstParagraph}</p>
 //     <p>{track.secondParagraph}</p>
 //     <p>{track.thirdParagraph}</p>

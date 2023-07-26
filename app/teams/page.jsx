@@ -12,7 +12,7 @@ const TeamsPage = () => {
   // drivers standings api call from ergast
   useEffect(() => {
     const getConstructorsStandings = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/constructors`)
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/constructors`, {next: {revalidate: 60}})
       const data = await res.json()
       setConstructorsStandings(data)
     }
@@ -23,7 +23,7 @@ const TeamsPage = () => {
   // driver information api call from db
   useEffect(() => {
     const getConstructorsInformation = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/constructors/mdb`)
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/constructors/mdb`, {next: {revalidate: 60}})
       const data = await res.json()
       // convert to map for faster lookup
       const constructorsMap = new Map();

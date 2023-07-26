@@ -6,28 +6,33 @@ import BannerImageMobile from '../public/assets/images/home-banner-mobile.png'
 
 
 const OverviewPage = async () => {
-  const res = await fetch("https://ergast.com/api/f1/current.json");
-  const data = await res.json();
-  const schedule = data.MRData.RaceTable.Races;
-  const currentDateTime = new Date();
-  const upcomingRaces = [];
-  const pastRaces = [];
-  for (let i = 0; i < schedule.length; i++) {
-    // results of previous week will not switch over until first practice of the next race weekend
-    const raceDate = new Date(
-      schedule[i].FirstPractice.date + "T" + schedule[i].FirstPractice.time
-    );
 
-    if (raceDate > currentDateTime) {
-      upcomingRaces.push(schedule[i]);
-    } else {
-      pastRaces.unshift(schedule[i]); //bad time complexity but list is short
+  const getScheduleData = async () => {
+    const res = await fetch("https://ergast.com/api/f1/current.json", {next: {revalidate: 60}});
+    const data = await res.json();
+    const schedule = data.MRData.RaceTable.Races;
+    const currentDateTime = new Date();
+    const upcomingRaces = [];
+    const pastRaces = [];
+    for (let i = 0; i < schedule.length; i++) {
+      // results of previous week will not switch over until first practice of the next race weekend
+      const raceDate = new Date(
+        schedule[i].FirstPractice.date + "T" + schedule[i].FirstPractice.time
+      );
+
+      if (raceDate > currentDateTime) {
+        upcomingRaces.push(schedule[i]);
+      } else {
+        pastRaces.unshift(schedule[i]); //bad time complexity but list is short
+      }
     }
+    const nextRace = upcomingRaces[0];
+    const nextRaceRound = nextRace.round;
+    const resultsRace = pastRaces[0];
+    const resultsRaceRound = resultsRace.round;
+    return { nextRace, nextRaceRound, resultsRace, resultsRaceRound}
   }
-  const nextRace = upcomingRaces[0];
-  const nextRaceRound = nextRace.round;
-  const resultsRace = pastRaces[0];
-  const resultsRaceRound = resultsRace.round;
+  const { nextRace, nextRaceRound, resultsRace, resultsRaceRound } = await getScheduleData();
 
   return (
     <div className="w-full flex flex-col items-center">
