@@ -65,4 +65,12 @@ signapore track needs layout or link fixed
 
 - need to update driver image with de vries X not being responsive on mobile sizes: works on desktop
 
-- on full race results page, when the driver is a lap down showing as a DNF - 
+- on full race results page, when the driver is a lap down showing as a DNF - fixed
+
+
+7/26 - 
+- Need track model to have both circuit name and official name for race - track pages will use circuit name for display. 
+
+
+
+

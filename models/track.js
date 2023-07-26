@@ -6,13 +6,13 @@ const TrackSchema = new Schema({
     },
     circuitId: {
         type: String,
-        required: [true, "Please provide a user friendly name"],
+        required: true,
+    },
+    circuitName: {
+        type: String,
     },
     trackStartDate: {
         type: String,
-    },
-    years: {
-        type: Array,
     },
     lat: {
         type: Number,

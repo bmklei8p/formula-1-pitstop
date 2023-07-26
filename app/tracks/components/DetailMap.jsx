@@ -3,7 +3,7 @@
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import { useState } from 'react';
 
-const DetailMap = ({ lat, long, officialRaceName, locationCity, locationCountry }) => {
+const DetailMap = ({ lat, long, circuitName, locationCity, locationCountry }) => {
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const [selectedMarker, setSelectedMarker] = useState(null);
   // const [mobileScreen, setMobileScreen] = useState(false);
@@ -43,7 +43,7 @@ const DetailMap = ({ lat, long, officialRaceName, locationCity, locationCountry 
                 onCloseClick={handleCloseInfoWindow}
               >
                 <div>
-                  <h3 style={{fontWeight: 'bold'}}>{officialRaceName}</h3>
+                  <h3 style={{fontWeight: 'bold'}}>{circuitName}</h3>
                   <p>Location: {locationCity}, {locationCountry}</p>
                 </div>
               </InfoWindow>

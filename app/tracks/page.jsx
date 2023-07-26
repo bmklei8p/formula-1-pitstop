@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
-
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 
 export default function TracksMap() {
@@ -58,7 +57,7 @@ export default function TracksMap() {
 
   const renderTrackList = () => {
     const sortedTrackList = trackList.sort((a, b) =>
-      a.officialRaceName.localeCompare(b.officialRaceName)
+      a.circuitName.localeCompare(b.circuitName)
     );
 
     const trackBoxes = [];
@@ -81,7 +80,7 @@ export default function TracksMap() {
             style={{ cursor: 'pointer' }}
             onClick={() => handleTrackClick(track)}
           >
-            {track.officialRaceName}
+            {track.circuitName}
           </p>
         ))}
       </div>
@@ -90,7 +89,7 @@ export default function TracksMap() {
 
   const renderMobileTrackList = () => {
     const sortedTrackList = trackList.sort((a, b) =>
-      a.officialRaceName.localeCompare(b.officialRaceName)
+      a.circuitName.localeCompare(b.circuitName)
     );
     const startIndex = mobileTrackIndex * 5;
     const endIndex = startIndex + 5;
@@ -129,7 +128,7 @@ export default function TracksMap() {
               style={{ cursor: 'pointer' }}
               onClick={() => handleTrackClick(track)}
             >
-              {track.officialRaceName}
+              {track.circuitName}
             </p>
           ))}
         </div>
@@ -182,7 +181,7 @@ export default function TracksMap() {
                     onCloseClick={handleCloseInfoWindow}
                   >
                     <div>
-                      <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.officialRaceName}</h3>
+                      <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.circuitName}</h3>
                       <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
                     </div>
                   </InfoWindow>

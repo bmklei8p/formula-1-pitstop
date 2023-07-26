@@ -23,11 +23,14 @@ export const PATCH = async (req, { params }) => {
     if (!track) {
       return new Response("track not found", { status: 404 });
     }
-    // console.log(body.official_track_name)
-    // track.officialRaceName = body.official_track_name;
-    // console.log(officialRaceName)
+
+
     if(body.official_track_name) {
-      track.officialRaceName = body.official_track_name;
+      track.circuitName = body.official_track_name;
+    }
+
+    if(body.circuit_name) {
+      track.circuitName = body.circuit_name;
     }
     if(body.first_grand_prix) {
       track.trackStartDate = body.first_grand_prix;
@@ -49,8 +52,10 @@ export const PATCH = async (req, { params }) => {
     }
     // console.log(track.fastestLapDriver);
     await track.save();
+    const updatedTrack = await Track.findOne({ circuitId: params.circuitId });
 
-    return new Response("Successfully updated the track", { status: 200 });
+
+    return new Response(`Successfully updated the track: ${updatedTrack}`, { status: 200 });
   } catch(err) {
     console.log(err);
     return new Response(err, {status: 500});

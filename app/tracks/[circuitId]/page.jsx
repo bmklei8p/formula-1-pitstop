@@ -12,7 +12,7 @@ const TrackDetailPage = async ({ params }) => {
   return (
     <div className="w-full h-screen flex flex-col items-center bg-gray-100">
       <h1 className="text-2xl md:text-3xl font-bold pt-2 pb-2 md:pb-4">
-        {track.officialRaceName}
+        {track.circuitName}
       </h1>
       {/* <div className="w-full lg:w-9/12  2xl:w-2/3 flex flex-col  bg-white md:flex-row"> */}
       <div className="w-full lg:w-9/12  2xl:w-2/3 flex flex-col pr-4 md:pr-8 bg-white md:flex-row">
@@ -34,7 +34,7 @@ const TrackDetailPage = async ({ params }) => {
           <p>{track.secondParagraph}</p>
         </div>
         <div className="w-[45%] pl-12 hidden md:block">
-          <DetailMap lat={track.lat} long={track.long} officialRaceName={track.officialRaceName} locationCity={track.locationCity} locationCountry={track.locationCountry}/>
+          <DetailMap lat={track.lat} long={track.long} circuitName={track.circuitName} locationCity={track.locationCity} locationCountry={track.locationCountry}/>
         </div>
         <div className="w-full mt-4">
           <p>{track.thirdParagraph}</p>
@@ -44,7 +44,7 @@ const TrackDetailPage = async ({ params }) => {
         <ImageCarousel imageURLArray={["001.avif","002.avif","003.avif"]} path={`/assets/images/historic/${track.circuitId}/`} alt={`${track.locationCity} images`} />
       </div>
       <div className="w-full px-4 rounded-sm bg-white block md:hidden">
-          <DetailMap lat={track.lat} long={track.long} officialRaceName={track.officialRaceName} locationCity={track.locationCity} locationCountry={track.locationCountry}/>
+          <DetailMap lat={track.lat} long={track.long} circuitName={track.circuitName} locationCity={track.locationCity} locationCountry={track.locationCountry}/>
         </div>
     </div>
   )
@@ -65,6 +65,6 @@ export default TrackDetailPage
 //   </div>
 // </div>
 // <div className="w-full md:w-1/2">
-//   <DetailMap lat={track.lat} long={track.long} officialRaceName={track.officialRaceName} locationCity={track.locationCity} locationCountry={track.locationCountry}/>
+//   <DetailMap lat={track.lat} long={track.long} circuitName={track.circuitName} locationCity={track.locationCity} locationCountry={track.locationCountry}/>
 // </div>
 // </div>

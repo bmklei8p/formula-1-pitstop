@@ -61,9 +61,11 @@ const UpcomingRaceSchedulePage = async ({ params }) => {
   // )
   return (
     <div className="w-full h-screen flex flex-col items-center bg-gray-100">
-      <h1 className="text-2xl md:text-3xl font-bold pt-2 pb-2 md:pb-4">
-        {race.raceName}
-      </h1>
+      <div className="pt-2 pb-2 md:pb-4 text-center">
+        <h1 className="text-2xl md:text-3xl font-bold">
+          {track.officialRaceName}
+        </h1>
+      </div>
       <div className="w-full lg:w-9/12 2xl:w-2/3 flex flex-col-reverse gap-y-16 justify-evenly pt-2 bg-white md:flex-row">
         {/* track layout image */}
         {/* <div className="pt-8 pl-8"> */}
