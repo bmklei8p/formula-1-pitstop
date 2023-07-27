@@ -81,8 +81,11 @@ const Header = () => {
                   </Link>
                 ))}
               </div>
-              <button className='text-xl hover:bg-white text-light rounded-lg hover:text-black flex px-2 items-center justify-center' onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-                {theme === 'light' ? <FiMoon size={25} /> : <FiSun size={25} />} 
+              <button className='sidebar-link-block' onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                {theme === 'light' ? <FiMoon size={25} /> : <FiSun size={25} />}
+                  {/* <div className='sidebar-link-box'>
+                    {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+                  </div>  */}
               </button> 
               <div className="sidebar-close">
                 <button className="btn btn-primary" onClick={() => setShowSideBar(false)}>Close</button>

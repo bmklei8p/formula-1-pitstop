@@ -3,6 +3,7 @@ import Header from './components/Header'
 import mongoose from 'mongoose';
 import { Titillium_Web } from 'next/font/google'
 import { Providers } from './components/Providers';
+import Footer from './components/Footer';
 
 export const metadata = {
   title: 'Formula 1 Pitstop',
@@ -68,6 +69,7 @@ export default function RootLayout({ children }) {
           <Providers>
             <Header />
             {children}
+            <Footer />
           </Providers>
         </main>
       </body>
