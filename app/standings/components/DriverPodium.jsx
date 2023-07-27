@@ -14,7 +14,7 @@ const DriverPodium = ({ firstPlace, secondPlace, thirdPlace }) => {
         />
         <div className="driver-podium-first-container">
           <Link href={`drivers/${firstPlace.driverId}`}>
-            <div className="w-[100px] h-[100px] rounded-full overflow-hidden bg-gray-100">
+            <div className="w-[100px] h-[100px] rounded-full overflow-hidden bg-background">
               <Image
                 className="object-contain"
                 src={`/assets/images/drivers/${firstPlace.driverId}_front.png`}
@@ -27,7 +27,7 @@ const DriverPodium = ({ firstPlace, secondPlace, thirdPlace }) => {
         </div>
         <div className="driver-podium-second-container">
           <Link href={`drivers/${secondPlace.driverId}`}>
-            <div className="w-[100px] h-[100px] rounded-full overflow-hidden bg-gray-100">
+            <div className="w-[100px] h-[100px] rounded-full overflow-hidden bg-background">
               <Image
                 className="object-contain"
                 src={`/assets/images/drivers/${secondPlace.driverId}_front.png`}
@@ -40,7 +40,7 @@ const DriverPodium = ({ firstPlace, secondPlace, thirdPlace }) => {
         </div>
         <div className="driver-podium-third-container">
           <Link href={`drivers/${thirdPlace.driverId}`}>
-            <div className="w-[100px] h-[100px] rounded-full overflow-hidden bg-gray-100">
+            <div className="w-[100px] h-[100px] rounded-full overflow-hidden bg-background">
               <Image
                 className="object-contain"
                 src={`/assets/images/drivers/${thirdPlace.driverId}_front.png`}

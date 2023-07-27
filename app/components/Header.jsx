@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { useState } from 'react'
+import { useTheme } from 'next-themes'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,8 +9,11 @@ import { RiMenuFill } from 'react-icons/ri'
 import { BiSolidBarChartAlt2, BiSolidCalendar } from 'react-icons/bi'
 import { GiFullMotorcycleHelmet } from 'react-icons/gi'
 import { PiFlagCheckeredFill } from 'react-icons/pi'
+import { FiSun, FiMoon } from 'react-icons/fi'
+
 
 const Header = () => {
+  const { theme, setTheme } = useTheme()
   const [showSideBar, setShowSideBar] = useState(false)
   const navLinks = [{
     title: "Schedule",
@@ -45,7 +49,7 @@ const Header = () => {
             <h2 className="text-2xl font-semibold">Formula 1 Pitstop</h2>
           </div>
         </Link>
-        <div className="hidden lg:p-2 lg:block">
+        <div className="hidden lg:p-2 lg:flex lg:flex-row">
           <div className='grid grid-cols-5 divide-x-2 justify-center '>
             {navLinks.map((link) => (
               <div key={link.href} className='px-2'>
@@ -53,6 +57,11 @@ const Header = () => {
               </div>
             ))}
           </div>
+          <div className='pl-2 flex justify-center items-center'>
+              <button className='text-xl hover:bg-white text-light rounded-lg hover:text-black flex px-2 items-center justify-center' onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                {theme === 'light' ? <FiMoon size={25} /> : <FiSun size={25} />} 
+              </button> 
+            </div>
         </div>
         {/* mobile header - sidebar */}
         <div className="lg:hidden flex justify-end">
@@ -72,6 +81,9 @@ const Header = () => {
                   </Link>
                 ))}
               </div>
+              <button className='text-xl hover:bg-white text-light rounded-lg hover:text-black flex px-2 items-center justify-center' onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                {theme === 'light' ? <FiMoon size={25} /> : <FiSun size={25} />} 
+              </button> 
               <div className="sidebar-close">
                 <button className="btn btn-primary" onClick={() => setShowSideBar(false)}>Close</button>
               </div>

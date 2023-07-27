@@ -2,6 +2,7 @@ import '../styles/global.css'
 import Header from './components/Header'
 import mongoose from 'mongoose';
 import { Titillium_Web } from 'next/font/google'
+import { Providers } from './components/Providers';
 
 export const metadata = {
   title: 'Formula 1 Pitstop',
@@ -61,22 +62,13 @@ export default function RootLayout({ children }) {
   // initialConnectToDB();
 
   return (
-    <html lang="en" className={`${titilliumWeb.variable}`}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="description" content={metadata.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{metadata.title}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-      </head>
-      <body>
-        {/* <div className='main'>
-          <div className='gradient'/>
-        </div> */}
-        <main className='app'>
-          <Header />
-          {children}
+    <html suppressHydrationWarning lang="en" className={`${titilliumWeb.variable}`}>
+      <body className=' bg-background'>
+        <main className='relative z-10 flex flex-col w-full justify-center items-center'>
+          <Providers>
+            <Header />
+            {children}
+          </Providers>
         </main>
       </body>
     </html>

@@ -7,7 +7,7 @@ const UpcomingRaces = ({races}) => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-3 mt-4 mx-2">
       {races && races.map((race, index) => {
         return (
-          <Link key={index} className="bg-gray-300 hover:bg-gray-400 w-9/10 border-8 border-solid rounded-md border-gray-300" href={`schedule/current/${race.round}`}>
+          <Link key={index} className="bg-gray-300 dark:bg-slate-700 hover:bg-gray-400 w-9/10 border-8 border-solid rounded-md border-gray-300 dark:border-slate-700" href={`schedule/current/${race.round}`}>
             <div className="flex flex-row px-2 items-center">
               {/* <div className="basis-1/6 flex align-middle box-border ">  
                  <Image src={`/assets/images/flag/${race.Circuit.Location.country.replace(/ /g, '_')}_flag.svg`} alt={`${race.Circuit.Location.country} flag`} width={100} height={100} className="object-contain"  />

@@ -17,7 +17,7 @@ const ResultsList = ({ raceResults, qualifyingResults }) => {
   return (
       <div className="flex flex-col justify-center text-center mt-6">
         {/* race results */}
-        <div onClick={() => setShowRaceResults(!showRaceResults)} className='flex flex-col border-2 border-gray-500 bg-slate-300 pt-2 pb-2'>
+        <div onClick={() => setShowRaceResults(!showRaceResults)} className='flex flex-col border-2 border-gray-500 bg-slate-300 dark:bg-slate-800 pt-2 pb-2'>
           <div className="w-full flex flex-row justify-center text-xl xl:text-2xl ">
             {showRaceResults ?
             <>
@@ -60,7 +60,7 @@ const ResultsList = ({ raceResults, qualifyingResults }) => {
         </div>
          : null}
         {/* Qualifying results */}
-        <div onClick={() => setShowQualifyingResults(!showQualifyingResults)} className='flex flex-col mt-4 border-2 border-gray-500 bg-slate-300 pt-2 pb-2'>
+        <div onClick={() => setShowQualifyingResults(!showQualifyingResults)} className='flex flex-col mt-4 border-2 border-gray-500 bg-slate-300 dark:bg-slate-800 pt-2 pb-2'>
           <div className="w-full flex flex-row justify-center text-xl xl:text-2xl ">
             {showQualifyingResults ?
             <>

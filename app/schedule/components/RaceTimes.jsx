@@ -25,7 +25,7 @@ const RaceTimes = ({ race, trackTimezone }) => {
 
 
   return (
-    <div className="flex flex-col border-r-4 border-t-4 border-black max-w-xl rounded-tr-lg w-full md:w-3/4">
+    <div className="flex flex-col border-r-4 border-t-4 border-borderColor max-w-xl rounded-tr-lg w-full md:w-3/4">
         <div className="w-full pt-2 flex flex-row justify-between">
           <div className='text-xl md:text-2xl font-bold text-left'>Weekend Schedule</div>
           <div className='flex flex-row gap-x-2 pr-4'>

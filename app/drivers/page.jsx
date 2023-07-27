@@ -40,7 +40,7 @@ const DriversPage = async () => {
       {/* <div classname='flex justify-left mx-3'> */}
         <h1 className='font-bold text-2xl md:text-3xl mb-4'>Drivers</h1>
       </div>
-      <div className="grid grid-cols-1 mx-3 gap-8 xl:gap-16 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 mx-3 gap-8 xl:gap-16 md:grid-cols-2 lg:grid-cols-3 ">
         {/* card   */}
         {driversStandings &&
           driverInformation &&
@@ -60,7 +60,7 @@ const DriversPage = async () => {
                   There has to be a better way to do this
                 </div>
                 <div
-                  className={`flex p-2 w-full flex-col border-t-4 border-r-4 hover:border-[${driverColor}] border-black rounded-tr-lg`}
+                  className={`flex group p-2 w-full flex-col border-t-4 border-r-4 hover:border-[${driverColor}] border-borderColor rounded-tr-lg`}
                 >
                   <div className="flex flex-row justify-between">
                     <div className="flex justify-center items-center text-xl md:text-2xl">
@@ -70,12 +70,12 @@ const DriversPage = async () => {
                       <div className="text-center text-l md:text-xl">
                         {driver.points}
                       </div>
-                      <div className="bg-black text-white font-bold px-2 rounded-lg mb-1">
+                      <div className="bg-black dark:bg-white dark:text-black text-white font-bold px-2 rounded-lg mb-1">
                         POINTS
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-row pt-2 pb-2 items-center justify-between border-t-2 border-b-2 border-black ">
+                  <div className={`flex flex-row pt-2 pb-2 items-center justify-between border-t-2 border-b-2 border-borderColor group-hover:border-[${driverColor}]`}>
                     <div
                       className={`border-l-4 border-solid border-[${driverColor}]`}
                     >
@@ -84,7 +84,7 @@ const DriversPage = async () => {
                         <strong>{driver.Driver.familyName}</strong>
                       </h3>
                     </div>
-                    <div className=" overflow-hidden relative border-solid border-gray-300 rounded-md border-2 w-14 h-8">
+                    <div className={`overflow-hidden relative border-solid border-gray-300 dark:border-black rounded-md border-2 w-14 h-8`}>
                       <Image
                         src={`/assets/images/flag/${driverFlag}`}
                         alt={`${driver.Driver.nationality} flag`}

@@ -65,20 +65,20 @@ const TeamsPage = () => {
           hover:border-[#2293d2] hover:border-[#37bedd] hover:border-[#b6babd] hover:border-[#c92d4b] hover:border-[#5e8faa]'>
                 There has to be a better way to do this
               </div>
-              <div className={`flex p-2 w-full flex-col border-t-2 border-r-2 border-black rounded-tr-lg hover:border-[${color}] hover:border-t-4 hover:border-r-4 `}>
+              <div className={`flex p-2 w-full flex-col border-t-2 border-r-2 border-borderColor rounded-tr-lg hover:border-[${color}] hover:border-t-4 hover:border-r-4 `}>
                 <div className='flex flex-row justify-between'>
                   <div className='flex justify-center items-center font-bold text-3xl md:text-4xl'><h1>{index + 1}</h1></div>
                   <div className='flex flex-col'>
                     <div className='text-center text-2xl md:text-3xl'>{constructor.points}</div>
-                    <div className='bg-black text-white font-bold px-2 rounded-lg mb-1'>POINTS</div>
+                    <div className='bg-black dark:bg-white dark:text-black text-white font-bold px-2 rounded-lg mb-1'>POINTS</div>
                   </div>
                 </div>
-                <div className={`flex flex-row pt-2 pb-2 items-center justify-between border-t-2 border-b-2 border-black`}  >
+                <div className={`flex flex-row pt-2 pb-2 items-center justify-between border-t-2 border-b-2 border-borderColor`}  >
                   <div className={`border-l-4 border-solid border-[${color}]`}><h3 className='px-2 text-xl md:text-2xl font-bold'>{constructor.Constructor.name}</h3></div>
                   <div className=' overflow-hidden relative w-12 h-12'><Image src={`/assets/images/logo/${constructorId}_logo.avif`} alt={`${constructor.Constructor.name} logo`} sizes="(max-width: 768px) 100vw" className='object-cover' fill={true} /></div>
                 </div>
                 <div className='flex flex-row w-full pt-2 pb-2 items-center gap-4'  >
-                  <div className={`basis-1/2 border-r-2 border-b-2 border-solid border-black rounded-br-lg `}>
+                  <div className={`basis-1/2 border-r-2 border-b-2 border-solid border-borderColor rounded-br-lg `}>
                     {/* split driver on two rows here- next */}
                     <div className='flex flex-col md:flex-row md:gap-1'>
                       <h3 className='text-lg'>
@@ -89,7 +89,7 @@ const TeamsPage = () => {
                       </strong>
                     </div>
                   </div>
-                  <div className={`basis-1/2 border-r-2 border-b-2 border-solid border-black rounded-br-lg `}>
+                  <div className={`basis-1/2 border-r-2 border-b-2 border-solid border-borderColor rounded-br-lg `}>
                     {/* split driver on two rows here- next */}
                     <div className='flex flex-col md:flex-row md:gap-1'>
                       <h3 className='text-lg'>

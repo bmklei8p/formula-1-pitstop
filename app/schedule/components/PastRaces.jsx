@@ -7,7 +7,7 @@ const PastRaces = ({races}) => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-4 mt-4 mx-2">
       {races && races.map((race, index) => {
         return (
-          <Link key={index} className="bg-gray-300 hover:bg-gray-400 w-9/10 border-8 border-solid rounded-md border-gray-300" href={`schedule/current/completed/${race.round}`}>
+          <Link key={index} className="bg-gray-300 dark:bg-slate-700 hover:bg-gray-400 w-9/10 border-8 border-solid rounded-md border-gray-300 dark:border-slate-700" href={`schedule/current/completed/${race.round}`}>
             <div className="flex flex-row px-2">
               <div className="basis-1/6 flex align-middle box-border h-95">
                   {/* replacing all spaces in the country name with _ for the image path */}

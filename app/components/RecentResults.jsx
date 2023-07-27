@@ -23,7 +23,7 @@ const RecentResults = async ({ raceRound, race }) => {
 
 
   return (
-    <div className="border-r-4 border-t-4 border-black rounded-tr-lg pl-2 pr-4 pt-2">
+    <div className="border-r-4 border-t-4 border-borderColor dark:bg-altGrayDarker bg-altGray rounded-tr-lg pl-2 pr-4 pt-2">
         <div className="flex flex-row justify-between">
           <div className="flex flex-row items-center gap-x-2">
             <div className="overflow-hidden relative border-solid border-2 border-white w-16 md:w-20 h-10">

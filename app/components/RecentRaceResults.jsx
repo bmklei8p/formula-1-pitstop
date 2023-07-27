@@ -20,7 +20,7 @@ const RecentRaceResults = ({ raceResults, show, raceRound }) => {
         <RecentResultRow raceResults={raceResults} index={2} qualy={false} />
         <div className="flex justify-center">
           <Link href={`schedule/current/completed/${raceRound}`}>
-            <button className="text-lg md:text-xl border-b-2 border-black">Full Results</button>
+            <button className="text-lg md:text-xl border-b-2 border-borderColor">Full Results</button>
           </Link>
         </div>
     </div> : null}

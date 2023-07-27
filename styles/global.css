@@ -3,27 +3,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-body {
-  /* background-color: #e2e8f0; */
-  /* background-color: #feffff; */
-  /* background-color: rgb(243 244 246);
-  } */
 
-/* .main {
-  width: 100vw;
-  min-height: 100vh;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  padding: 120px 24px 160px 24px;
-  pointer-events: none;
-}
-@media (max-width: 1024px) {
-  .main {
-    min-height: 90vh;
+
+@layer base {
+  :root {
+    --background: 220 14% 96%;
+    --contentBackground: 0 0% 100%;
+    --borderColor: 0 0% 0%;
+    --altGray: 220 14% 96%;
+    --altGrayDarker: 220 14% 90%;
   }
-} */
+  .dark {
+    /* --background: 240.5 5.9% 10%; */
+    --background: 200 6.7% 17.6%;
+    --contentBackground: 60 3.23% 12.16%;
+    /* --contentBackground: 217.2 32.6% 17.5%; */
+    --borderColor: 0 0% 100%;
+    --altGray: 215.3 25% 26.7%;
+    --altGrayDarker: 217.2 32.6% 17.5%;
+  }
+}
+
 
 .header-container {
     width: 100vw;
@@ -276,10 +276,6 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.map-container {
-  display: flex;
-  justify-content: center;
-}
 
 .track-list-container {
   display: flex;
@@ -287,15 +283,8 @@ body {
   justify-content: space-evenly;
   padding-top: 0.75rem;
 }
-.mobile-track-list-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.track-list-box {
-  border: black 1px solid;
-  padding: 0.5rem
-}
+
+
 
 
 @keyframes moveRightAnimation {
@@ -316,7 +305,7 @@ body {
 }
 
 .body {
-  @apply bg-black dark:bg-black
+  @apply bg-gray-100 dark:bg-red-500
 }
 
 .podium_first {

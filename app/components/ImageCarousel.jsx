@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { BsChevronCompactLeft, BsChevronCompactRight, BsCircle } from "react-icons/bs";
-import { LuRectangleHorizontal } from "react-icons/lu";
 
 const ImageCarousel = ({ imageURLArray, path, alt }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,7 +22,7 @@ const ImageCarousel = ({ imageURLArray, path, alt }) => {
 
 
   return (
-    <div className="bg-white border-t-2 border-gray-100 max-w-full m-0 relative flex justify-center group">
+    <div className="bg-contentBackground border-t-2 border-contentBackground max-w-full m-0 relative flex justify-center group">
         <div className="flex flex-row absolute top-4 gap-x-2">
           {/* dashes to denote carousel */}
           {imageURLArray.map((image, index) => (

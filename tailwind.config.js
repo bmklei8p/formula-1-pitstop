@@ -8,6 +8,13 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        background: "hsl(var(--background))",
+        contentBackground: "hsl(var(--contentBackground))",
+        borderColor: "hsl(var(--borderColor))",
+        altGray: "hsl(var(--altGray))",
+        altGrayDarker: "hsl(var(--altGrayDarker))",
+      },
       fontFamily: {
         sans: ['var(--font-titillium-web)', 'sans-serif'],
       },

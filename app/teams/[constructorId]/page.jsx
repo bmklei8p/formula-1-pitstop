@@ -16,14 +16,14 @@ const ConstructorDetailPage = async ({ params }) => {
   ).then((res) => res.json());
 
   return (
-    <div className="w-full h-screen flex flex-col items-center bg-gray-100">
-      <div className="w-full h-full flex flex-col items-center bg-gray-100">
+    <div className="w-full h-screen flex flex-col items-center bg-background">
+      <div className="w-full h-full flex flex-col items-center bg-background">
         <div className="pt-2 pb-2 md:pb-4 text-center">
           <h1 className="text-2xl md:text-3xl font-bold">
             {constructor.fullTeamName}
           </h1>
         </div>
-        <div className="w-full 2xl:w-2/3 bg-white flex flex-col-reverse gap-4 lg:flex-row lg:justify-between md:gap-0 pb-4 md:pb-0 ">
+        <div className="w-full 2xl:w-2/3 bg-contentBackground flex flex-col-reverse gap-4 lg:flex-row lg:justify-between md:gap-0 pb-4 md:pb-0 ">
           {/* constructor info container */}
           <div className="">
             <ConstructorInfoBox constructor={constructor} />
@@ -60,7 +60,7 @@ const ConstructorDetailPage = async ({ params }) => {
               </div>)}
           </div>
         </div>
-        <div className="w-full 2xl:w-2/3 m-0 h-auto bg-gray-100">
+        <div className="w-full 2xl:w-2/3 m-0 h-auto bg-background">
           <ImageCarousel imageURLArray={["001.avif","002.avif","003.avif"]} path={`/assets/images/teams/${constructor.constructorId}/`} alt={`${constructor.teamName} images`} />
         </div>
       </div>

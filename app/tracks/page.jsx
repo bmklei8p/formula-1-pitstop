@@ -72,7 +72,7 @@ export default function TracksMap() {
     }
 
     return trackBoxes.map((box, index) => (
-      <div key={index} className='track-list-box'>
+      <div key={index} className='border-borderColor border-2 border-solid bg-altGray p-4'>
         {box.map((track, trackIndex) => (
           <p
             key={trackIndex}
@@ -110,17 +110,17 @@ export default function TracksMap() {
 
 
     return (
-      <div className='mobile-track-list-container'>
+      <div className='flex flex-row items-center'>
         <div>
         <button
             onClick={handlePrevArrowClick}
             disabled={disablePrevArrow}
             style={{ marginRight: '10px', fontSize: '2rem' }}
           >
-            <BiLeftArrowAlt className={`${disablePrevArrow ? 'text-gray-100 dark:text-black' : ''}`} />
+            <BiLeftArrowAlt className={`${disablePrevArrow ? 'text-gray-100 dark:text-background' : ''}`} />
           </button>
         </div>
-        <div className='track-list-box'>
+        <div className='border-borderColor bg-altGray border-[1px] border-solid p-4'>
           {currentTracks && currentTracks.map((track, trackIndex) => (
             <p
               key={trackIndex}
@@ -159,7 +159,7 @@ export default function TracksMap() {
         <h1 className='font-bold font-sans mb-4 text-2xl md:text-3xl'>Tracks</h1>
         {/* <h1 className='font-bold font-sans mb-2 text-3xl hidden md:block'>2023 Formula 1 Tracks </h1> */}
       </div>
-      <div className='map-container'>
+      <div className='flex justify-center'>
         <LoadScript googleMapsApiKey={API_KEY}>
           <GoogleMap
             mapContainerStyle={mapContainerStyle}
@@ -181,8 +181,8 @@ export default function TracksMap() {
                     onCloseClick={handleCloseInfoWindow}
                   >
                     <div>
-                      <h3 className="px-4"><strong className='text-md font-bold'>{selectedMarker.circuitName}</strong></h3>
-                      <p>{selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
+                      <h3 className="px-4"><strong className='text-md text-black font-bold'>{selectedMarker.circuitName}</strong></h3>
+                      <p className='text-black'>{selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
                       <button className='border-red-500 border-2 rounded-lg bg-red-500 text-white px-2 font-bold mt-2'>Track Details</button>
                     </div>
                   </InfoWindow>

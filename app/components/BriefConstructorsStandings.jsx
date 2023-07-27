@@ -21,7 +21,7 @@ const BriefConstructorsStandings = ({constructorsStandingsList}) => {
         <BriefConstructorsStandingsRow constructorsStandingsList={constructorsStandingsList} index={2} />
         <div className="flex justify-center pb-4">
           <Link href={`standings/`}>
-            <button className="text-lg md:text-xl border-b-2 border-black">Full Constructors Standings</button>
+            <button className="text-lg md:text-xl border-b-2 border-borderColor">Full Constructors Standings</button>
           </Link>
         </div>
       </div>
