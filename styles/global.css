@@ -3,14 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 body {
   /* background-color: #e2e8f0; */
   /* background-color: #feffff; */
-  background-color: rgb(243 244 246);
-  }
+  /* background-color: rgb(243 244 246);
+  } */
 
-.main {
+/* .main {
   width: 100vw;
   min-height: 100vh;
   position: fixed;
@@ -23,7 +23,7 @@ body {
   .main {
     min-height: 90vh;
   }
-}
+} */
 
 .header-container {
     width: 100vw;
@@ -313,6 +313,10 @@ body {
 
 .app {
   @apply relative z-10 flex justify-center items-center flex-col w-full ;
+}
+
+.body {
+  @apply bg-black dark:bg-black
 }
 
 .podium_first {

@@ -117,7 +117,7 @@ export default function TracksMap() {
             disabled={disablePrevArrow}
             style={{ marginRight: '10px', fontSize: '2rem' }}
           >
-            <BiLeftArrowAlt />
+            <BiLeftArrowAlt className={`${disablePrevArrow ? 'text-gray-100 dark:text-black' : ''}`} />
           </button>
         </div>
         <div className='track-list-box'>
@@ -133,7 +133,7 @@ export default function TracksMap() {
         </div>
         <div>
           <button onClick={handleNextArrowClick} disabled={disableNextArrow} style={{ marginLeft: '10px', fontSize: '2rem'}}>
-            <BiRightArrowAlt />
+            <BiRightArrowAlt className={`${disableNextArrow ? 'text-gray-100 dark:text-black' : ''}`} />
           </button>
         </div>
       </div>
@@ -156,7 +156,7 @@ export default function TracksMap() {
   return (
     <div className='tracks-container'>
       <div className='tracks-title-block'>
-        <h1 className='font-bold font-sans mb-4 text-2xl md:text-3xl'>Circuits </h1>
+        <h1 className='font-bold font-sans mb-4 text-2xl md:text-3xl'>Tracks</h1>
         {/* <h1 className='font-bold font-sans mb-2 text-3xl hidden md:block'>2023 Formula 1 Tracks </h1> */}
       </div>
       <div className='map-container'>
@@ -181,8 +181,9 @@ export default function TracksMap() {
                     onCloseClick={handleCloseInfoWindow}
                   >
                     <div>
-                      <h3 style={{fontWeight: 'bold'}}>Official Name: {selectedMarker.circuitName}</h3>
-                      <p>Location: {selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
+                      <h3 className="px-4"><strong className='text-md font-bold'>{selectedMarker.circuitName}</strong></h3>
+                      <p>{selectedMarker.locationCity}, {selectedMarker.locationCountry}</p>
+                      <button className='border-red-500 border-2 rounded-lg bg-red-500 text-white px-2 font-bold mt-2'>Track Details</button>
                     </div>
                   </InfoWindow>
                 </Link>

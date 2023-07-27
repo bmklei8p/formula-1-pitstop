@@ -62,10 +62,18 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className={`${titilliumWeb.variable}`}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="description" content={metadata.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{metadata.title}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      </head>
       <body>
-        <div className='main'>
+        {/* <div className='main'>
           <div className='gradient'/>
-        </div>
+        </div> */}
         <main className='app'>
           <Header />
           {children}
