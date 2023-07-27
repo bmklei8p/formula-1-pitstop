@@ -56,13 +56,11 @@ const OverviewPage = async () => {
           className="-z-10 opacity-95"
           sizes="(min-width: 777px) 100vw"
         />
-      <div className="w-full h-[75vh] absolute">
-        <div className="absolute bottom-0 right-20 h-8">
-            <div className="animate-bounce text-6xl text-red-500">
-                <FaRegArrowAltCircleDown />
-            </div>
+      <div className="absolute hidden xl:block xl:bottom-20 2xl:bottom-40 right-20 h-8">
+          <div className="animate-bounce text-6xl text-[#b30600]">
+              <FaRegArrowAltCircleDown />
           </div>
-      </div>
+        </div>
       </div>
       <div className="flex max-h-[80vh] md:hidden overflow-clip relative justify-center items-end bg-gray-900 -z-50 ">
         <div className="h-26 w-full absolute z-40 flex flex-col justify-end py-2 items-center bg-gradient-to-t opacity-75 to-[#494949] from-[#2b2b2b]">
