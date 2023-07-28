@@ -28,7 +28,7 @@ const TrackDetailPage = async ({ params }) => {
         <ImageCarousel imageURLArray={["001.avif","002.avif","003.avif"]} path={`/assets/images/historic/${track.circuitId}/`} alt={`${track.locationCity} images`} />
       </div>
       <div className="w-full lg:w-9/12 2xl:w-2/3 flex flex-wrap pt-4 md:pt-6 px-4 gap-x-8 bg-contentBackground">
-        <div className="w-full md:w-1/2 flex flex-col gap-6 pr-2 md:border-t-4 md:border-r-4 md:rounded-tr-lg md:border-black ">
+        <div className="w-full md:w-1/2 flex flex-col gap-6 pr-2 md:border-t-4 md:border-r-4 md:rounded-tr-lg md:border-borderColor ">
           <h3 className="text-xl md:text-2xl font-bold pt-2">Track Story</h3>
           <p>{track.firstParagraph}</p>
           <p>{track.secondParagraph}</p>

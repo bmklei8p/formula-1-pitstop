@@ -2,8 +2,8 @@ import '../styles/global.css'
 import Header from './components/Header'
 import mongoose from 'mongoose';
 import { Titillium_Web } from 'next/font/google'
-import { Providers } from './components/Providers';
-import Footer from './components/Footer';
+// import { Providers } from './components/Providers';
+// import Footer from './components/Footer';
 
 export const metadata = {
   title: 'Formula 1 Pitstop',
@@ -66,11 +66,11 @@ export default function RootLayout({ children }) {
     <html suppressHydrationWarning lang="en" className={`${titilliumWeb.variable}`}>
       <body className=' bg-background'>
         <main className='relative z-10 flex flex-col w-full justify-center items-center'>
-          <Providers>
+          {/* <Providers> */}
             <Header />
             {children}
-            <Footer />
-          </Providers>
+            {/* <Footer /> */}
+          {/* </Providers> */}
         </main>
       </body>
     </html>

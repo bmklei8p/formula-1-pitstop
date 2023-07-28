@@ -1,7 +1,9 @@
 import Image from "next/image"
 import RecentQualyResults from "./RecentQualyResults"
 import RecentRaceResults from "./RecentRaceResults"
-
+import RaceTimes from "../schedule/components/RaceTimes"
+import SprintRaceTimes from "../schedule/components/SprintRaceTimes"
+import UpcomingRace from "../schedule/components/UpcomingRace"
 
 
 const RecentResults = async ({ raceRound, race }) => {
@@ -15,6 +17,11 @@ const RecentResults = async ({ raceRound, race }) => {
   const raceResultsResponse = await fetch(`https://ergast.com/api/f1/current/${raceRound}/results.json`, { next: {revalidate: 60}})
   const raceResultsData = await raceResultsResponse.json()
   const raceResults = raceResultsData.MRData.RaceTable.Races
+
+  const timeZoneRes = await fetch(`https://maps.googleapis.com/maps/api/timezone/json?location=${race.Circuit.Location.lat},${race.Circuit.Location.long}&timestamp=0&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`)
+  const data = await timeZoneRes.json()
+  const trackTimeZone = data.timeZoneId
+
 
   const displayMonthFromDateObj = (dateObj) => {
     const month = dateObj.toLocaleString('en-US', { month: 'long'})
@@ -66,7 +73,10 @@ const RecentResults = async ({ raceRound, race }) => {
 
       {/* Neither Complete */}
       { !qualifyingResults.length > 0 && !raceResults.length > 0 ?
-      <h1>Neither Complete</h1> : null}
+      <div className="flex flex-col justify-start">
+        <UpcomingRace nextRace={race} />
+        {race.hasOwnProperty('Sprint') ? <SprintRaceTimes race={race} trackTimezone={trackTimeZone} /> : <RaceTimes race={race} trackTimezone={trackTimeZone} />}
+      </div>: null}
     </div>
   )
 }
