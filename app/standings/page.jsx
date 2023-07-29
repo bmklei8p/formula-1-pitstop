@@ -5,8 +5,8 @@ import DriverPodium from "./components/DriverPodium";
 import DriverStandingsTable from "./components/DriverStandingsTable";
 import ConstructorStandingsTable from "./components/ConstructorStandingsTable";
 
-const StandingsPage = () => {
-  const [showDriversStandings, setShowDriversStandings] = useState(true);
+const StandingsPage = ({showContructors}) => {
+  const [showDriversStandings, setShowDriversStandings] = useState(showContructors ? false : true);
 
   const [driversStandings, setDriversStandings] = useState([]);
   const [constructorsStandings, setConstructorsStandings] = useState([]);

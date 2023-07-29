@@ -16,7 +16,7 @@ const UpcomingRace = ({ nextRace, justify, frontPage }) => {
     <div className={`w-full flex justify-${justify ? justify : "center"} text-center`}>
       <Link href={`schedule/current/${nextRace.round}`} className="w-full lg:w-2/3 grid border-4 bg-gray-500 dark:bg-slate-800 text-white pt-2 mt-2">  {/* this was a flex flex-col */}
         <div className="text-xl md:text-2xl flex justify-center">
-          {frontPage ? <h3>Feature Race</h3> : nextRace.raceName}
+          {frontPage ? <h3>Race Countdown</h3> : nextRace.raceName}
         </div>
         <div className="justify-self-center w-full md:w-8/12"> 
         <div className="grid grid-cols-3 mb-2 mt-1 divide-x-2 md:divide-x-4  justify-center">
