@@ -5,7 +5,6 @@ import { PiCaretDown, PiCaretUp } from "react-icons/pi"
 import RecentResultRow from "./RecentResultRow"
 
 const RecentQualyResults = ({ qualifyingResults, show, raceRound }) => {
-  console.log(qualifyingResults)
     const [showRaceResults, setShowRaceResults] = useState(show)
 
     return (
