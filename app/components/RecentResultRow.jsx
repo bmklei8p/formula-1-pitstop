@@ -21,7 +21,8 @@ const RecentResultRow = ({raceResults, index, qualy}) => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <p className="text-xl md:text-2xl">{qualy ? raceResults[index].Q1 : (raceResults[index].Time.time.length > 8 ? raceResults[index].Time.time.slice(0,7) : raceResults[index].Time.time)}</p>      </div>
+        <p className="text-xl md:text-2xl">{qualy ? raceResults[index].Q3 : (raceResults[index].Time.time.length > 8 ? raceResults[index].Time.time.slice(0,7) : raceResults[index].Time.time)}</p>  
+    </div>
   </div>
   )
 }
