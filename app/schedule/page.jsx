@@ -31,6 +31,7 @@ const SchedulePage = () => {
     }
 
     setUpcomingRaces(upcoming.slice(1));
+    past.unshift(upcoming[0]);
     setPastRaces(past);
 
     if (upcoming.length > 0) {

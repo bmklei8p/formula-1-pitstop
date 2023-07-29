@@ -6,10 +6,10 @@ import ConstructorSingleRaceStandingsTable from '@/app/standings/components/Cons
 import QualifyingResults from './QualifyingResults'
 
 
-const ResultsList = ({ raceResults, qualifyingResults }) => {
-  const [showRaceResults, setShowRaceResults] = useState(false)
+const ResultsList = ({ raceResults, qualifyingResults, showQR }) => {
+  const [showRaceResults, setShowRaceResults] = useState(true)
   const [showDriversStandings, setShowDriversStandings] = useState(true)
-  const [showQualifyingResults, setShowQualifyingResults] = useState(false)
+  const [showQualifyingResults, setShowQualifyingResults] = useState(showQR)
   // const [showPracticeOneResults, setShowPracticeOneResults] = useState(false)
   // const [showPracticeTwoResults, setShowPracticeTwoResults] = useState(false)
   // const [showPracticeThreeResults, setShowPracticeThreeResults] = useState(false)
@@ -17,6 +17,7 @@ const ResultsList = ({ raceResults, qualifyingResults }) => {
   return (
       <div className="flex flex-col justify-center text-center mt-6">
         {/* race results */}
+        {raceResults.length > 0 ?
         <div onClick={() => setShowRaceResults(!showRaceResults)} className='flex flex-col border-2 border-gray-500 bg-slate-300 dark:bg-slate-800 pt-2 pb-2'>
           <div className="w-full flex flex-row justify-center text-xl xl:text-2xl ">
             {showRaceResults ?
@@ -28,8 +29,8 @@ const ResultsList = ({ raceResults, qualifyingResults }) => {
             <div className="flex items-center text-xl"><BsChevronUp/></div> :
             <div className="flex items-center text-xl"><BsChevronDown /></div>}
           </div>
-        </div>
-        {showRaceResults ?
+        </div> : null }
+        {showRaceResults && raceResults.length > 0 ?
         <div className='flex flex-col'>
           {/* mobile buttons */}
           <div className="flex justify-center xl:hidden mt-2">

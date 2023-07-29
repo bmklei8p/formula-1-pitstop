@@ -11,7 +11,10 @@ const DriversPage = async () => {
   // drivers standings api call from ergast
   useEffect(() => {
     const getDriverStandings = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`, { next: {revalidate: 60}});
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`,
+        { next: { revalidate: 60 } }
+      );
       const data = await res.json();
       setDriversStandings(data);
     };
@@ -21,7 +24,10 @@ const DriversPage = async () => {
   // driver information api call from db
   useEffect(() => {
     const getDriverInformation = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/mdb`, { next: {revalidate: 60}});
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/mdb`,
+        { next: { revalidate: 60 } }
+      );
       const data = await res.json();
       // convert to map for faster lookup
       const driversMap = new Map();
@@ -36,9 +42,9 @@ const DriversPage = async () => {
   return (
     <div className="w-full mx-4 mt-4 md:w-3/4">
       {/* card container */}
-      <div className='flex justify-center'>
-      {/* <div classname='flex justify-left mx-3'> */}
-        <h1 className='font-bold text-2xl md:text-3xl mb-4'>Drivers</h1>
+      <div className="flex justify-center">
+        {/* <div classname='flex justify-left mx-3'> */}
+        <h1 className="font-bold text-2xl md:text-3xl mb-4">Drivers</h1>
       </div>
       <div className="grid grid-cols-1 mx-3 gap-8 xl:gap-16 md:grid-cols-2 lg:grid-cols-3 ">
         {/* card   */}
@@ -75,7 +81,9 @@ const DriversPage = async () => {
                       </div>
                     </div>
                   </div>
-                  <div className={`flex flex-row pt-2 pb-2 items-center justify-between border-t-2 border-b-2 border-borderColor group-hover:border-[${driverColor}]`}>
+                  <div
+                    className={`flex flex-row pt-2 pb-2 items-center justify-between border-t-2 border-b-2 border-borderColor group-hover:border-[${driverColor}]`}
+                  >
                     <div
                       className={`border-l-4 border-solid border-[${driverColor}]`}
                     >
@@ -84,7 +92,9 @@ const DriversPage = async () => {
                         <strong>{driver.Driver.familyName}</strong>
                       </h3>
                     </div>
-                    <div className={`overflow-hidden relative border-solid border-gray-300 dark:border-black rounded-md border-2 w-14 h-8`}>
+                    <div
+                      className={`overflow-hidden relative border-solid border-gray-300 dark:border-black rounded-md border-2 w-14 h-8`}
+                    >
                       <Image
                         src={`/assets/images/flag/${driverFlag}`}
                         alt={`${driver.Driver.nationality} flag`}
