@@ -1,7 +1,7 @@
 
 export const GET = async () => {
     try {
-        const response = await fetch('https://ergast.com/api/f1/current/driverStandings.json', { cache: 'no store'});
+        const response = await fetch('https://ergast.com/api/f1/current/driverStandings.json', { cache: 'no-store'});
         const data = await response.json();
         const standings = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
         return new Response(JSON.stringify(standings), {status: 200});

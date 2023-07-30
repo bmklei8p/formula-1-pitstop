@@ -10,11 +10,11 @@ const RecentResults = async ({ raceRound, race }) => {
   // hard code to test if both race and qualy results show if both are complete
   // const RecentResults = async ({ race }) => {
   // const raceRound = 12
-  const qualifyingResponse = await fetch(`https://ergast.com/api/f1/current/${raceRound}/qualifying.json`, { cache: 'no store'})
+  const qualifyingResponse = await fetch(`https://ergast.com/api/f1/current/${raceRound}/qualifying.json`, { cache: 'no-store'})
   const qualifyingData = await qualifyingResponse.json()
   const qualifyingResults = qualifyingData.MRData.RaceTable.Races
 
-  const raceResultsResponse = await fetch(`https://ergast.com/api/f1/current/${raceRound}/results.json`, { cache: 'no store'})
+  const raceResultsResponse = await fetch(`https://ergast.com/api/f1/current/${raceRound}/results.json`, { cache: 'no-store'})
   const raceResultsData = await raceResultsResponse.json()
   const raceResults = raceResultsData.MRData.RaceTable.Races
 

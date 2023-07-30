@@ -24,7 +24,7 @@ const StandingsPage = ({showContructors}) => {
   useEffect(() => {
     const getDriverStandings = async () => {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`, { cache: 'no store'}
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/drivers`, { cache: 'no-store'}
       );
       const data = await res.json();
       setDriversStandings(data);
@@ -38,7 +38,7 @@ const StandingsPage = ({showContructors}) => {
   useEffect(() => {
     const getConstructorsStandings = async () => {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/constructors`, { cache: 'no store'}
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/standings/constructors`, { cache: 'no-store'}
       );
       const data = await res.json();
       setConstructorsStandings(data);
