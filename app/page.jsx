@@ -30,8 +30,10 @@ const OverviewPage = async () => {
     const nextRaceRound = nextRace.round;
     const resultsRace = pastRaces[0];
     const resultsRaceRound = resultsRace.round;
+    console.log(typeof resultsRaceRound, resultsRaceRound)
     return { nextRace, nextRaceRound, resultsRace, resultsRaceRound}
   }
+  
   const { nextRace, nextRaceRound, resultsRace, resultsRaceRound } = await getScheduleData();
 
   return (

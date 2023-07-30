@@ -1,1 +1,0 @@
-import BriefStandings from "@/app/components/BriefStandings";
