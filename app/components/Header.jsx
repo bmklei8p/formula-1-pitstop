@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     //  desktop header
-    <div className='header-container'>
+    <div className='header-container z-50'>
       <div className="header-box">
         <Link href="/">
           <div className="logo">
@@ -59,15 +59,15 @@ const Header = () => {
           </div>
           <div className='pl-2 flex justify-center items-center'>
               <button className='text-xl hover:bg-white text-light rounded-lg hover:text-black flex px-2 items-center justify-center' onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-                {theme === 'light' ? <FiMoon size={25} /> : <FiSun size={25} />} 
-              </button> 
+                {theme === 'light' ? <FiMoon size={25} /> : <FiSun size={25} />}
+              </button>
             </div>
         </div>
         {/* mobile header - sidebar */}
         <div className="lg:hidden flex justify-end">
           <RiMenuFill size={30} onClick={() => setShowSideBar((prev) => !prev)} />
           {showSideBar && (
-            <div className="sidebar">
+            <div className="sidebar z-20">
               <div className="sidebar-links">
                 {navLinks.map((link) => (
                   <Link key={link.href} href={link.href} onClick={() => setShowSideBar(false)}>
@@ -86,7 +86,7 @@ const Header = () => {
                   {/* <div className='sidebar-link-box'>
                     {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
                   </div>  */}
-              </button> 
+              </button>
               <div className="sidebar-close">
                 <button className="btn btn-primary" onClick={() => setShowSideBar(false)}>Close</button>
               </div>
