@@ -2,7 +2,7 @@
 
 export const GET = async (req, res) => {
     try {
-        const data = await fetch('https://ergast.com/api/f1/2023.json', { next: {revalidate: 60}});
+        const data = await fetch('https://ergast.com/api/f1/2023.json', { cache: 'no store'});
         const json = await data.json();
         return new Response(JSON.stringify(json.MRData.RaceTable.Races), { status: 200 })
     } catch (error) {

@@ -8,7 +8,7 @@ import { FaRegArrowAltCircleDown } from "react-icons/fa";
 const OverviewPage = async () => {
 
   const getScheduleData = async () => {
-    const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 60}});
+    const res = await fetch("https://ergast.com/api/f1/current.json", { cache: 'no store'});
     const data = await res.json();
     const schedule = data.MRData.RaceTable.Races;
     const currentDateTime = new Date();
@@ -33,7 +33,7 @@ const OverviewPage = async () => {
     console.log(typeof resultsRaceRound, resultsRaceRound)
     return { nextRace, nextRaceRound, resultsRace, resultsRaceRound}
   }
-  
+
   const { nextRace, nextRaceRound, resultsRace, resultsRaceRound } = await getScheduleData();
 
   return (

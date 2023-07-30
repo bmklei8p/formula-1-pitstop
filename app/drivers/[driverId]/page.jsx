@@ -6,7 +6,7 @@ import Image from "next/image"
 
 
 const DriverDetailPage = async ({ params }) => {
-  const driver = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/${params.driverId}`, { next: {revalidate: 60}}
+  const driver = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/${params.driverId}`, { cache: 'no store'}
   ).then((res) => res.json())
 
 

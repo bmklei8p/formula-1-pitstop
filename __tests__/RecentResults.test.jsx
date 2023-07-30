@@ -1,5 +1,7 @@
 import RecentResults from "../app/components/RecentResults";
 import { render, screen } from "@testing-library/react";
+import { server } from "@/mocks/server";
+import { rest } from 'msw'
 
 const mockRaceInfoData = {
   season: '2023',
@@ -27,8 +29,78 @@ const mockRaceInfoData = {
 
 describe("RecentResults Rendering", () => {
   it("should render both qualy and race results", async () => {
-    render(<RecentResults raceRound={"12"} race={mockRaceInfoData} />);
+    render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
     expect(screen.getByText("Qualification Results")).toBeInTheDocument();
     expect(screen.getByText("Race Results")).toBeInTheDocument();
+  }),
+  it("should render Upcoming Race timer and qualifying results, but not race results", async () => {
+    // mock data that shows there is no race results infomation yet
+    const mockNoRaceResultsData = {
+      "MRData": {
+        "xmlns": "http:\/\/ergast.com\/mrd\/1.5",
+        "series": "f1",
+        "url": "http://ergast.com/api/f1/current/13/results.json",
+        "limit": "30",
+        "offset": "0",
+        "total": "0",
+        "RaceTable": {
+          "season": "2023",
+          "round": "13",
+          "Races": []
+        }
+      }
+    }
+    server.use(rest.get('https://ergast.com/api/f1/current/:raceRound/results.json', (req, res, ctx) => {
+      return res(ctx.json(mockNoRaceResultsData));
+  }))
+    render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
+    expect(screen.queryByText("Race Results")).not.toBeInTheDocument();
+    expect(screen.getByText("Qualification Results")).toBeInTheDocument();
+    expect(screen.getByText("Race Countdown")).toBeInTheDocument();
+  }),
+  it("should render Upcoming Race timer and raceTimes, but not race or qualy results", async () => {
+        // mock data that shows there is no race results infomation yet
+        const mockNoRaceResultsData = {
+          "MRData": {
+            "xmlns": "http:\/\/ergast.com\/mrd\/1.5",
+            "series": "f1",
+            "url": "http://ergast.com/api/f1/current/13/results.json",
+            "limit": "30",
+            "offset": "0",
+            "total": "0",
+            "RaceTable": {
+              "season": "2023",
+              "round": "13",
+              "Races": []
+            }
+          }
+        }
+        server.use(rest.get('https://ergast.com/api/f1/current/:raceRound/results.json', (req, res, ctx) => {
+          return res(ctx.json(mockNoRaceResultsData));
+      }))
+    // mock data that shows there is no qualifying results infomation yet
+    const mockNoQualyResultsData = {
+      "MRData": {
+        "xmlns": "http:\/\/ergast.com\/mrd\/1.5",
+        "series": "f1",
+        "url": "http://ergast.com/api/f1/current/14/qualifying.json",
+        "limit": "30",
+        "offset": "0",
+        "total": "0",
+        "RaceTable": {
+          "season": "2023",
+          "round": "14",
+          "Races": []
+        }
+      }
+    }
+    server.use(rest.get('https://ergast.com/api/f1/current/:raceRound/qualifying.json', (req, res, ctx) => {
+      return res(ctx.json(mockNoQualyResultsData));
+  }))
+    render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
+    expect(screen.queryByText("Race Results")).not.toBeInTheDocument();
+    expect(screen.queryByText("Qualification Results")).not.toBeInTheDocument();
+    expect(screen.getByText("Race Countdown")).toBeInTheDocument();
+    expect(screen.getByText("My Times")).toBeInTheDocument();
   })
 })

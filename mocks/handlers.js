@@ -288,6 +288,160 @@ const mockRaceInfoData = {
   Sprint: { date: '2023-07-29', time: '14:30:00Z' }
 }
 
+const mockDriverStandingsData = {
+	"MRData": {
+		"xmlns": "http:\/\/ergast.com\/mrd\/1.5",
+		"series": "f1",
+		"url": "http://ergast.com/api/f1/current/driverstandings.json",
+		"limit": "30",
+		"offset": "0",
+		"total": "21",
+		"StandingsTable": {
+			"season": "2023",
+			"StandingsLists": [
+				{
+					"season": "2023",
+					"round": "11",
+					"DriverStandings": [
+						{
+							"position": "1",
+							"positionText": "1",
+							"points": "281",
+							"wins": "9",
+							"Driver": {
+								"driverId": "max_verstappen",
+								"permanentNumber": "33",
+								"code": "VER",
+								"url": "http:\/\/en.wikipedia.org\/wiki\/Max_Verstappen",
+								"givenName": "Max",
+								"familyName": "Verstappen",
+								"dateOfBirth": "1997-09-30",
+								"nationality": "Dutch"
+							},
+							"Constructors": [
+								{
+									"constructorId": "red_bull",
+									"url": "http:\/\/en.wikipedia.org\/wiki\/Red_Bull_Racing",
+									"name": "Red Bull",
+									"nationality": "Austrian"
+								}
+							]
+						},
+						{
+							"position": "2",
+							"positionText": "2",
+							"points": "171",
+							"wins": "2",
+							"Driver": {
+								"driverId": "perez",
+								"permanentNumber": "11",
+								"code": "PER",
+								"url": "http:\/\/en.wikipedia.org\/wiki\/Sergio_P%C3%A9rez",
+								"givenName": "Sergio",
+								"familyName": "Pérez",
+								"dateOfBirth": "1990-01-26",
+								"nationality": "Mexican"
+							},
+							"Constructors": [
+								{
+									"constructorId": "red_bull",
+									"url": "http:\/\/en.wikipedia.org\/wiki\/Red_Bull_Racing",
+									"name": "Red Bull",
+									"nationality": "Austrian"
+								}
+							]
+						},
+						{
+							"position": "3",
+							"positionText": "3",
+							"points": "139",
+							"wins": "0",
+							"Driver": {
+								"driverId": "alonso",
+								"permanentNumber": "14",
+								"code": "ALO",
+								"url": "http:\/\/en.wikipedia.org\/wiki\/Fernando_Alonso",
+								"givenName": "Fernando",
+								"familyName": "Alonso",
+								"dateOfBirth": "1981-07-29",
+								"nationality": "Spanish"
+							},
+							"Constructors": [
+								{
+									"constructorId": "aston_martin",
+									"url": "http:\/\/en.wikipedia.org\/wiki\/Aston_Martin_in_Formula_One",
+									"name": "Aston Martin",
+									"nationality": "British"
+								}
+							]
+						},]}]}}}
+
+const mockConstructorStandingsData = {
+	"MRData": {
+		"xmlns": "http:\/\/ergast.com\/mrd\/1.5",
+		"series": "f1",
+		"url": "http://ergast.com/api/f1/current/constructorstandings.json",
+		"limit": "30",
+		"offset": "0",
+		"total": "10",
+		"StandingsTable": {
+			"season": "2023",
+			"StandingsLists": [
+				{
+					"season": "2023",
+					"round": "11",
+					"ConstructorStandings": [
+						{
+							"position": "1",
+							"positionText": "1",
+							"points": "452",
+							"wins": "11",
+							"Constructor": {
+								"constructorId": "red_bull",
+								"url": "http://en.wikipedia.org/wiki/Red_Bull_Racing",
+								"name": "Red Bull",
+								"nationality": "Austrian"
+							}
+						},
+						{
+							"position": "2",
+							"positionText": "2",
+							"points": "223",
+							"wins": "0",
+							"Constructor": {
+								"constructorId": "mercedes",
+								"url": "http://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One",
+								"name": "Mercedes",
+								"nationality": "German"
+							}
+						},
+						{
+							"position": "3",
+							"positionText": "3",
+							"points": "184",
+							"wins": "0",
+							"Constructor": {
+								"constructorId": "aston_martin",
+								"url": "http://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One",
+								"name": "Aston Martin",
+								"nationality": "British"
+							}
+						},
+						{
+							"position": "4",
+							"positionText": "4",
+							"points": "167",
+							"wins": "0",
+							"Constructor": {
+								"constructorId": "ferrari",
+								"url": "http://en.wikipedia.org/wiki/Scuderia_Ferrari",
+								"name": "Ferrari",
+								"nationality": "Italian"
+							}
+						},
+          ]}]}}}
+
+
 export const handlers = [
   rest.get('https://ergast.com/api/f1/current/:raceRound/qualifying.json', (req, res, ctx) => {
     return res(ctx.json(mockQualifyingResultsData));
@@ -297,5 +451,11 @@ export const handlers = [
   }),
   rest.get('https://maps.googleapis.com/maps/api/timezone/json', (req, res, ctx) => {
     return res(ctx.json(mockTimeZoneData));
+  }),
+  rest.get('https://ergast.com/api/f1/current/driverStandings.json', (req, res, ctx) => {
+    return res(ctx.json(mockDriverStandingsData));
+  }),
+  rest.get(`https://ergast.com/api/f1/current/constructorStandings.json`, (req, res, ctx) => {
+    return res(ctx.json(mockConstructorStandingsData));
   }),
 ];

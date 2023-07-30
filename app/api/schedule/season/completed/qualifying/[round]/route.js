@@ -1,6 +1,6 @@
 export const GET = async (request, { params }) => {
     try {
-        const response = await fetch(`http://ergast.com/api/f1/current/${params.round}/qualifying.json`, { next: {revalidate: 60}});
+        const response = await fetch(`http://ergast.com/api/f1/current/${params.round}/qualifying.json`, { cache: 'no store'});
         const data = await response.json();
         console.log(data.MRData.RaceTable);
         const results = data.MRData.RaceTable
