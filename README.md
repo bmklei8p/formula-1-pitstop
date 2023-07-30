@@ -73,4 +73,4 @@ signapore track needs layout or link fixed
 
 
 
-- { cache: 'no store'} vs { next: {revalidate: 60}} for fetches
+- { cache: 'no-store'} vs { next: {revalidate: 60}} for fetches

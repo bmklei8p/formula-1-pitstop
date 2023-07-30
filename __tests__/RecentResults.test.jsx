@@ -28,10 +28,11 @@ const mockRaceInfoData = {
 }
 
 describe("RecentResults Rendering", () => {
-  it("should render both qualy and race results", async () => {
+  it("should render both qualy and race results, but no countdown timer", async () => {
     render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
     expect(screen.getByText("Qualification Results")).toBeInTheDocument();
     expect(screen.getByText("Race Results")).toBeInTheDocument();
+    expect(screen.queryByText("Race Countdown")).not.toBeInTheDocument();
   }),
   it("should render Upcoming Race timer and qualifying results, but not race results", async () => {
     // mock data that shows there is no race results infomation yet
@@ -100,7 +101,8 @@ describe("RecentResults Rendering", () => {
     render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
     expect(screen.queryByText("Race Results")).not.toBeInTheDocument();
     expect(screen.queryByText("Qualification Results")).not.toBeInTheDocument();
-    expect(screen.getByText("Race Countdown")).toBeInTheDocument();
+    expect(screen.getByText("Hours")).toBeInTheDocument();
+    expect(screen.getByText("Minutes")).toBeInTheDocument();
     expect(screen.getByText("My Times")).toBeInTheDocument();
   })
 })

@@ -68,11 +68,14 @@ const RecentResults = async ({ raceRound, race }) => {
         </div> : null}
 
       {/* Qualy Results Complete */}
-      <div className="mt-2">
-        <UpcomingRace nextRace={race} justify={"center"} frontPage={true} />
-      </div>
       { qualifyingResults.length > 0 && !raceResults.length > 0 ?
-      <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} raceRound={raceRound} show={true} /> : null}
+      <>
+        <div className="mt-2">
+          <UpcomingRace nextRace={race} justify={"center"} frontPage={true} />
+        </div>
+        <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} raceRound={raceRound} show={true} />
+      </>
+      : null}
 
       {/* Neither Complete */}
       { !qualifyingResults.length > 0 && !raceResults.length > 0 ?
