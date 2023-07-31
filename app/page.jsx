@@ -6,7 +6,7 @@ import BannerImageMobile from '../public/assets/images/home-banner-mobile.png'
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
 
 const getScheduleData = async () => {
-  const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 360000}});
+  const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 3600}});
   const data = await res.json();
   const schedule = data.MRData.RaceTable.Races;
   const currentDateTime = new Date();
