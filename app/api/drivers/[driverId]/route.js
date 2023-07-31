@@ -58,7 +58,11 @@ export const PATCH = async (req, { params }) => {
 
     await driver.save();
     try {
-      fetch(`http:/localhost:3000/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
+      console.log("revalidating")
+      const res = await fetch(`http:/localhost:3000/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
+      if (res.status !== 200) {
+        console.log("error revalidating");
+      }
     } catch(err) {
       console.log("error revalidating");
     }
