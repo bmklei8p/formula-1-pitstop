@@ -30,7 +30,6 @@ const OverviewPage = async () => {
     const nextRaceRound = nextRace.round;
     const resultsRace = pastRaces[0];
     const resultsRaceRound = resultsRace.round;
-    console.log(typeof resultsRaceRound, resultsRaceRound)
     return { nextRace, nextRaceRound, resultsRace, resultsRaceRound}
   }
 
@@ -53,7 +52,7 @@ const OverviewPage = async () => {
           alt="pit-stop"
           width={2670}
           height={1100}
-          quality={75}
+          quality={25}
           placeholder="blur"
           className="-z-10 opacity-95"
           sizes="(min-width: 777px) 100vw"
@@ -80,6 +79,7 @@ const OverviewPage = async () => {
           className="-z-10 object-fill"
           placeholder="blur"
           sizes="(max-width: 777px) 100vw, 0vw"
+          quality={25}
         />
       </div>
       {/* Content */}
