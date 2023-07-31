@@ -1,9 +1,31 @@
 import Image from "next/image"
-import RecentQualyResults from "./RecentQualyResults"
-import RecentRaceResults from "./RecentRaceResults"
-import RaceTimes from "../schedule/components/RaceTimes"
-import SprintRaceTimes from "../schedule/components/SprintRaceTimes"
-import UpcomingRace from "../schedule/components/UpcomingRace"
+import dynamic from "next/dynamic"
+
+// import RecentQualyResults from "./RecentQualyResults"
+// import RecentRaceResults from "./RecentRaceResults"
+// import RaceTimes from "../schedule/components/RaceTimes"
+// import SprintRaceTimes from "../schedule/components/SprintRaceTimes"
+// import UpcomingRace from "../schedule/components/UpcomingRace"
+
+const DynamicRecentQualyResults = dynamic(() => import("./RecentQualyResults"), {
+  loading: () => <p>Loading...</p>
+})
+
+const DynamicRecentRaceResults = dynamic(() => import("./RecentRaceResults"), {
+  loading: () => <p>Loading...</p>
+})
+
+const DynamicRaceTimes = dynamic(() => import("../schedule/components/RaceTimes"), {
+  loading: () => <p>Loading...</p>
+})
+
+const DynamicSprintRaceTimes = dynamic(() => import("../schedule/components/SprintRaceTimes"), {
+  loading: () => <p>Loading...</p>
+})
+
+const DynamicUpcomingRace = dynamic(() => import("../schedule/components/UpcomingRace"), {
+  loading: () => <p>Loading...</p>
+})
 
 
 const RecentResults = async ({ raceRound, race }) => {
@@ -63,25 +85,25 @@ const RecentResults = async ({ raceRound, race }) => {
       {/* Both Qualy and Race Results Complete */}
       { qualifyingResults.length > 0 && raceResults.length > 0 ?
         <div className="flex flex-col gap-y-4">
-          <RecentRaceResults raceResults={raceResults[0].Results} raceRound={raceRound} show={true} />
-          <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} raceRound={raceRound} show={false}  />
+          <DynamicRecentRaceResults raceResults={raceResults[0].Results} raceRound={raceRound} show={true} />
+          <DynamicRecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} raceRound={raceRound} show={false}  />
         </div> : null}
 
       {/* Qualy Results Complete */}
       { qualifyingResults.length > 0 && !raceResults.length > 0 ?
       <>
         <div className="mt-2">
-          <UpcomingRace nextRace={race} justify={"center"} frontPage={true} />
+          <DynamicUpcomingRace nextRace={race} justify={"center"} frontPage={true} />
         </div>
-        <RecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} raceRound={raceRound} show={true} />
+        <DynamicRecentQualyResults qualifyingResults={qualifyingResults[0].QualifyingResults} raceRound={raceRound} show={true} />
       </>
       : null}
 
       {/* Neither Complete */}
       { !qualifyingResults.length > 0 && !raceResults.length > 0 ?
       <div className="flex flex-col justify-start">
-        <UpcomingRace nextRace={race} />
-        {race.hasOwnProperty('Sprint') ? <SprintRaceTimes race={race} trackTimezone={trackTimeZone} /> : <RaceTimes race={race} trackTimezone={trackTimeZone} />}
+        <DynamicUpcomingRace nextRace={race} />
+        {race.hasOwnProperty('Sprint') ? <DynamicSprintRaceTimes race={race} trackTimezone={trackTimeZone} /> : <DynamicRaceTimes race={race} trackTimezone={trackTimeZone} />}
       </div>: null}
     </div>
   )

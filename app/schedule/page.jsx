@@ -1,8 +1,23 @@
 'use client'
+import dynamic from 'next/dynamic'
 
-import UpcomingRace from 'app/schedule/components/UpcomingRace'
-import UpcomingRaces from 'app/schedule/components/UpcomingRaces'
-import PastRaces from 'app/schedule/components/PastRaces'
+// import UpcomingRace from 'app/schedule/components/UpcomingRace'
+// import UpcomingRaces from 'app/schedule/components/UpcomingRaces'
+// import PastRaces from 'app/schedule/components/PastRaces'
+
+const DynamicUpcomingRace = dynamic(() => import('app/schedule/components/UpcomingRace'), {
+  loading: () => <p>Loading...</p>
+})
+
+const DynamicUpcomingRaces = dynamic(() => import('app/schedule/components/UpcomingRaces'), {
+  loading: () => <p>Loading...</p>
+})
+
+const DynamicPastRaces = dynamic(() => import('app/schedule/components/PastRaces'), {
+  loading: () => <p>Loading...</p>
+})
+
+
 import { useScheduleContext } from './components/ScheduleProvider';
 
 import { useState, useEffect } from 'react';
@@ -63,8 +78,8 @@ const SchedulePage = () => {
               <button className={`${!showUpcomingRaces ? `text-2xl border-b-4 w-full border-red-500 rounded` : `text-xl`}`}>Completed Races</button>
             </div>
           </div>
-          { nextRace && showUpcomingRaces ? <UpcomingRace nextRace={nextRace} /> : null}
-          {upcomingRaces && pastRaces && showUpcomingRaces ? <UpcomingRaces races={upcomingRaces} /> : <PastRaces races={pastRaces} />}
+          { nextRace && showUpcomingRaces ? <DynamicUpcomingRace nextRace={nextRace} /> : null}
+          {upcomingRaces && pastRaces && showUpcomingRaces ? <DynamicUpcomingRaces races={upcomingRaces} /> : <DynamicPastRaces races={pastRaces} />}
      </div>
   );
 };

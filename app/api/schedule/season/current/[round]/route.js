@@ -1,7 +1,6 @@
 
 
 export const GET = async (request, { params }) => {
-    console.log(params)
     try {
         const response = await fetch(`https://ergast.com/api/f1/2023/${params.round}.json`, { next: {revalidate: 360000}});
         const data = await response.json();
