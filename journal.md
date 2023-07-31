@@ -74,3 +74,8 @@ signapore track needs layout or link fixed
 
 
 - { cache: 'no-store'} vs { next: {revalidate: 60}} for fetches
+
+
+
+ISSUE: 
+google maps api is being requested from a client component: this is causing the api key to be exposed on the networking tab. Need to move this to the server side to prevent this from happening. 

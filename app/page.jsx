@@ -1,42 +1,43 @@
 import Image from "next/image";
 import RecentResults from "./components/RecentResults";
 import BriefStandings from "./components/BriefStandings";
-import BannerImageDesktop from '../public/assets/images/home-pit-stop-desktop.png'
+import BannerImageDesktop from '../public/assets/images/home-pit-stop-desktop-cropped.png'
 import BannerImageMobile from '../public/assets/images/home-banner-mobile.png'
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
 
-const OverviewPage = async () => {
+const getScheduleData = async () => {
+  const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 3600}});
+  const data = await res.json();
+  const schedule = data.MRData.RaceTable.Races;
+  const currentDateTime = new Date();
+  const upcomingRaces = [];
+  const pastRaces = [];
+  for (let i = 0; i < schedule.length; i++) {
+    // results of previous week will not switch over until first practice of the next race weekend
+    const raceDate = new Date(
+      schedule[i].FirstPractice.date + "T" + schedule[i].FirstPractice.time
+    );
 
-  const getScheduleData = async () => {
-    const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 360000}});
-    const data = await res.json();
-    const schedule = data.MRData.RaceTable.Races;
-    const currentDateTime = new Date();
-    const upcomingRaces = [];
-    const pastRaces = [];
-    for (let i = 0; i < schedule.length; i++) {
-      // results of previous week will not switch over until first practice of the next race weekend
-      const raceDate = new Date(
-        schedule[i].FirstPractice.date + "T" + schedule[i].FirstPractice.time
-      );
-
-      if (raceDate > currentDateTime) {
-        upcomingRaces.push(schedule[i]);
-      } else {
-        pastRaces.unshift(schedule[i]); //bad time complexity but list is short
-      }
+    if (raceDate > currentDateTime) {
+      upcomingRaces.push(schedule[i]);
+    } else {
+      pastRaces.unshift(schedule[i]); //bad time complexity but list is short
     }
-    const nextRace = upcomingRaces[0];
-    const nextRaceRound = nextRace.round;
-    const resultsRace = pastRaces[0];
-    const resultsRaceRound = resultsRace.round;
-    return { nextRace, nextRaceRound, resultsRace, resultsRaceRound}
   }
+  const nextRace = upcomingRaces[0];
+  const nextRaceRound = nextRace.round;
+  const resultsRace = pastRaces[0];
+  const resultsRaceRound = resultsRace.round;
+  return { nextRace, nextRaceRound, resultsRace, resultsRaceRound}
+}
+
+const OverviewPage = async () => {
 
   const { nextRace, nextRaceRound, resultsRace, resultsRaceRound } = await getScheduleData();
 
   return (
     <div className="w-full flex flex-col items-center bg-[60 3.23% 12.16%] -z-50">
+      {/* Desktop Banner Image */}
       <div className="hidden md:flex justify-center items-end lg:items-start relative -z-40 ">
         <div className="h-36 lg:h-56 xl:h-56 w-2/4 absolute z-40 flex flex-col justify-center items-center opacity-95">
           <h1 className=" text-4xl lg:text-6xl font-bold text-white z-10">
@@ -46,20 +47,20 @@ const OverviewPage = async () => {
             Your <strong>one-stop</strong> for F1
           </p>
         </div>
-        <div className="w-full h-[90vh]">
-        <Image
-          src={BannerImageDesktop}
-          priority={true}
-          alt="pit-stop"
-          // width={2670}
-          // height={1100}
-          width={2000}
-          height={422}
-          quality={25}
-          placeholder="blur"
-          className="-z-10 opacity-95"
-          sizes="(min-width: 777px) 100vw"
-        />
+        <div className="">
+          <Image
+            src={BannerImageDesktop}
+            priority={true}
+            alt="pit-stop"
+            // width={2670}
+            // height={1100}
+            width={2560}
+            height={1170}
+            quality={25}
+            placeholder="blur"
+            className="-z-10 opacity-95"
+            sizes="(min-width: 777px) 100vw"
+          />
         </div>
       <div className="absolute hidden xl:block xl:bottom-20 2xl:bottom-40 right-20 h-8">
           <div className="animate-bounce text-6xl text-[#b30600]">
@@ -67,6 +68,7 @@ const OverviewPage = async () => {
           </div>
         </div>
       </div>
+      {/* Mobile Banner Image */}
       <div className="flex max-h-[80vh] md:hidden overflow-clip relative justify-center items-end -z-40 ">
         <div className="h-26 w-full absolute z-40 flex flex-col justify-end py-2 items-center bg-gradient-to-t opacity-75 to-[#494949] from-[#2b2b2b]">
           <h1 className="text-white font-bold text-4xl">Formula 1 Pitstop</h1>

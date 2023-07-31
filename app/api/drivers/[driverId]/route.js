@@ -1,5 +1,6 @@
 import Driver from "@/models/driver"
 import { connectToDB } from "@/utils/database"
+import { revalidateTag } from "next/cache";
 
 export const GET = async (req, { params }) => {
   try {
@@ -54,7 +55,8 @@ export const PATCH = async (req, { params }) => {
     }   
 
     await driver.save();
-
+    revalidateTag("driver")
+    
     return new Response("Successfully updated the Driver", { status: 200 });
   } catch(err) {
     console.log(err);
