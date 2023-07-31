@@ -51,8 +51,10 @@ const OverviewPage = async () => {
           src={BannerImageDesktop}
           priority={true}
           alt="pit-stop"
-          width={2670}
-          height={1100}
+          // width={2670}
+          // height={1100}
+          width={750}
+          height={422}
           quality={25}
           placeholder="blur"
           className="-z-10 opacity-95"
@@ -76,8 +78,10 @@ const OverviewPage = async () => {
           src={BannerImageMobile}
           priority={true}
           alt="pit-stop"
-          width={1100}
-          height={1100}
+          // width={1100}
+          // height={1100}
+          width={750}
+          height={422}
           className="-z-10 object-fill"
           placeholder="blur"
           sizes="(max-width: 777px) 100vw, 0vw"
