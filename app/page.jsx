@@ -47,14 +47,14 @@ const OverviewPage = async () => {
             Your <strong>one-stop</strong> for F1
           </p>
         </div>
-        <div className="">
+        <div className="w-full h-[90vh]">
           <Image
             src={BannerImageDesktop}
             priority={true}
             alt="pit-stop"
             // width={2670}
             // height={1100}
-            width={2560}
+            width={2000}
             height={1170}
             quality={25}
             placeholder="blur"
