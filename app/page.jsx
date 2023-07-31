@@ -5,33 +5,33 @@ import BannerImageDesktop from '../public/assets/images/home-pit-stop-desktop-cr
 import BannerImageMobile from '../public/assets/images/home-banner-mobile.png'
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
 
-const OverviewPage = async () => {
+const getScheduleData = async () => {
+  const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 360000}});
+  const data = await res.json();
+  const schedule = data.MRData.RaceTable.Races;
+  const currentDateTime = new Date();
+  const upcomingRaces = [];
+  const pastRaces = [];
+  for (let i = 0; i < schedule.length; i++) {
+    // results of previous week will not switch over until first practice of the next race weekend
+    const raceDate = new Date(
+      schedule[i].FirstPractice.date + "T" + schedule[i].FirstPractice.time
+    );
 
-  const getScheduleData = async () => {
-    const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 360000}});
-    const data = await res.json();
-    const schedule = data.MRData.RaceTable.Races;
-    const currentDateTime = new Date();
-    const upcomingRaces = [];
-    const pastRaces = [];
-    for (let i = 0; i < schedule.length; i++) {
-      // results of previous week will not switch over until first practice of the next race weekend
-      const raceDate = new Date(
-        schedule[i].FirstPractice.date + "T" + schedule[i].FirstPractice.time
-      );
-
-      if (raceDate > currentDateTime) {
-        upcomingRaces.push(schedule[i]);
-      } else {
-        pastRaces.unshift(schedule[i]); //bad time complexity but list is short
-      }
+    if (raceDate > currentDateTime) {
+      upcomingRaces.push(schedule[i]);
+    } else {
+      pastRaces.unshift(schedule[i]); //bad time complexity but list is short
     }
-    const nextRace = upcomingRaces[0];
-    const nextRaceRound = nextRace.round;
-    const resultsRace = pastRaces[0];
-    const resultsRaceRound = resultsRace.round;
-    return { nextRace, nextRaceRound, resultsRace, resultsRaceRound}
   }
+  const nextRace = upcomingRaces[0];
+  const nextRaceRound = nextRace.round;
+  const resultsRace = pastRaces[0];
+  const resultsRaceRound = resultsRace.round;
+  return { nextRace, nextRaceRound, resultsRace, resultsRaceRound}
+}
+
+const OverviewPage = async () => {
 
   const { nextRace, nextRaceRound, resultsRace, resultsRaceRound } = await getScheduleData();
 

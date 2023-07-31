@@ -2,7 +2,7 @@ import RacePodiumResults from "@/app/schedule/components/RacePodiumResults"
 import ResultsList from "@/app/schedule/components/ResultsList";
 
 const RaceResultsPage = async ({ params }) => {
-  const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/completed/${params.round}`, { next: {revalidate: 360000}})
+  const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/completed/${params.round}`, { cache: "no-cache"})
     .then((res) => res.json()).catch((err) => console.log(err))
 
   const raceResults = race ? race.Results : []

@@ -4,7 +4,8 @@ import Image from "next/image"
 
 
 export async function GenerateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers`, { next: {revalidate: 360000}})
+  // may not need a revalidate here as this is just used to generate a list of paths that can be statically generated
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/mdb/`, { next: {revalidate: 360000}})
   const data = await res.json()
   const paths = data.map((driver) => ({
     params: { driverId: driver.driverId.toString() },
@@ -15,8 +16,10 @@ export async function GenerateStaticParams() {
   }
 }
 
+export const dynamicParams = false;
+
 const DriverDetailPage = async ({ params }) => {
-  const driver = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/${params.driverId}`, { next: {revalidate: 360000}}
+  const driver = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/${params.driverId}`, { tags: ["driver"]}
   ).then((res) => res.json())
 
 
