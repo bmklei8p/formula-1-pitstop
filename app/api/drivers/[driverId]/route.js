@@ -19,7 +19,7 @@ export const PATCH = async (req, { params }) => {
     connectToDB();
     const driver = await Driver.findOne({ driverId: params.driverId });
     // console.log(body);
-    
+
     if (!driver) {
       return new Response("Driver not found", { status: 404 });
     }
@@ -40,23 +40,28 @@ export const PATCH = async (req, { params }) => {
       driver.highestGridPosition = body.highest_grid_position;
     }
 
-    try {
-      driver.highestRaceFinish = body.highest_race_finish;
-      const raceFinishSplit = body.highest_race_finish.split(' ');
-      if (raceFinishSplit.length === 2) {
-        const number1 = body.highest_race_finish.split(' ')[0];
-        const number2 = body.highest_race_finish.split(' ')[1];
-        driver.wins = number1 === '1' ? number2.slice(2, number2.length - 1) : 0;
-      } else {
-        driver.wins = 0;
+    if(body.highest_race_finish) {
+      try {
+        driver.highestRaceFinish = body.highest_race_finish;
+        const raceFinishSplit = body.highest_race_finish.split(' ');
+        if (raceFinishSplit.length === 2) {
+          const number1 = body.highest_race_finish.split(' ')[0];
+          const number2 = body.highest_race_finish.split(' ')[1];
+          driver.wins = number1 === '1' ? number2.slice(2, number2.length - 1) : 0;
+        } else {
+          driver.wins = 0;
+        }
+      } catch(err) {
+        return new Response(err, {status: 500});
       }
-    } catch(err) {
-      return new Response(err, {status: 500});
-    }   
+    }
 
     await driver.save();
-    revalidateTag("driver")
-    
+    try {
+      fetch(`http:/localhost:3000/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
+    } catch(err) {
+      console.log("error revalidating");
+    }
     return new Response("Successfully updated the Driver", { status: 200 });
   } catch(err) {
     console.log(err);
