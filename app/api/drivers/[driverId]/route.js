@@ -59,7 +59,7 @@ export const PATCH = async (req, { params }) => {
     await driver.save();
     try {
       console.log("revalidating")
-      const res = await fetch(`http:/localhost:3000/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
+      const res = await fetch(`https://formula-1-pitstop.vercel.app/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
       if (res.status !== 200) {
         console.log("error revalidating");
       }
