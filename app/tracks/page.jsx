@@ -18,7 +18,7 @@ export default function TracksMap() {
   const [ trackList, setTrackList ] = useState([]);
   useEffect(() => {
     const fetchTracks = async () => {
-      const res = await fetch('/api/tracks', { cache: 'no-store'});
+      const res = await fetch('/api/tracks', { next: {revalidate: 360000}});
       const data = await res.json();
       setTrackList(data);
     };

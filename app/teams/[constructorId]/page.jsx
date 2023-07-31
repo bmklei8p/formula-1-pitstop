@@ -12,7 +12,7 @@ import ImageCarousel from "../../components/ImageCarousel";
 
 const ConstructorDetailPage = async ({ params }) => {
   const constructor = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/constructors/${params.constructorId}`, { cache: 'no-store'}
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/constructors/${params.constructorId}`, { next: {revalidate: 360000}}
   ).then((res) => res.json());
 
   return (

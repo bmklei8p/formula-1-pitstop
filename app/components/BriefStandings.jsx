@@ -3,11 +3,11 @@ import BriefConstructorsStandings from './BriefConstructorsStandings'
 import BriefDriversStandings from './BriefDriversStandings'
 
 const BriefStandings = async () => {
-  const driversStandingsResponse = await fetch(`https://ergast.com/api/f1/current/driverStandings.json`, { cache: 'no-store'})
+  const driversStandingsResponse = await fetch(`https://ergast.com/api/f1/current/driverStandings.json`, { next: {revalidate: 360000}})
   const driversStandingsData = await driversStandingsResponse.json()
   const driversStandingsList = driversStandingsData.MRData.StandingsTable.StandingsLists[0].DriverStandings
 
-  const constructorsStandingsResponse = await fetch(`https://ergast.com/api/f1/current/constructorStandings.json`, { cache: 'no-store'})
+  const constructorsStandingsResponse = await fetch(`https://ergast.com/api/f1/current/constructorStandings.json`, { next: {revalidate: 360000}})
   const constructorsStandingsData = await constructorsStandingsResponse.json()
   const constructorsStandingsList = constructorsStandingsData.MRData.StandingsTable.StandingsLists[0].ConstructorStandings
 
