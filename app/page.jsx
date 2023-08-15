@@ -3,7 +3,7 @@ import RecentResults from "./components/RecentResults";
 import BriefStandings from "./components/BriefStandings";
 import BannerImageDesktop from '../public/assets/images/home-pit-stop-desktop-cropped.png'
 import BannerImageMobile from '../public/assets/images/home-banner-mobile.png'
-import { FaRegArrowAltCircleDown } from "react-icons/fa";
+// import { FaRegArrowAltCircleDown } from "react-icons/fa";
 
 const getScheduleData = async () => {
   const res = await fetch("https://ergast.com/api/f1/current.json", { next: {revalidate: 3600}});
