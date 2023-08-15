@@ -21,21 +21,30 @@ const RacePodiumResults = ({raceResults, raceCircuitId}) => {
         </div>
         <div className="w-2/3 p-x-4 mt-4 hidden lg:block">
             <div className="flex flex-row w-full text-xl md:text-2xl mb-3">
-                <div className="basis-1/5 flex justify-center">
+                <div className="basis-1/5 hidden dark:flex dark:justify-center">
+                    <Image src="/assets/images/first_dark.png" alt="first place trophy" width={50} height={50} />
+                </div>
+                <div className="basis-1/5 flex justify-center dark:hidden">
                     <Image src="/assets/images/first.png" alt="first place trophy" width={50} height={50} />
                 </div>
                 <div className="basis-3/5 ">{raceResults[0].Driver.givenName + " " + raceResults[0].Driver.familyName}</div>
                 <div className="basis-1/5">{raceResults[0].Time.time.slice(0,7)}</div>
             </div>
             <div className="flex flex-row w-full text-xl md:text-2xl mb-3">
-                <div className="flex justify-center basis-1/5">
+            <div className="basis-1/5 hidden dark:flex dark:justify-center">
+                    <Image src="/assets/images/second_place_dark.png" alt="second place trophy" width={50} height={50} />
+                </div>
+                <div className="basis-1/5 flex justify-center dark:hidden">
                     <Image src="/assets/images/second_place.png" alt="second place trophy" width={50} height={50} />
                 </div>
                 <div className="basis-3/5">{raceResults[1].Driver.givenName + " " + raceResults[1].Driver.familyName}</div>
                 <div className="basis-1/5">{raceResults[1].Time.time}</div>
             </div>
             <div className="flex flex-row w-full text-xl md:text-2xl">
-                <div className="flex justify-center basis-1/5">
+            <div className="basis-1/5 hidden dark:flex dark:justify-center">
+                    <Image src="/assets/images/third_place_dark.png" alt="third place trophy" width={50} height={50} />
+                </div>
+                <div className="basis-1/5 flex justify-center dark:hidden">
                     <Image src="/assets/images/third_place.png" alt="third place trophy" width={50} height={50} />
                 </div>
                 <div className="basis-3/5">{raceResults[2].Driver.givenName + " " + raceResults[2].Driver.familyName}</div>

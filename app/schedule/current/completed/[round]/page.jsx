@@ -19,7 +19,7 @@ const RaceResultsPage = async ({ params }) => {
         <RacePodiumResults raceResults={raceResults} raceCircuitId={qualifying.Races[0].Circuit.circuitId}/>
         : null }
         <div className="mt-4">
-          <h1 className="text-3xl font-bold text-red-500 md:text-4xl">
+          <h1 className="text-3xl font-bold text-[#ff0800] md:text-4xl">
             Race Weekend Results
           </h1>
           <h3 className="text-2xl md:text-2xl mt-1">

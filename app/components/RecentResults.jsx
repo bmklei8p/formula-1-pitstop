@@ -1,12 +1,6 @@
 import Image from "next/image"
 import dynamic from "next/dynamic"
 
-// import RecentQualyResults from "./RecentQualyResults"
-// import RecentRaceResults from "./RecentRaceResults"
-// import RaceTimes from "../schedule/components/RaceTimes"
-// import SprintRaceTimes from "../schedule/components/SprintRaceTimes"
-// import UpcomingRace from "../schedule/components/UpcomingRace"
-
 const DynamicRecentQualyResults = dynamic(() => import("./RecentQualyResults"), {
   loading: () => <p>Loading...</p>
 })
@@ -29,9 +23,6 @@ const DynamicUpcomingRace = dynamic(() => import("../schedule/components/Upcomin
 
 
 const RecentResults = async ({ raceRound, race }) => {
-  // hard code to test if both race and qualy results show if both are complete
-  // const RecentResults = async ({ race }) => {
-  // const raceRound = 12
   const qualifyingResponse = await fetch(`https://ergast.com/api/f1/current/${raceRound}/qualifying.json`, { next: {revalidate: 360000}})
   const qualifyingData = await qualifyingResponse.json()
   const qualifyingResults = qualifyingData.MRData.RaceTable.Races
@@ -52,7 +43,7 @@ const RecentResults = async ({ raceRound, race }) => {
 
 
   return (
-    <div className="border-r-4 border-t-4 border-borderColor dark:bg-altGray bg-altGray rounded-tr-lg pl-2 pr-4 pt-2">
+    <div className="border-r-4 border-t-4 border-borderColor dark:bg-altGray bg-altGray rounded-tr-lg pl-4 pr-4 pt-2">
         <div className="flex flex-row justify-between">
           <div className="flex flex-row items-center gap-x-2">
             <div className="overflow-hidden relative border-solid border-2 border-white w-16 md:w-20 h-10">

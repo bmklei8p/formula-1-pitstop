@@ -12,7 +12,7 @@ const BriefStandings = async () => {
   const constructorsStandingsList = constructorsStandingsData.MRData.StandingsTable.StandingsLists[0].ConstructorStandings
 
   return (
-    <div className="border-r-4 border-t-4 border-borderColor rounded-tr-lg bg-altGray pl-2 pr-4 pt-2">
+    <div className="border-r-4 border-t-4 border-borderColor rounded-tr-lg bg-altGray pl-4 pr-4 pt-2">
         <div className="flex flex-row justify-between">
           <div className="flex flex-row items-center gap-x-2">
             <div className="overflow-hidden relative">

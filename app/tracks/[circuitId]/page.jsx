@@ -30,14 +30,24 @@ const TrackDetailPage = async ({ params }) => {
       <div className="w-full lg:w-9/12 2xl:w-2/3 flex flex-wrap pt-4 md:pt-6 px-4 gap-x-8 bg-contentBackground">
         <div className="w-full md:w-1/2 flex flex-col gap-6 pr-2 md:border-t-4 md:border-r-4 md:rounded-tr-lg md:border-borderColor ">
           <h3 className="text-xl md:text-2xl font-bold pt-2">Track Story</h3>
-          <p>{track.firstParagraph}</p>
-          <p>{track.secondParagraph}</p>
+          { track.firstParagraph ?
+          <>
+            <p>{track.firstParagraph}</p>
+            <p>{track.secondParagraph}</p>
+          </>
+          : <p>Track story coming soon!</p>
+          }
         </div>
         <div className="w-[45%] pl-12 hidden md:block">
           <DetailMap lat={track.lat} long={track.long} circuitName={track.circuitName} locationCity={track.locationCity} locationCountry={track.locationCountry}/>
         </div>
         <div className="w-full my-4">
-          <p>{track.thirdParagraph}</p>
+        { track.firstParagraph ?
+          <>
+            <p>{track.thirdParagraph}</p>
+          </>
+          : null
+          }
         </div>
       </div>
       <div className="w-full lg:w-9/12 2xl:w-2/3 m-0 pt-4 h-auto bg-contentBackground hidden md:block">

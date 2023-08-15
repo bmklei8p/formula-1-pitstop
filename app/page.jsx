@@ -62,11 +62,11 @@ const OverviewPage = async () => {
             sizes="(min-width: 777px) 100vw"
           />
         </div>
-      <div className="absolute hidden xl:block xl:bottom-20 2xl:bottom-40 right-20 h-8">
+        {/* <div className="absolute hidden xl:block xl:bottom-20 2xl:bottom-40 right-20 h-8">
           <div className="animate-bounce text-6xl text-[#b30600]">
               <FaRegArrowAltCircleDown />
           </div>
-        </div>
+        </div> */}
       </div>
       {/* Mobile Banner Image */}
       <div className="flex max-h-[80vh] md:hidden overflow-clip relative justify-center items-end -z-40 ">
