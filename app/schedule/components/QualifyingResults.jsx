@@ -3,7 +3,7 @@ import Link from "next/link"
 const QualifyingResults = ({ qualifyingResults }) => {
 
     return (
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full max-w-5xl justify-center">
                 {/* table header */}
                 <div className="flex justify-center flex-col bg-background" >
                 <div className="flex flex-row md:hidden">

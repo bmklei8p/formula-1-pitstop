@@ -34,7 +34,9 @@ export default function RootLayout({ children }) {
         const dataTrack = await mongoose.connection.collection('tracks').find({}).toArray();
         const dataDriver = await mongoose.connection.collection('drivers').find({}).toArray();
         const dataConstructor = await mongoose.connection.collection('constructors').find({}).toArray();
-        if (dataTrack.length > 0 && dataDriver.length > 0 && dataConstructor.length > 0) {
+        const dataPhoneNumber = await mongoose.connection.collection('phonenumbers').find({}).toArray();
+
+        if (dataTrack.length > 0 && dataDriver.length > 0 && dataConstructor.length > 0 && dataPhoneNumber.length > 0) {
             console.log("All data already uploaded to database");
             return;
         }
@@ -55,6 +57,11 @@ export default function RootLayout({ children }) {
           const constructors = require('../utils/constructors.json');
           await mongoose.connection.collection('constructors').insertMany(constructors);
           console.log("Constructors uploaded to database");
+        }
+        if (dataPhoneNumber.length === 0) {
+          const phoneNumbers = require('../utils/phoneNumber.json');
+          await mongoose.connection.collection('phonenumbers').insertMany(phoneNumbers);
+          console.log("Phone Numbers uploaded to database");
         }
     } catch (error) {
         console.log(error);

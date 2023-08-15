@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NotificationButton from "./NotificationButton";
 
 const UpcomingRace = ({ nextRace, justify, frontPage }) => {
   const currentDate = new Date();
@@ -13,14 +14,24 @@ const UpcomingRace = ({ nextRace, justify, frontPage }) => {
   );
 
   return (
-    <div className={`w-full flex justify-${justify ? justify : "center"} text-center`}>
-      <Link href={`schedule/current/${nextRace.round}`} className="w-full lg:w-2/3 grid border-4 bg-gray-500 dark:bg-slate-800 text-white pt-2 mt-2">  {/* this was a flex flex-col */}
-        <div className="text-xl md:text-2xl flex justify-center">
-          {frontPage ? <h3>Race Countdown</h3> : nextRace.raceName}
+    <div
+      className={`w-full flex justify-${
+        justify ? justify : "center"
+      } text-center`}
+    >
+      <div
+        className="w-full lg:w-2/3 grid border-4 bg-gray-500 dark:bg-slate-800 text-white pt-2 mt-2"
+      >
+        <div className="text-xl md:text-2xl flex justify-center relative">
+          {frontPage ? <h3>Race Countdown</h3> : <Link
+        href={`schedule/current/${nextRace.round}`}>{nextRace.raceName}</Link>}
+          <div className="absolute right-8 text-xl">
+            <NotificationButton />
+          </div>
         </div>
-        <div className="justify-self-center w-full md:w-8/12">
-        <div className="grid grid-cols-3 mb-2 mt-1 divide-x-2 md:divide-x-4  justify-center">
-          {/* <div className="justify-self-center">  */}
+        <Link
+        href={`schedule/current/${nextRace.round}`} className="justify-self-center w-full md:w-8/12">
+          <div className="grid grid-cols-3 mb-2 mt-1 divide-x-2 md:divide-x-4  justify-center">
             <div className="flex flex-col">
               <div>{daysUntilRace}</div>
               <div>Days</div>
@@ -33,11 +44,11 @@ const UpcomingRace = ({ nextRace, justify, frontPage }) => {
               <div>{minutesUntilRace}</div>
               <div>Minutes</div>
             </div>
-            </div>
           </div>
-      </Link>
+        </Link>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default UpcomingRace
+export default UpcomingRace;

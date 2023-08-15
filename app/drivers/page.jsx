@@ -40,7 +40,7 @@ const DriversPage = async () => {
   }, []);
 
   return (
-    <div className="w-full mx-4 mt-4 md:w-3/4">
+    <div className="w-full mx-4 mt-4 md:w-3/4 mb-4">
       {/* card container */}
       <div className="flex justify-center">
         {/* <div classname='flex justify-left mx-3'> */}
@@ -98,18 +98,18 @@ const DriversPage = async () => {
                       <Image
                         src={`/assets/images/flag/${driverFlag}`}
                         alt={`${driver.Driver.nationality} flag`}
-                        sizes="(max-width: 768px) 100vw"
+                        sizes="(max-width: 768px) 10vw"
                         className="object-cover"
                         fill={true}
                       />
                     </div>
                   </div>
                   <div className="flex flex-row justify-between items-end">
-                    <div className="overflow-hidden relative w-14 h-10">
+                    <div className={`overflow-hidden relative w-16 h-10`}>
                       <Image
                         className="object-cover"
                         src={`/assets/images/drivers/car_numbers/${driver.Driver.driverId}_car_number.avif`}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        sizes="(max-width: 768px) 10vw, (max-width: 1200px) 10vw, 10vw"
                         alt={`${driver.Driver.givenName}'s car number stylized`}
                         fill={true}
                       />
