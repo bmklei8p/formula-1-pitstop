@@ -1,5 +1,5 @@
 import RecentResults from "../app/components/RecentResults";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { server } from "@/mocks/server";
 import { rest } from 'msw'
 
@@ -30,9 +30,11 @@ const mockRaceInfoData = {
 describe("RecentResults Rendering", () => {
   it("should render both qualy and race results, but no countdown timer", async () => {
     render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
+    await waitFor(() => {
     expect(screen.getByText("Qualification Results")).toBeInTheDocument();
     expect(screen.getByText("Race Results")).toBeInTheDocument();
     expect(screen.queryByText("Race Countdown")).not.toBeInTheDocument();
+    })
   }),
   it("should render Upcoming Race timer and qualifying results, but not race results", async () => {
     // mock data that shows there is no race results infomation yet
@@ -55,9 +57,11 @@ describe("RecentResults Rendering", () => {
       return res(ctx.json(mockNoRaceResultsData));
   }))
     render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
+    await waitFor(() => {
     expect(screen.queryByText("Race Results")).not.toBeInTheDocument();
     expect(screen.getByText("Qualification Results")).toBeInTheDocument();
     expect(screen.getByText("Race Countdown")).toBeInTheDocument();
+    })
   }),
   it("should render Upcoming Race timer and raceTimes, but not race or qualy results", async () => {
         // mock data that shows there is no race results infomation yet
@@ -99,10 +103,12 @@ describe("RecentResults Rendering", () => {
       return res(ctx.json(mockNoQualyResultsData));
   }))
     render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
+    await waitFor(() => {
     expect(screen.queryByText("Race Results")).not.toBeInTheDocument();
     expect(screen.queryByText("Qualification Results")).not.toBeInTheDocument();
     expect(screen.getByText("Hours")).toBeInTheDocument();
     expect(screen.getByText("Minutes")).toBeInTheDocument();
     expect(screen.getByText("My Times")).toBeInTheDocument();
+    })
   })
 })
