@@ -1,10 +1,6 @@
 'use client'
 import dynamic from 'next/dynamic'
 
-// import UpcomingRace from 'app/schedule/components/UpcomingRace'
-// import UpcomingRaces from 'app/schedule/components/UpcomingRaces'
-// import PastRaces from 'app/schedule/components/PastRaces'
-
 const DynamicUpcomingRace = dynamic(() => import('app/schedule/components/UpcomingRace'), {
   loading: () => <p>Loading...</p>
 })

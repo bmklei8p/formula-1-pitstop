@@ -1,4 +1,5 @@
 import ImageCarousel from "@/app/components/ImageCarousel"
+import TwitterTimeLine from "@/app/components/TwitterTimeline"
 import DriverInfoBox from "@/app/drivers/components/DriverInfoBox"
 import Image from "next/image"
 
@@ -32,7 +33,8 @@ const DriverDetailPage = async ({ params }) => {
         <div className="basis-full bg-gray-900 flex justify-center ">
           <Image src={`/assets/images/drivers/${driver.driverId}_front.png`} width={500} height={500} priority={true} alt={`${driver.familyName}'s headshot image`} />
         </div>
-        <DriverInfoBox driver={driver} className="basis-full" />
+        <DriverInfoBox driver={driver} className="" />
+        <TwitterTimeLine twitterHandle={"Max33Verstappen"} height={"500px"} width={"500px"} />
       </div>
       <div className="w-full md:w-9/12 2xl:w-2/3 m-0 h-auto bg-contentBackground dark:bg-contentBackground">
         <ImageCarousel imageURLArray={["001.avif","002.avif","003.avif"]} path={`/assets/images/drivers/${driver.driverId}/`} alt={`${driver.familyName} images`} />
