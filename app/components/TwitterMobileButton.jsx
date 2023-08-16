@@ -8,7 +8,6 @@ const TwitterMobileButton = ({ twitterHandle }) => {
   const [ animationComplete, setAnimationComplete ] = useState(false)
   const modalRef = useRef(null);
 
-
   const handleTwitterIconOpen = () => {
     setShowModal(true)
     // setAnimationComplete(true)

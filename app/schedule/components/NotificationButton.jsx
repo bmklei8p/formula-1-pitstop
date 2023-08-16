@@ -102,7 +102,7 @@ const NotificationButton = () => {
                       <div className="mt-2">
                         <p className="text-sm">
                           By entering your phone number you consent to recieving
-                          a SMS notification when the race starts!
+                          a SMS notification 15 minutes before the race starts!
                         </p>
                       </div>
                       <div className="mt-4 w-full">
