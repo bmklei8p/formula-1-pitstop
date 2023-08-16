@@ -2,7 +2,8 @@
 const DriverInfoBox = ({ driver }) => {
 
   return (
-    <div className="flex flex-col w-full gap-4 pl-4 pt-2">
+    // <div className="flex flex-row w-full gap-4 pl-4 pt-2 mt-8 mb-8 text-left justify-evenly">
+    <div className="driver-info-container">
         <div className="">
             <h3 className="text-xl md:text-2xl font-bold">Driver Info</h3>
             <ul className="ml-4 text-lg md:text-xl">

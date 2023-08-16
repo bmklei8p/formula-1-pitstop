@@ -5,6 +5,15 @@ import { useState, useEffect } from 'react';
 
 function TwitterTimeLine({ twitterHandle, height, width }) {
   const [mobileScreen, setMobileScreen] = useState(false);
+  const [theme, setTheme] = useState(null); 
+  useEffect(() => {
+    if (document.documentElement.classList.contains('dark')) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }, []);
+
 
   useEffect(() => {
     if (window.innerWidth < 500) {
@@ -12,23 +21,23 @@ function TwitterTimeLine({ twitterHandle, height, width }) {
     }
   }, []);
 
-  console.log(mobileScreen)
-
   return (
     <div className=''>
-      {mobileScreen ? 
+      {theme && mobileScreen ? 
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName={twitterHandle}
-        options={{ height: height, width: width ? width : '375px', theme: 'dark'}}
+        options={{ height: height, width: width ? width : '375px'}}
+        theme={theme}
       />
       : null }
-      {!mobileScreen ? 
+      {theme && !mobileScreen ? 
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName={twitterHandle}
-        options={{ height: height, width: width ? width : '600px', theme: 'dark'}}
-      />
+        options={{ height: height, width: width ? width : '600px'}}
+        theme={theme}
+        />
       : null }
     </div>
   );

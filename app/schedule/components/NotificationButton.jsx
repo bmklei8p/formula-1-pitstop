@@ -69,11 +69,11 @@ const NotificationButton = () => {
   return (
     <>
       {!modalOpen ? (
-        <button
+        <button 
           className="text-2xl md:text-3xl text-red-500"
           onClick={handleButtonClick}
         >
-          <MdNotificationsActive />
+          <MdNotificationsActive  />
         </button>
       ) : null}
       {modalOpen && (

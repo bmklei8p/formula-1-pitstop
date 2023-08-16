@@ -24,6 +24,23 @@
   }
 }
 
+.driver-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  text-align: left;
+  gap: 1rem;
+}
+@media (max-width: 500px) {
+  .driver-info-container {
+    flex-direction: column;
+  }
+}
 
 .header-container {
     width: 100vw;
@@ -286,7 +303,23 @@
 }
 
 
-
+@keyframes twitter-circular-animation {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(100px) translateX(0);
+  }
+  50% {
+    transform: translateY(100px) translateX(-100px);
+  }
+  75% {
+    transform: translateY(0) translateX(-100px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
 
 @keyframes moveRightAnimation {
   0% {
