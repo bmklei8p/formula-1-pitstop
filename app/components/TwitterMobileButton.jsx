@@ -15,7 +15,7 @@ const TwitterMobileButton = ({ twitterHandle }) => {
     setTimeout(() => {
       setAnimationComplete(true)
     }
-    , 2000)
+    , 1000)
   }
 
   const handleTwitterIconClose = () => {
