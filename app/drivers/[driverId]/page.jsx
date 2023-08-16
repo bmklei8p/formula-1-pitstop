@@ -43,12 +43,12 @@ const DriverDetailPage = async ({ params }) => {
             alt={`${driver.familyName}'s headshot image`}
           />
           <div className="text-5xl text-blue-300 md:hidden absolute right-8 top-10" >
-            <TwitterMobileButton twitterHandle={"Max33Verstappen"}/>
+            <TwitterMobileButton twitterHandle={driver.twitterHandle}/>
           </div>
         </div>
         <div className="hidden md:flex lg:justify-start mt-8 xl:mt-0">
           <TwitterTimeLine
-            twitterHandle={"Max33Verstappen"}
+            twitterHandle={driver.twitterHandle}
             height={"500px"}
             width={"500px"}
           />

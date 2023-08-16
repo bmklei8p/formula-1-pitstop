@@ -23,6 +23,11 @@ export const PATCH = async (req, { params }) => {
     if (!driver) {
       return new Response("Driver not found", { status: 404 });
     }
+
+    if(body.twitter_handle) {
+      driver.twitterHandle = body.twitter_handle;
+    }
+
     if(body.podiums) {
       driver.podiums = body.podiums;
     }
@@ -59,7 +64,7 @@ export const PATCH = async (req, { params }) => {
     await driver.save();
     revalidateTag(`driver`);
     try {
-      console.log("revalidating")
+      // console.log("revalidating")
       const res = await fetch(`https://formula-1-pitstop.vercel.app/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
       if (res.status !== 200) {
         console.log("error revalidating");

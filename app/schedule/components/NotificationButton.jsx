@@ -94,18 +94,18 @@ const NotificationButton = () => {
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <h3
-                        className="text-xl font-semibold leading-6"
+                        className="text-xl font-semibold leading-6 text-gray-900 dark:text-gray-300"
                         id="modal-title"
                       >
                         Race Notification
                       </h3>
                       <div className="mt-2">
-                        <p className="text-sm">
-                          By entering your phone number you consent to receiving
+                        <p className="text-sm text-gray-900 dark:text-gray-300">
+                          By entering your phone number you consent to recieving
                           a SMS notification 15 minutes before the race starts!
                         </p>
                       </div>
-                      <div className="mt-4 w-full">
+                      <div className="mt-4 w-full text-gray-900 dark:text-gray-300">
                         <PhoneInput
                           placeholder="Enter phone number"
                           value={value}

@@ -16,7 +16,6 @@ const ConstructorSchema = new Schema({
     },
     nationality: {
         type: String,
-        required: true,
     },
     base: {
         type: String,
@@ -70,6 +69,12 @@ const ConstructorSchema = new Schema({
     driverTwoPictureURL: {
         type: String,
     },
+    chassis: {
+      type: String,
+    },
+    twitterHandle: {
+      type: String,
+    }
 });
 
 

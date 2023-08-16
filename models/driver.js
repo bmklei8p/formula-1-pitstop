@@ -73,6 +73,9 @@ const DriverSchema = new Schema({
     },
     polePositions: {
         type: String,
+    },
+    twitterHandle: {
+        type: String,
     },  
 });
 
