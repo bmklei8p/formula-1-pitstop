@@ -79,3 +79,7 @@ signapore track needs layout or link fixed
 
 ISSUE: 
 google maps api is being requested from a client component: this is causing the api key to be exposed on the networking tab. Need to move this to the server side to prevent this from happening. 
+
+
+
+- 8/16 - submitted application for twilio account for sms messages
