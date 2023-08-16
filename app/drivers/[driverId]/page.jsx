@@ -8,7 +8,7 @@ export async function GenerateStaticParams() {
   // may not need a revalidate here as this is just used to generate a list of paths that can be statically generated
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/mdb/`,
-    { next: { revalidate: 360000 } }
+    { cache: 'no-store' } 
   );
   const data = await res.json();
   const paths = data.map((driver) => ({
