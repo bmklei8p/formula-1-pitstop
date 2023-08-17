@@ -20,12 +20,12 @@ Jest
 
 ## Images of the application:
 # Mobile View:
-![Dark Mode]()
-![Light Mode]()
+![Dark Mode](https://github.com/bmklei8p/formula-1-pitstop/blob/main/public/assets/images/misc/mobile_dark.png)
+![Light Mode](https://github.com/bmklei8p/formula-1-pitstop/blob/main/public/assets/images/misc/mobile_light.png)
 
 # Desktop View:
-![Dark Mode]()
-![Light Mode]()
+![Dark Mode](https://github.com/bmklei8p/formula-1-pitstop/blob/main/public/assets/images/misc/desktop_dark.png)
+![Light Mode](https://github.com/bmklei8p/formula-1-pitstop/blob/main/public/assets/images/misc/desktop_light.png)
 
 ## How to run locally:
 You will need a .env folder with the following information.
