@@ -6,17 +6,21 @@ You will need a .env folder with the following information for the core function
 A Google Maps API Key can be aquired here: https://developers.google.com/maps/
 A MongoDB database can be created here: https://www.mongodb.com/
 
+```dotenv
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY= ** Your Google Maps API Key Here **
 MONGODB_URI= ** Your MongoDB URI Here ** 
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
 
 ## Twilio SMS Functionality (Optional)
 A Twilio account can be created here: https://www.twilio.com/
 I recommend considering not using the SMS functionality as it will cost money and significant setup time to send SMS message notifications. You will have to sign up and purchase a phone number to send SMS messages. You will also need to verify your personal phone number to send SMS messages to it. Additionally, there is an application process to send SMS messages to other phone numbers. This application process can take up to 2 weeks to complete. 
+
+```dotenv
 TWILIO_ACCOUNT_SID=
 TWILIO_AUTH_TOKEN=
 TWILIO_PHONE_NUMBER=
-
+```
 
 ## Dependencies
 Please run `npm install` to install all dependencies.
@@ -32,7 +36,7 @@ Please run `npm run dev` to run the application locally. The application will be
 ## Running the application locally with a production build
 Please run `npm run build` to build the application. Then run `npm run start` to run the application locally. The application will be available at http://localhost:3000
 
-## Lastly: enjoy!
+## Enjoy!
 
 
 
