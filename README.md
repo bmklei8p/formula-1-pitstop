@@ -1,8 +1,8 @@
 # Formula 1 Pitstop
+#
+Deployed on Vercel at: https://formula-1-pitstop.vercel.app/
 
 ## About
-Deployed on Vercel at: https://formula-1-pitstop.vercel.app/
-#
 This application provides users with real time information related to Formula 1's standings and schedule. A user can sign up for a SMS notification for notification before a race is about to begin. Additional information can be found about each driver, team, and track from the current 2023 season. The latest news for drivers, teams, and f1 as whole can be viewed via the embedded X(Twitter) timelines. The application was designed with a mobile first approach and is highly responsive.
 
 ## Technologies Used:

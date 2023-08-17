@@ -194,13 +194,13 @@ const NotificationButton = () => {
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <h3
-                        className="text-xl font-semibold leading-6"
+                        className="text-xl font-semibold leading-6 text-gray-900 dark:text-gray-300"
                         id="modal-title"
                       >
                         Success!!
                       </h3>
                       <div className="mt-2">
-                        <p className="text-sm">
+                        <p className="text-sm text-gray-900 dark:text-gray-300">
                           You will recieve a SMS message before the next race
                           start!
                         </p>
@@ -240,13 +240,13 @@ const NotificationButton = () => {
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <h3
-                        className="text-xl font-semibold leading-6"
+                        className="text-xl font-semibold leading-6 text-gray-900 dark:text-gray-300"
                         id="modal-title"
                       >
                         Non-valid phone number!
                       </h3>
                       <div className="mt-2">
-                        <p className="text-sm">
+                        <p className="text-sm text-gray-900 dark:text-gray-300">
                           Please enter a valid phone number to continue
                         </p>
                       </div>
@@ -280,18 +280,18 @@ const NotificationButton = () => {
               <div className="relative transform overflow-hidden rounded-lg bg-background text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="bg-background px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white sm:mx-0 sm:h-10 sm:w-10">
+                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg- sm:mx-0 sm:h-10 sm:w-10">
                       <BiErrorCircle className="text-3xl text-red-500" />
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <h3
-                        className="text-xl font-semibold leading-6"
+                        className="text-xl font-semibold leading-6 text-gray-900 dark:text-gray-300"
                         id="modal-title"
                       >
                         Phone number already in system.
                       </h3>
                       <div className="mt-2">
-                        <p className="text-sm">
+                        <p className="text-sm text-gray-900 dark:text-gray-300">
                           Please enter a new phone number to continue
                         </p>
                       </div>
@@ -330,7 +330,7 @@ const NotificationButton = () => {
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <h3
-                        className="text-xl font-semibold leading-6"
+                        className="text-xl font-semibold leading-6 text-gray-900 dark:text-gray-300"
                         id="modal-title"
                       >
                         Your race preference has been updated!
