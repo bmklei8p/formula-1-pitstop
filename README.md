@@ -18,22 +18,23 @@ Jest
 4. Users can sign up for a SMS notification before the race starts.
 5. Users can see the latest tweet via the drivers, teams, and f1 twitter accounts.
 
-## Images of the application:
-# Mobile View:
+# Images of the application:
+## Mobile View:
+## Dark:
 ![Dark Mode](https://github.com/bmklei8p/formula-1-pitstop/blob/main/public/assets/images/misc/mobile_dark.png)
+## Light:
 ![Light Mode](https://github.com/bmklei8p/formula-1-pitstop/blob/main/public/assets/images/misc/mobile_light.png)
 
-# Desktop View:
+## Desktop View:
+## Dark:
 ![Dark Mode](https://github.com/bmklei8p/formula-1-pitstop/blob/main/public/assets/images/misc/desktop_dark.png)
+## Light:
 ![Light Mode](https://github.com/bmklei8p/formula-1-pitstop/blob/main/public/assets/images/misc/desktop_light.png)
 
 ## How to run locally:
-You will need a .env folder with the following information.
-A Google Maps API Key can be aquired here:
+Local development for all features will require some manual setup. The application is currently using a MongoDB database to store driver, constructor, and track information. A Twilio account is required to send SMS messages. A Google Maps API key is required to display the track location on the track page. Please see the file below for the required steps to run the application locally.
 
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=
-MONGODB_URI=
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
+[Installation Instructions](local_install.md)
 
 ## Testing:
 Unit tests were created using jest for core features that have more complex working logic. To run unit tests use the command: `npm test`
@@ -44,7 +45,8 @@ Unit tests were created using jest for core features that have more complex work
 2. Improved caching for the driver twitter timelines. Current blocker: revalidate tag after patch request not working as expected.
 
 # Contact
-Please feel free to reach out to me at bmklei8p@gmail.com if you have any feature requests or bug reports.
+Please feel free to reach out to me at bmklei8p@gmail.com if you have any feature requests, bug reports, or comments!
+My portfolio of projects can be found at https://bk-portfolio.azurewebsites.net/
 
 
 
