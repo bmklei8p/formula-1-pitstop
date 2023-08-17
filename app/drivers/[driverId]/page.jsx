@@ -25,7 +25,8 @@ import TwitterMobileButton from "@/app/components/TwitterMobileButton";
 const DriverDetailPage = async ({ params }) => {
   const driver = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/${params.driverId}`,
-    { next: { tags: ["driver"] }}
+    // { next: { tags: ["driver"] }}
+    { cache: 'no-store' }
   ).then((res) => res.json());
 
   return (
