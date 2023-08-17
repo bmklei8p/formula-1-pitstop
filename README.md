@@ -1,15 +1,14 @@
 # Formula 1 Pitstop
-#
 Deployed on Vercel at: https://formula-1-pitstop.vercel.app/
 
 ## About
 This application provides users with real time information related to Formula 1's standings and schedule. A user can sign up for a SMS notification for notification before a race is about to begin. Additional information can be found about each driver, team, and track from the current 2023 season. The latest news for drivers, teams, and f1 as whole can be viewed via the embedded X(Twitter) timelines. The application was designed with a mobile first approach and is highly responsive.
 
 ## Technologies Used:
-NextJS 13 (Using app router)
-Twilio API
-Twitter Embed Api
-Tailwind Css
+NextJS 13 (Using app router),
+Twilio API,
+Twitter Embed Api,
+Tailwind Css,
 Jest
 
 ## Usage and Features:
@@ -20,10 +19,12 @@ Jest
 5. Users can see the latest tweet via the drivers, teams, and f1 twitter accounts.
 
 ## Images of the application:
-# Dark Mode:
+# Mobile View:
 ![Dark Mode]()
+![Light Mode]()
 
-# Light Mode:
+# Desktop View:
+![Dark Mode]()
 ![Light Mode]()
 
 ## How to run locally:
@@ -39,8 +40,10 @@ Unit tests were created using jest for core features that have more complex work
 
 
 ## Future Improvements:
-1. Add additional story information for some tracks. Current blocker: API does not provide this information.
+1. Add additional story information for some tracks. Current blocker: ChatGPT will not provide this information for these newer tracks.
+2. Improved caching for the driver twitter timelines. Current blocker: revalidate tag after patch request not working as expected.
 
+# Contact
 Please feel free to reach out to me at bmklei8p@gmail.com if you have any feature requests or bug reports.
 
 
