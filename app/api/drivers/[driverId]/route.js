@@ -62,8 +62,8 @@ export const PATCH = async (req, { params }) => {
     }
 
     await driver.save();
-    revalidateTag(`driver`);
-    console.log("Revalidating Driver")
+    // revalidateTag(`driver`);
+    // console.log("Revalidating Driver")
     // try {
     //   // console.log("revalidating")
     //   const res = await fetch(`https://formula-1-pitstop.vercel.app/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
