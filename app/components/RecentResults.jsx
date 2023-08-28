@@ -92,7 +92,7 @@ const RecentResults = async ({ raceRound, race }) => {
 
       {/* Neither Complete */}
       { !qualifyingResults.length > 0 && !raceResults.length > 0 ?
-      <div className="flex flex-col justify-start">
+      <div className="flex flex-col gap-y-4 justify-start">
         <DynamicUpcomingRace nextRace={race} />
         {race.hasOwnProperty('Sprint') ? <DynamicSprintRaceTimes race={race} trackTimezone={trackTimeZone} /> : <DynamicRaceTimes race={race} trackTimezone={trackTimeZone} />}
       </div>: null}

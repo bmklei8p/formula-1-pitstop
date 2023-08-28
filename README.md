@@ -16,7 +16,7 @@ Jest
 2. Users can view the current schedule for the 2023 season.
 3. Users can view information about each driver, team, and track.
 4. Users can sign up for a SMS notification before the race starts.
-5. Users can see the latest tweet via the drivers, teams, and f1 twitter accounts.
+5. Users can see the latest tweets via the drivers, teams, and f1 twitter accounts.
 
 # Images of the application:
 ## Mobile View:
