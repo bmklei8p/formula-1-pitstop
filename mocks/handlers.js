@@ -443,19 +443,19 @@ const mockConstructorStandingsData = {
 
 
 export const handlers = [
-  rest.get('https://ergast.com/api/f1/current/:raceRound/qualifying.json', (req, res, ctx) => {
+  rest.get('http://ergast.com/api/f1/current/:raceRound/qualifying.json', (req, res, ctx) => {
     return res(ctx.json(mockQualifyingResultsData));
   }),
-  rest.get('https://ergast.com/api/f1/current/:raceRound/results.json', (req, res, ctx) => {
+  rest.get('http://ergast.com/api/f1/current/:raceRound/results.json', (req, res, ctx) => {
     return res(ctx.json(mockRaceResultsData));
   }),
   rest.get('https://maps.googleapis.com/maps/api/timezone/json', (req, res, ctx) => {
     return res(ctx.json(mockTimeZoneData));
   }),
-  rest.get('https://ergast.com/api/f1/current/driverStandings.json', (req, res, ctx) => {
+  rest.get('http://ergast.com/api/f1/current/driverStandings.json', (req, res, ctx) => {
     return res(ctx.json(mockDriverStandingsData));
   }),
-  rest.get(`https://ergast.com/api/f1/current/constructorStandings.json`, (req, res, ctx) => {
+  rest.get(`http://ergast.com/api/f1/current/constructorStandings.json`, (req, res, ctx) => {
     return res(ctx.json(mockConstructorStandingsData));
   }),
 ];

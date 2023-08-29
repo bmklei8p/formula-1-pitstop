@@ -53,7 +53,7 @@ describe("RecentResults Rendering", () => {
         }
       }
     }
-    server.use(rest.get('https://ergast.com/api/f1/current/:raceRound/results.json', (req, res, ctx) => {
+    server.use(rest.get('http://ergast.com/api/f1/current/:raceRound/results.json', (req, res, ctx) => {
       return res(ctx.json(mockNoRaceResultsData));
   }))
     render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
@@ -80,7 +80,7 @@ describe("RecentResults Rendering", () => {
             }
           }
         }
-        server.use(rest.get('https://ergast.com/api/f1/current/:raceRound/results.json', (req, res, ctx) => {
+        server.use(rest.get('http://ergast.com/api/f1/current/:raceRound/results.json', (req, res, ctx) => {
           return res(ctx.json(mockNoRaceResultsData));
       }))
     // mock data that shows there is no qualifying results infomation yet
@@ -99,7 +99,7 @@ describe("RecentResults Rendering", () => {
         }
       }
     }
-    server.use(rest.get('https://ergast.com/api/f1/current/:raceRound/qualifying.json', (req, res, ctx) => {
+    server.use(rest.get('http://ergast.com/api/f1/current/:raceRound/qualifying.json', (req, res, ctx) => {
       return res(ctx.json(mockNoQualyResultsData));
   }))
     render(await RecentResults({raceRound: "12", race: mockRaceInfoData}));
