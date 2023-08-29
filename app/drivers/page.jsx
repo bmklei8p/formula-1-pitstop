@@ -26,8 +26,8 @@ const DriversPage = async () => {
     const getDriverInformation = async () => {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/drivers/mdb`,
-        { next: { tag: "driver" } }
-      );
+        { cache: 'no-store' }
+        );
       const data = await res.json();
       // convert to map for faster lookup
       const driversMap = new Map();
