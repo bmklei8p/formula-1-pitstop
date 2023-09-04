@@ -23,11 +23,11 @@ const DynamicUpcomingRace = dynamic(() => import("../schedule/components/Upcomin
 
 
 const RecentResults = async ({ raceRound, race }) => {
-  const qualifyingResponse = await fetch(`http://ergast.com/api/f1/current/${raceRound}/qualifying.json`, { next: {revalidate: 0}})
+  const qualifyingResponse = await fetch(`http://ergast.com/api/f1/current/${raceRound}/qualifying.json`, { cache: 'no-store'})
   const qualifyingData = await qualifyingResponse.json()
   const qualifyingResults = qualifyingData.MRData.RaceTable.Races
 
-  const raceResultsResponse = await fetch(`http://ergast.com/api/f1/current/${raceRound}/results.json`, { next: {revalidate: 0}})
+  const raceResultsResponse = await fetch(`http://ergast.com/api/f1/current/${raceRound}/results.json`, { cache: 'no-store'})
   const raceResultsData = await raceResultsResponse.json()
   const raceResults = raceResultsData.MRData.RaceTable.Races
 
