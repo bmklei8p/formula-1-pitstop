@@ -13,7 +13,7 @@ const ScheduleProvider = ({ children }) => {
 
     useEffect(() => {
     const getRaceSchedule = async () => {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`, { next: {revalidate: 360000}})
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season`, { cache: 'no-store'})
         const data = await res.json()
         setSchedule(data);
         }
