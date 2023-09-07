@@ -7,7 +7,8 @@ import TwitterTimeLine from "./components/TwitterTimeline";
 // import { FaRegArrowAltCircleDown } from "react-icons/fa";
 
 const getScheduleData = async () => {
-  const res = await fetch("http://ergast.com/api/f1/current.json", { cache: 'no-store'} );
+  // const res = await fetch("http://ergast.com/api/f1/current.json", { cache: 'no-store'} );
+  const res = await fetch("http://ergast.com/api/f1/current.json", { revalidate: 60} );
   const data = await res.json();
   const schedule = data.MRData.RaceTable.Races;
   const currentDateTime = new Date();

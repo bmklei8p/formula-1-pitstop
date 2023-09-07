@@ -41,15 +41,15 @@ export const PATCH = async (req, { params }) => {
 
     
     await constructor.save();
-    try {
-      console.log("revalidating")
-      const res = await fetch(`https://formula-1-pitstop.vercel.app/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
-      if (res.status !== 200) {
-        console.log("error revalidating");
-      }
-    } catch(err) {
-      console.log("error revalidating");
-    }
+    // try {
+    //   console.log("revalidating")
+    //   const res = await fetch(`https://formula-1-pitstop.vercel.app/api/revalidate?path=${encodeURIComponent("/drivers/")}`)
+    //   if (res.status !== 200) {
+    //     console.log("error revalidating");
+    //   }
+    // } catch(err) {
+    //   console.log("error revalidating");
+    // }
     return new Response("Successfully updated the Constructor", { status: 200 });
   } catch(err) {
     console.log(err);

@@ -13,10 +13,10 @@ import TrackInfoBox from "@/app/tracks/components/TrackInfoBox";
 
 const UpcomingRaceSchedulePage = async ({ params }) => {
 
-  const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/current/${params.round}`, { next: {revalidate: 360000}}
+  const race = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/schedule/season/current/${params.round}`, { next: {revalidate: 60}}
   ).then((res) => res.json())
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/tracks/${race.Circuit.circuitId}`, { next: {revalidate: 360000}})
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/tracks/${race.Circuit.circuitId}`, { next: {revalidate: 60}})
   const track = await res.json()
 
   const timeZoneRes = await fetch(`https://maps.googleapis.com/maps/api/timezone/json?location=${race.Circuit.Location.lat},${race.Circuit.Location.long}&timestamp=0&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`)
